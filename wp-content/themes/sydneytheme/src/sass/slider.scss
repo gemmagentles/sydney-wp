@@ -1,0 +1,182 @@
+.slide {
+    // position: absolute;
+    // width: 100%;
+    // float: left;
+    // height: 870px;
+
+    // &__image {
+    //     width: 100%;
+    //     height: auto;
+    //     max-height: 870px;
+    // }
+}
+
+.slider {
+    // position: relative;
+    // overflow-x: scroll;
+    // width: 100%;
+    // height: 870px;
+
+
+    // &__inner {
+    //     max-width: $site-width;
+    //     margin: 0 auto;
+    // }
+
+    &__content-box {
+        background: white;
+        padding: 20px;
+        position: relative;
+        margin-top: -4px;
+
+        @include breakpoint(tablet) {
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            margin-top: 0;
+            padding: 40px;
+            max-width: 430px;
+        }
+
+        @include breakpoint(largedesktop) {
+            max-width: 530px;
+            padding: 82px;
+        }
+
+        // overwrite some of main default styles to be custom to this component
+        .subtitle {
+            font-size: 0.875em;
+            padding-bottom: 30px;
+
+            &::after {
+                top: 4px;
+                max-width: 86px;
+            }
+        }
+
+        &--heading {
+            text-transform: uppercase;
+            padding: 10px 0 15px 0;
+
+            @include breakpoint(tablet) {
+                padding: 20px 0 30px 0;
+            }
+        }
+
+        &--paragraph {
+            padding-bottom: 20px;
+            font-size: 0.875em;
+            line-height: 1.8;
+
+            @include breakpoint(tablet) {
+                padding-bottom: 30px;
+                max-width: 310px;
+            }
+
+            @include breakpoint(largedesktop) {
+                padding-bottom: 65px;
+            }
+        }
+
+        // overwrite some of main default styles to be custom to this component
+        .sydney-button__with-icon {
+            left: 0;
+            transform: none;
+            margin: 0 0 10px;
+            padding: 20px 48px 20px 36px;
+        }
+    }    
+}
+
+.slider__arrow--prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    @include breakpoint(tablet) {
+        top: 50%;
+    }
+
+    // overwrite some of main default styles to be custom to this component
+    .sydney-button__with-icon {
+        margin: 0;
+        padding: 22px;
+
+        @include breakpoint(tablet) {
+            padding: 32px;
+        }
+    }
+}
+
+.slider__arrow--next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    @include breakpoint(tablet) {
+        top: 50%;
+    }
+
+    // overwrite some of main default styles to be custom to this component
+    .sydney-button__with-icon {
+        margin: 0;
+        padding: 22px;
+
+        @include breakpoint(tablet) {
+            padding: 32px;
+        }
+    }
+}
+
+
+.slider {
+    max-width: 100%;
+    position: relative;
+    // margin: auto;
+    // max-height: 870px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(tablet) {
+        // padding: 78px;
+    }
+
+
+    &__default-fallback {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        min-height: 870px;    
+        z-index: -1;
+
+        img {
+            height: 100%;
+    overflow: hidden;
+    max-height: 668px;
+        }
+    }
+}
+
+/* Hide the images by default */ /* maybe dont need to */
+.slide {
+    display: none;
+
+
+
+    &__image {
+        height: 100%;
+    overflow: hidden;
+    max-height: 200px;
+        // max-height: 870px;
+
+        @include breakpoint(tablet) {
+            max-height: 670px;
+        }
+    
+        @include breakpoint(largedesktop) {
+            max-height: 870px;
+        }
+    }
+}

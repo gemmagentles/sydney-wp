@@ -1,0 +1,205 @@
+@import 'breakpoints.scss';
+@import 'vars.scss';
+
+.header {
+    display: flex;
+    max-width: $site-width;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    font-size: 0.875em;
+    font-family: $main-font-family;
+
+    @include breakpoint(desktop) {
+        font-size: 1em;
+    }
+}
+
+.logo {
+    color: $primary-color;
+    max-width: 51px;
+
+    @include breakpoint(desktop) {
+        max-width: 75px;
+    }
+}
+
+.nav {
+    display: none;
+    visibility: hidden;
+    background: $secondary-color;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+        visibility: visible;
+        display: flex;
+        padding-bottom: 0;
+        align-items: center;
+        background: none;
+    }
+
+    &__list {
+        padding: 28px 10px 10px;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            margin: 0 5px;
+            padding: 10px;
+        }
+
+        @include breakpoint(desktop) {
+            margin: 0 30px;
+        }
+    }
+    
+    &__item {
+        list-style-type: none; 
+        margin: 10px;
+        position: relative;
+        white-space: nowrap;
+
+        @include breakpoint(desktop) {
+            margin: 15px;
+        }
+
+        @include breakpoint(tablet) {
+
+            &:hover,
+            &:focus,
+            &:active {
+        
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 5px;
+                    border-bottom: 2px solid $primary-color;
+                    width: 100%;
+                    top: 16px;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    a {
+      color: $font-color;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+.social {
+    padding: 0 20px;
+
+    @include breakpoint(tablet) {
+        padding: 0;
+        display: flex;
+        width: 100%;
+    }
+
+    .line {
+        background: $primary-color;
+        width: 100%;
+        height: 2px;
+        margin: 12px 0 20px;
+
+        @include breakpoint(tablet) {
+            margin: 12px 0 0;
+        }
+
+        @include breakpoint(desktop) {
+            margin-top: 30px;
+
+        }
+    }
+
+    .nav__link {
+        padding: 10px;
+
+        @include breakpoint(tablet) {
+            padding: 6px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 20px;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    .nav__icon {
+        width: 20px;
+
+        @include breakpoint(tablet) {
+            width: 16px;
+        }
+
+        @include breakpoint(desktop) {
+            width: 25px;
+        }
+    }
+}
+
+/* styles only for mobile and tablet when menu is a hamburger */
+.nav__hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+
+    .hamburger-bar1, 
+    .hamburger-bar2, 
+    .hamburger-bar3 {
+        width: 30px;
+        height: 5px;
+        background-color: $primary-color;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    @include breakpoint(tablet) {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+ /* style the hamburger menu icon to transition into a cross when clicked */
+
+.nav__open {
+
+  .hamburger-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .hamburger-bar2 { opacity: 0; }
+
+  .hamburger-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-9px, -7px);
+  }  
+}
+
+ /* inside the hamburger menu once opened */
+.nav__open + .nav {
+  display: block;
+  visibility: visible;
+  background: $secondary-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  
+  @keyframes slidein {
+    from {left: -100%;}
+  }
+}
