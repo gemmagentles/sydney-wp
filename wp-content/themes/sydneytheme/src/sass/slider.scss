@@ -1,38 +1,88 @@
-.slide {
-    // position: absolute;
-    // width: 100%;
-    // float: left;
-    // height: 870px;
-
-    // &__image {
-    //     width: 100%;
-    //     height: auto;
-    //     max-height: 870px;
-    // }
-}
-
 .slider {
-    // position: relative;
-    // overflow-x: scroll;
-    // width: 100%;
-    // height: 870px;
+    max-width: 100%;
+    position: relative;
+    height: 560px;
 
+    @include breakpoint(tablet) {
+        height: 670px;
+    }
 
-    // &__inner {
-    //     max-width: $site-width;
-    //     margin: 0 auto;
-    // }
+    @include breakpoint(largedesktop) {
+        height: 870px;
+    }
+    
+    &__slide-wrapper {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transition: all 1.75s ease;
+
+        // default slide positions**********
+
+        // the slide that is always on top
+        &:first-child {
+            z-index: 3;
+            left: 0;
+        }
+
+        // the slide that is always next
+        &:nth-child(2) {
+            z-index: 2;
+            left: -100vw;
+        }
+
+        // the slide that is always in the background 
+        &:last-child {
+            z-index: 1;
+            left: 0;
+        }
+
+        // reset slide positions when previous button is clicked, the animations are different as it is the previous slide we need to transition in.******
+
+        // this slide is alway in the background 
+        &.previous:first-child {
+            z-index: 3;
+        }
+
+        // this slide is always current on screen at top
+        &.previous:nth-child(2) {
+            z-index: 3;
+        }
+
+        // this slide is always the one off screen waiting to slide in
+        &.previous:last-child {
+            z-index: 2;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 280px;
+        // need object fit to retain aspect ratio
+        object-fit: cover;
+        object-position: left;
+        position: relative;
+
+        @include breakpoint(tablet) {
+            height: 670px;
+            position: absolute;
+        }
+
+        @include breakpoint(largedesktop) {
+            height: 870px;
+        }
+    }
 
     &__content-box {
         background: white;
-        padding: 20px;
+        padding: 30px;
         position: relative;
         margin-top: -4px;
 
         @include breakpoint(tablet) {
             position: absolute;
             top: 100px;
-            right: 100px;
+            right: 130px;
             margin-top: 0;
             padding: 40px;
             max-width: 430px;
@@ -88,14 +138,18 @@
     }    
 }
 
+// style next and previous arrow buttons ****
+
 .slider__arrow--prev {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 24%;
+    transform: translateY(-24%);
     left: 0;
+    z-index: 15;
 
     @include breakpoint(tablet) {
         top: 50%;
+        transform: translateY(-50%);
     }
 
     // overwrite some of main default styles to be custom to this component
@@ -111,12 +165,14 @@
 
 .slider__arrow--next {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 24%;
+    transform: translateY(-24%);
     right: 0;
+    z-index: 15;
 
     @include breakpoint(tablet) {
         top: 50%;
+        transform: translateY(-50%);
     }
 
     // overwrite some of main default styles to be custom to this component
@@ -126,57 +182,6 @@
 
         @include breakpoint(tablet) {
             padding: 32px;
-        }
-    }
-}
-
-
-.slider {
-    max-width: 100%;
-    position: relative;
-    // margin: auto;
-    // max-height: 870px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    @include breakpoint(tablet) {
-        // padding: 78px;
-    }
-
-
-    &__default-fallback {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        min-height: 870px;    
-        z-index: -1;
-
-        img {
-            height: 100%;
-    overflow: hidden;
-    max-height: 668px;
-        }
-    }
-}
-
-/* Hide the images by default */ /* maybe dont need to */
-.slide {
-    display: none;
-
-
-
-    &__image {
-        height: 100%;
-    overflow: hidden;
-    max-height: 200px;
-        // max-height: 870px;
-
-        @include breakpoint(tablet) {
-            max-height: 670px;
-        }
-    
-        @include breakpoint(largedesktop) {
-            max-height: 870px;
         }
     }
 }
