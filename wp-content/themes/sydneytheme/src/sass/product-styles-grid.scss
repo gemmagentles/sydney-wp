@@ -1,0 +1,160 @@
+.product-styles-grid {
+
+    &__heading {
+        text-align: center;
+        font-weight: 300;
+        padding-bottom: 40px;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 84px;
+        }
+    }
+
+    &__wrapper {    
+        max-width: $site-width;
+        margin: 55px auto 54px;
+
+
+        @include breakpoint(tablet) {
+            margin: 80px auto 100px;
+        }
+
+        @include breakpoint(desktop) {
+            margin: 155px auto 130px;    
+        }
+    }
+
+    &__container {
+
+        @include breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        @include breakpoint(desktop) {
+            grid-gap: 40px;
+        }
+    }
+
+    &__image-container {
+        position: relative;
+        // stop image on hover growing outside of the container to create zoom effect.
+        overflow: hidden;
+        max-height: 380px;
+
+        @include breakpoint(tablet) {
+            max-height: 100%;
+        }
+    }
+
+    // when the image gets hovered over both image and title should have hover effect.
+    &__image-link {
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: $primary-color;
+                opacity: 0;
+                transition: opacity 2s ease;
+                z-index: 1;
+            }
+            @include breakpoint(tablet) {
+                &:hover:after { opacity: 0.9; }
+            }   
+
+        &:hover,
+        &:focus {
+            @include breakpoint(tablet) {
+                .product-styles-grid__image--title {
+                    opacity: 1;
+                }
+                .product-styles-grid__image {
+                    transform: scale(1.1);
+                }   
+            }
+        } 
+    }
+
+    &__image {
+        width: 100%;
+
+        // make animation of zoom in on hover ease when in and out.
+        transition: transform 2s ease;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 5px;
+            background-color: $primary-color;
+            // stop line going full with under arrow
+            width: 100%;
+            bottom: 0;
+        }
+        
+        &--title {
+            color: white;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 1s ease;
+            z-index: 2;
+            font-size: 16px;
+            letter-spacing: 1.19px;
+
+            @include breakpoint(tablet) {
+                font-size: 1.500em; // 24px
+            }
+
+            // underline
+            &::after {
+                content: "";
+                position: absolute;
+                height: 5px;
+                border-bottom: 2px solid white;
+                // stop line going full with under arrow
+                width: calc(100% - 20px);
+                bottom: 0;
+                right: 20px;
+            }
+        }
+
+        &--title-arrow {
+            padding-left: 10px;
+        }
+        
+    }
+
+    &__title-link {
+        font-size: 1.125em; // 18px
+        color: $font-color;
+        text-decoration: none;
+        font-family: $primary-font-family;
+        font-weight: 300;
+        margin-top: 54px;
+        margin-bottom: 54px;
+        display: block;
+        text-align: center;
+        
+        @include breakpoint(tablet) {
+            font-size: 1.500em; // 24px
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(desktop) {
+            font-size: 2em; // 32px
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}

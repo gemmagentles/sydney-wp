@@ -8,7 +8,7 @@
     padding: 20px;
     background: white;
     font-size: 0.875em;
-    font-family: $main-font-family;
+    font-family: $primary-font-family;
 
     @include breakpoint(desktop) {
         font-size: 1em;
