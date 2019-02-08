@@ -20,7 +20,7 @@
 
       <div class="slider__content-box">
           <span class="subtitle"><?php echo $subheading; ?></span>
-          <h2 class="slider__content-box--heading"><?php echo $heading; ?></h2>
+          <h1 class="slider__content-box--heading"><?php echo $heading; ?></h1>
           <p class="slider__content-box--paragraph"><?php echo $paragraph; ?></p>
           <button class="sydney-button__with-icon" onclick="location.href='<?php echo $link; ?>'" type="button">
           <?php echo $linkText; ?> <img class="sydney-button__with-icon--icon"src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></button>

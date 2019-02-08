@@ -1,5 +1,6 @@
 @import 'header.scss';
 @import 'slider.scss';
+@import 'product-styles-grid.scss';
 @import 'product-grid.scss';
 @import 'newsletter-signup.scss';
 @import 'footer.scss';
@@ -29,7 +30,7 @@ TYPOGRAPHY
 .subtitle {
     color: $primary-color;
     text-transform: uppercase;
-    font-family: $main-font-family;
+    font-family: $primary-font-family;
     font-size: 10px;
     position: relative;
 
@@ -63,17 +64,16 @@ h3,
 h4,
 h5 {
     color: $font-color;
-    font-family: $main-font-family;
+    font-family: $primary-font-family;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 24px;
-    font-family: $main-font-family;
-    color: $font-color;
+    font-size: 1.500em; // 24px
+    font-family: $primary-font-family;
 
     @include breakpoint(tablet) {
-        font-size: 32px;
+        font-size: 2em; // 32px
     }
 
     @include breakpoint(desktop) {
@@ -87,7 +87,7 @@ h2 {
 
 p {
     color: $font-color;
-    font-family: $main-font-family;
+    font-family: $primary-font-family;
     font-size: 12px;
     line-height: 1.6;
     font-weight: 300;

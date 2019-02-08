@@ -7,6 +7,12 @@
 		</section>
 		<!-- /Slider -->
 
+		<!-- Product Styles Grid -->
+		<section>
+			<?php include 'partials/product-styles-grid.php'; ?> 		
+		</section>
+		<!-- /Product Styles Grid -->
+
 		<!-- Product Grid -->
 		<section>
 			<?php include 'partials/product-grid.php'; ?> 		
