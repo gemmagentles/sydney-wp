@@ -7,11 +7,11 @@
 		</section>
 		<!-- /Slider -->
 
-		<!-- Product Styles Grid -->
+		<!-- Card Grid -->
 		<section>
-			<?php include 'partials/product-styles-grid.php'; ?> 		
+			<?php include 'partials/card-grid.php'; ?> 		
 		</section>
-		<!-- /Product Styles Grid -->
+		<!-- /Card Grid -->
 
 		<!-- Product Grid -->
 		<section>
