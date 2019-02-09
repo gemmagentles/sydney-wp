@@ -19,16 +19,18 @@ SIZES
 TYPOGRAPHY
 *********************/
 .header {
-  display: flex;
-  max-width: 1552px;
-  margin: 0 auto;
-  padding: 20px;
-  background: white;
   font-size: 0.875em;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3); }
   @media (min-width: 70em) {
     .header {
       font-size: 1em; } }
+  .header__wrapper {
+    display: flex;
+    max-width: 1552px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white; }
 
 .logo {
   color: #EB0029;
@@ -169,6 +171,28 @@ TYPOGRAPHY
 @keyframes slidein {
   from {
     left: -100%; } }
+
+.centered-text__wrapper {
+  max-width: 1552px;
+  margin: 0 auto;
+  text-align: center; }
+
+.centered-text__container {
+  max-width: 700px;
+  margin: 0 auto; }
+
+.centered-text__heading {
+  font-weight: 300;
+  padding: 60px 20px 45px; }
+  @media (min-width: 48em) {
+    .centered-text__heading {
+      padding: 82px 20px 72px; } }
+  @media (min-width: 70em) {
+    .centered-text__heading {
+      padding: 140px 20px 110px; } }
+  @media (min-width: 87em) {
+    .centered-text__heading {
+      padding: 160px 0 140px 0; } }
 
 .slider {
   max-width: 100%;
@@ -327,43 +351,46 @@ TYPOGRAPHY
       .slider__arrow--next .sydney-button__with-icon {
         padding: 32px; } }
 
-.product-styles-grid__heading {
+.card-grid__heading {
   text-align: center;
   font-weight: 300;
-  padding-bottom: 40px; }
+  padding: 55px 0 40px; }
   @media (min-width: 48em) {
-    .product-styles-grid__heading {
-      padding-bottom: 84px; } }
-
-.product-styles-grid__wrapper {
-  max-width: 1552px;
-  margin: 55px auto 54px; }
-  @media (min-width: 48em) {
-    .product-styles-grid__wrapper {
-      margin: 80px auto 100px; } }
+    .card-grid__heading {
+      padding: 80px 0 84px; } }
   @media (min-width: 70em) {
-    .product-styles-grid__wrapper {
-      margin: 155px auto 130px; } }
+    .card-grid__heading {
+      padding: 155px 0 84px; } }
+
+.card-grid__wrapper {
+  max-width: 1552px;
+  margin: 0 auto 54px; }
+  @media (min-width: 48em) {
+    .card-grid__wrapper {
+      margin: 0 auto 100px; } }
+  @media (min-width: 70em) {
+    .card-grid__wrapper {
+      margin: 0 auto 130px; } }
 
 @media (min-width: 48em) {
-  .product-styles-grid__container {
+  .card-grid__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px; } }
 
 @media (min-width: 70em) {
-  .product-styles-grid__container {
+  .card-grid__container {
     grid-gap: 40px; } }
 
-.product-styles-grid__image-container {
+.card-grid__image-container {
   position: relative;
   overflow: hidden;
   max-height: 380px; }
   @media (min-width: 48em) {
-    .product-styles-grid__image-container {
+    .card-grid__image-container {
       max-height: 100%; } }
 
-.product-styles-grid__image-link:after {
+.card-grid__image-link:after {
   content: "";
   display: block;
   position: absolute;
@@ -377,26 +404,26 @@ TYPOGRAPHY
   z-index: 1; }
 
 @media (min-width: 48em) {
-  .product-styles-grid__image-link:hover:after {
+  .card-grid__image-link:hover:after {
     opacity: 0.9; } }
 
 @media (min-width: 48em) {
-  .product-styles-grid__image-link:hover .product-styles-grid__image--title, .product-styles-grid__image-link:focus .product-styles-grid__image--title {
+  .card-grid__image-link:hover .card-grid__image--title, .card-grid__image-link:focus .card-grid__image--title {
     opacity: 1; }
-  .product-styles-grid__image-link:hover .product-styles-grid__image, .product-styles-grid__image-link:focus .product-styles-grid__image {
+  .card-grid__image-link:hover .card-grid__image, .card-grid__image-link:focus .card-grid__image {
     transform: scale(1.1); } }
 
-.product-styles-grid__image {
+.card-grid__image {
   width: 100%;
   transition: transform 2s ease; }
-  .product-styles-grid__image:before {
+  .card-grid__image:before {
     content: "";
     position: absolute;
     height: 5px;
     background-color: #EB0029;
     width: 100%;
     bottom: 0; }
-  .product-styles-grid__image--title {
+  .card-grid__image--title {
     color: white;
     text-transform: uppercase;
     position: absolute;
@@ -409,9 +436,9 @@ TYPOGRAPHY
     font-size: 16px;
     letter-spacing: 1.19px; }
     @media (min-width: 48em) {
-      .product-styles-grid__image--title {
+      .card-grid__image--title {
         font-size: 1.500em; } }
-    .product-styles-grid__image--title::after {
+    .card-grid__image--title::after {
       content: "";
       position: absolute;
       height: 5px;
@@ -419,10 +446,10 @@ TYPOGRAPHY
       width: calc(100% - 20px);
       bottom: 0;
       right: 20px; }
-  .product-styles-grid__image--title-arrow {
+  .card-grid__image--title-arrow {
     padding-left: 10px; }
 
-.product-styles-grid__title-link {
+.card-grid__title-link {
   font-size: 1.125em;
   color: #424445;
   text-decoration: none;
@@ -433,13 +460,13 @@ TYPOGRAPHY
   display: block;
   text-align: center; }
   @media (min-width: 48em) {
-    .product-styles-grid__title-link {
+    .card-grid__title-link {
       font-size: 1.500em;
       margin-bottom: 0; } }
   @media (min-width: 70em) {
-    .product-styles-grid__title-link {
+    .card-grid__title-link {
       font-size: 2em; } }
-  .product-styles-grid__title-link:hover, .product-styles-grid__title-link:focus {
+  .card-grid__title-link:hover, .card-grid__title-link:focus {
     text-decoration: underline; }
 
 .product-grid {
@@ -854,17 +881,17 @@ h5 {
   font-family: "Roboto", sans-serif;
   font-weight: bold; }
 
-h2 {
+h2, h1 {
   font-size: 1.500em;
   font-family: "Roboto", sans-serif; }
   @media (min-width: 48em) {
-    h2 {
+    h2, h1 {
       font-size: 2em; } }
   @media (min-width: 70em) {
-    h2 {
+    h2, h1 {
       font-size: 46px; } }
   @media (min-width: 87em) {
-    h2 {
+    h2, h1 {
       font-size: 3.250em; } }
 
 p {
@@ -892,6 +919,7 @@ BUTTONS
   color: white;
   padding: 14px;
   width: 30%;
+  transition: background-color 0.7s ease;
   letter-spacing: 1px;
   font-size: 12px;
   line-height: 1.6;
@@ -917,6 +945,7 @@ BUTTONS
   left: 50%;
   transform: translateX(-50%);
   background: #EB0029;
+  transition: background-color 0.7s ease;
   color: white;
   padding: 14px 48px 14px 36px;
   letter-spacing: 1.2px;
