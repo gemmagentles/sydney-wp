@@ -1,26 +1,30 @@
-.product-styles-grid {
+.card-grid {
 
     &__heading {
         text-align: center;
         font-weight: 300;
-        padding-bottom: 40px;
+        padding: 55px 0 40px;
 
         @include breakpoint(tablet) {
-            padding-bottom: 84px;
+            padding: 80px 0 84px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 155px 0 84px;
         }
     }
 
     &__wrapper {    
         max-width: $site-width;
-        margin: 55px auto 54px;
+        margin: 0 auto 54px;
 
 
         @include breakpoint(tablet) {
-            margin: 80px auto 100px;
+            margin: 0 auto 100px;
         }
 
         @include breakpoint(desktop) {
-            margin: 155px auto 130px;    
+            margin: 0 auto 130px;    
         }
     }
 
@@ -70,10 +74,10 @@
         &:hover,
         &:focus {
             @include breakpoint(tablet) {
-                .product-styles-grid__image--title {
+                .card-grid__image--title {
                     opacity: 1;
                 }
-                .product-styles-grid__image {
+                .card-grid__image {
                     transform: scale(1.1);
                 }   
             }
@@ -95,6 +99,8 @@
             width: 100%;
             bottom: 0;
         }
+
+        
         
         &--title {
             color: white;

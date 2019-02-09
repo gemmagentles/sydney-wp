@@ -14,32 +14,33 @@
 <div class="wrapper">
 
     <header class="header clear" role="banner">
+        <div class="header__wrapper">
+            <a class="header__logo" href="<?php echo home_url(); ?>">
+                <img src="<?php the_field('brand_logo', 'option'); ?>" alt="Brand" class="logo">
+            </a>
 
-        <a class="header__logo" href="<?php echo home_url(); ?>">
-            <img src="<?php the_field('brand_logo', 'option'); ?>" alt="Brand" class="logo">
-        </a>
-
-        <div class="nav__hamburger-icon" id="hamburger">
-            <div class="hamburger-bar1"></div>
-            <div class="hamburger-bar2"></div>
-            <div class="hamburger-bar3"></div>
-        </div>
-        <nav class="nav" role="navigation">
-            <?php html5blank_nav(); ?>
-            <div class ="social">
-                <div class="line"></div>
-
-                <a class="nav__link" href="<?php the_field('facebook_url', 'option'); ?>">
-                    <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook" title="Facebook" />
-                </a>
-
-                <a class="nav__link" href="<?php the_field('twitter_url', 'option'); ?>">
-                    <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Twitter" title="Twitter" />
-                </a>
-
-                <a class="nav__link" href="<?php the_field('instagram_url', 'option'); ?>">
-                    <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram" title="Instagram" />
-                </a>
+            <div class="nav__hamburger-icon" id="hamburger">
+                <div class="hamburger-bar1"></div>
+                <div class="hamburger-bar2"></div>
+                <div class="hamburger-bar3"></div>
             </div>
-        </nav>
+            <nav class="nav" role="navigation">
+                <?php html5blank_nav(); ?>
+                <div class ="social">
+                    <div class="line"></div>
+
+                    <a class="nav__link" href="<?php the_field('facebook_url', 'option'); ?>">
+                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook" title="Facebook" />
+                    </a>
+
+                    <a class="nav__link" href="<?php the_field('twitter_url', 'option'); ?>">
+                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Twitter" title="Twitter" />
+                    </a>
+
+                    <a class="nav__link" href="<?php the_field('instagram_url', 'option'); ?>">
+                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram" title="Instagram" />
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>

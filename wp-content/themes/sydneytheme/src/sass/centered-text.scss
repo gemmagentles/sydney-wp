@@ -1,0 +1,30 @@
+.centered-text {
+
+    &__wrapper {
+        max-width: $site-width;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    &__heading {
+        font-weight: 300;
+        padding: 60px 20px 45px;
+
+        @include breakpoint(tablet) {
+            padding: 82px 20px 72px;
+        }
+    
+        @include breakpoint(desktop) {
+            padding: 140px 20px 110px;
+        }
+    
+        @include breakpoint(largedesktop) {
+            padding: 160px 0 140px 0;
+        }
+    }
+}
