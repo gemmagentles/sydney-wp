@@ -194,6 +194,61 @@ TYPOGRAPHY
     .centered-text__heading {
       padding: 160px 0 140px 0; } }
 
+.price {
+  display: none !important; }
+
+.products {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 370px;
+  justify-content: center;
+  display: grid; }
+  @media (min-width: 48em) {
+    .products {
+      max-width: 100%;
+      margin: 0 30px 50px 30px;
+      grid-template-columns: auto auto;
+      grid-gap: 20px; } }
+  @media (min-width: 50em) {
+    .products {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px; } }
+  @media (min-width: 87em) {
+    .products {
+      display: grid;
+      grid-template-columns: auto auto auto auto; } }
+
+.attachment-woocommerce_thumbnail {
+  border: 1px solid #C7C7C7;
+  width: 100%;
+  max-width: 270px;
+  height: auto; }
+  @media (min-width: 48em) {
+    .attachment-woocommerce_thumbnail {
+      max-width: 354px; } }
+
+.woocommerce-loop-product__title {
+  font-size: 1.125em;
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 20px 0 40px; }
+  @media (min-width: 48em) {
+    .woocommerce-loop-product__title {
+      font-size: 1.3em;
+      padding: 20px 0 34px; } }
+  @media (min-width: 70em) {
+    .woocommerce-loop-product__title {
+      font-size: 1.500em; } }
+
+.woocommerce-loop-product__link {
+  text-decoration: none; }
+
+.button {
+  display: none;
+  visibility: hidden; }
+
 .slider {
   max-width: 100%;
   position: relative;
@@ -510,31 +565,6 @@ TYPOGRAPHY
       .product-grid__products {
         display: grid;
         grid-template-columns: auto auto auto auto; } }
-  .product-grid .attachment-woocommerce_thumbnail {
-    border: 1px solid #C7C7C7;
-    width: 100%;
-    max-width: 270px;
-    height: auto; }
-    @media (min-width: 48em) {
-      .product-grid .attachment-woocommerce_thumbnail {
-        max-width: 354px; } }
-  .product-grid .woocommerce-loop-product__title {
-    font-size: 1.125em;
-    font-weight: 300;
-    line-height: 1.4;
-    padding: 20px 0 40px; }
-    @media (min-width: 48em) {
-      .product-grid .woocommerce-loop-product__title {
-        font-size: 1.3em;
-        padding: 20px 0 34px; } }
-    @media (min-width: 70em) {
-      .product-grid .woocommerce-loop-product__title {
-        font-size: 1.500em; } }
-  .product-grid .woocommerce-loop-product__link {
-    text-decoration: none; }
-  .product-grid .button {
-    display: none;
-    visibility: hidden; }
 
 @media (min-width: 70em) {
   .left-full-width-bg,

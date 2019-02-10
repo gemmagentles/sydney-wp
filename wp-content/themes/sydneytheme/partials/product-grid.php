@@ -20,6 +20,6 @@
                 wp_reset_postdata();
             ?>
         </ul><!--/.products-->
-        <button class="sydney-button__with-icon">View All <img class="sydney-button__with-icon--icon"src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></button>
+        <button class="sydney-button__with-icon" onclick="location.href='./products'" type="button">View All <img class="sydney-button__with-icon--icon"src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></button>
     </div>
 </div>

@@ -444,4 +444,85 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
+/*------------------------------------*\
+    Custom Widgets
+\*------------------------------------*/
+
+
+function custom_filter_widgets_area_init() {
+    register_sidebar( array(
+      'name' => 'Filter Widgets Area',
+      'id' => 'filter_widgets_area',
+      'before_widget' => '<aside>',
+      'after_widget' => '</aside>',
+      'before_title' => '<h3 class="widget-title">',
+      'after_title' => '</h3>',
+    ));
+  }
+  
+  add_action ( 'widgets_init', 'custom_filter_widgets_area_init');
+
+/*------------------------------------*\
+    Custom WooCommerce Snippets area
+\*------------------------------------*/
+
+add_theme_support('woocommerce'); //allows for WooCommerce hooks to be used.
+
+// REMOVES
+// store front page // archive-product.php // all products
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ); // Removes results number (not part of sydney/vernon design)
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 ); // Removes default sort on products/shop page (not part of sydney/vernon design)
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+
+// single product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+// ADDS
+// store front page // archive-product.php // all products
+add_action( 'woocommerce_before_shop_loop', 'products_page_heading_action', 1 );
+add_action( 'woocommerce_before_shop_loop', 'filter_widget_area_action', 15 );
+add_action( 'woocommerce_shop_loop_item_title', 'product_collection_block_action', 1 );
+//remove all WooCommerce Styles
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+// single product page
+add_action( 'woocommerce_single_product_summary', 'product_collection_block_action', 1 );
+add_action( 'woocommerce_single_product_summary', 'product_specs_block_action', 30 );
+add_action( 'woocommerce_after_single_product_summary', 'pdf_block_action', 5 );
+
+// FUNCTIONS
+// store front page // archive-product.php // all products
+function products_page_heading_action() {
+    get_template_part('partials/centered-text');
+  }
+
+function filter_widget_area_action() {
+  get_template_part('partials/filter-widget-area');
+}
+
+function new_loop_shop_per_page( $cols ) {
+    // $cols contains the current number of products per page based on the value stored on Options -> Reading
+    // Return the number of products you wanna show per page.
+    $cols = 16;
+    return $cols;
+  }
+
+// single product page
+function product_collection_block_action() {
+  get_template_part('partials/custom-product-collection-block');
+}
+function product_specs_block_action() {
+    get_template_part('partials/custom-product-specs-block');
+  }
+function pdf_block_action() {
+  get_template_part('partials/pdf-block');
+}
+
 ?>
