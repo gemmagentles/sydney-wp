@@ -11,6 +11,7 @@ COLOURS
 /* grey */
 /* grey */
 /* dark grey */
+/* light grey */
 /* grey */
 /*********************
 SIZES
@@ -194,6 +195,9 @@ TYPOGRAPHY
     .centered-text__heading {
       padding: 160px 0 140px 0; } }
 
+.product-filter_wrapper {
+  background: #EB0029; }
+
 .price {
   display: none !important; }
 
@@ -219,6 +223,57 @@ TYPOGRAPHY
     .products {
       display: grid;
       grid-template-columns: auto auto auto auto; } }
+  .products__subheading {
+    font-size: 0.875em;
+    padding-top: 20px; }
+
+ul.page-numbers {
+  display: flex;
+  margin: 116px auto;
+  max-width: 1152px;
+  justify-content: center;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: #767676;
+  font-size: 1em;
+  font-weight: 300; }
+  @media (min-width: 48em) {
+    ul.page-numbers {
+      font-size: 1.500em; } }
+
+.page-numbers li span {
+  background-color: #EB0029;
+  padding: 20px;
+  color: white; }
+
+a.page-numbers {
+  color: #767676;
+  text-decoration: none;
+  padding: 0 20px; }
+  a.page-numbers:hover, a.page-numbers:focus, a.page-numbers:active {
+    background-color: #EB0029;
+    padding: 20px;
+    color: white; }
+
+.next.page-numbers {
+  visibility: hidden; }
+  .next.page-numbers::after {
+    content: "Next";
+    padding-left: 20px;
+    visibility: visible; }
+
+.prev.page-numbers {
+  visibility: hidden; }
+  .prev.page-numbers::before {
+    content: "Prev";
+    padding-right: 20px;
+    visibility: visible; }
+
+a.prev.page-numbers:hover, a.prev.page-numbers:active,
+a.next.page-numbers:hover,
+a.next.page-numbers:active {
+  text-decoration: underline;
+  color: #767676; }
 
 .attachment-woocommerce_thumbnail {
   border: 1px solid #C7C7C7;
@@ -231,13 +286,13 @@ TYPOGRAPHY
 
 .woocommerce-loop-product__title {
   font-size: 1.125em;
-  font-weight: 300;
   line-height: 1.4;
-  padding: 20px 0 40px; }
+  padding: 4px 0 40px;
+  font-weight: normal; }
   @media (min-width: 48em) {
     .woocommerce-loop-product__title {
       font-size: 1.3em;
-      padding: 20px 0 34px; } }
+      padding: 4px 0 34px; } }
   @media (min-width: 70em) {
     .woocommerce-loop-product__title {
       font-size: 1.500em; } }
