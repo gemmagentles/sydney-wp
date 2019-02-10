@@ -491,7 +491,8 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * Change number of products that are displayed per page (shop page)
  */
 add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
+// remove page default heading 
+add_filter( 'woocommerce_show_page_title' , 'woo_hide_page_title' );
 // single product page
 add_action( 'woocommerce_single_product_summary', 'product_collection_block_action', 1 );
 add_action( 'woocommerce_single_product_summary', 'product_specs_block_action', 30 );
@@ -505,6 +506,11 @@ function products_page_heading_action() {
 
 function filter_widget_area_action() {
   get_template_part('partials/filter-widget-area');
+}
+
+// remove page default heading 
+function woo_hide_page_title() {
+	return false;	
 }
 
 function new_loop_shop_per_page( $cols ) {
