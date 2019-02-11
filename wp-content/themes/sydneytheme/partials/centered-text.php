@@ -2,6 +2,6 @@
     <div class="centered-text__container">
         <h1 class="centered-text__heading"><?php the_field( 'centered_text_heading' ); ?></h1>
         <!-- wysiwyg -->
-        <?php the_field( 'centered_text_aparagraph' ); ?>
+        <?php the_field( 'centered_text_paragraph' ); ?>
     </div>
 </div>

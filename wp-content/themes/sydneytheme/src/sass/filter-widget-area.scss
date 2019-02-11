@@ -1,0 +1,109 @@
+.filter-widget {
+    &__wrapper {
+        padding: 0 30px;
+    }
+
+    &__inner {
+        background: $primary-color;
+        margin: 0 auto;
+        max-width: 300px;
+        padding: 28px 18px;
+        border-radius: 30px;
+
+        @include breakpoint(tablet) {
+            padding: 40px;
+            border-radius: 50px;
+        }
+
+        @include breakpoint(smalldesktop) {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap: 22px;
+            padding: 32px;
+            border-radius: 100px;
+            max-width: $filter-width;
+        }
+    }
+
+    &__title {
+        display: none;
+        visibility: hidden;
+    }
+
+    &__dropdown {
+        margin-bottom: 18px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(smalldesktop) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// woocommerce plugin overrides
+
+// dropdown box
+.select2-container--open .select2-dropdown {
+    left: 25px !important;
+    top: 3px;
+}
+
+// .select2-container .select2-container--default {
+//     transition: height 15s ease;
+//     height: 0;
+// }
+
+// .select2-container .select2-container--default .select2-container--open {
+//     height: 100%;
+//     // transition: all 5s ease;
+// }
+
+.select2-dropdown {
+    border: 1px solid $quaternary-color !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: $quaternary-color !important;
+    padding: 15px 25px !important;
+}
+
+.select2-results__option[aria-selected], .select2-results__option[data-selected] {
+    padding: 15px 25px !important;
+}
+
+.select2-results__option {
+    color: $font-color !important;
+    font-family: $primary-font-family !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: 100px !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 48px !important;
+}
+
+// placeholder text
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    font-family: $primary-font-family !important;
+    color: $font-color !important;
+    font-size: 14px !important;
+
+    @include breakpoint(tablet) {
+        font-size: 16px !important;
+    }
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 10px 25px !important;
+}
+
+// arrow
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 10px !important;
+    right: 25px !important;
+}

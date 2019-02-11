@@ -55,42 +55,4 @@
             grid-template-columns: auto auto auto auto;
         }
     }
-
-    // override the woocommerce plugin styles start
-    .attachment-woocommerce_thumbnail {
-        border: 1px solid $quinary-color;
-        width: 100%;
-        max-width: 270px;
-        height: auto;
-
-        @include breakpoint(tablet) {
-            max-width: 354px;
-        }
-    }
-
-    .woocommerce-loop-product__title {
-        font-size: 1.125em; // 18px
-        font-weight: 300;
-        line-height: 1.4;
-        padding: 20px 0 40px;
-
-        @include breakpoint(tablet) {
-            font-size: 1.3em; // 20px
-            padding: 20px 0 34px;
-        }
-
-        @include breakpoint(desktop) {
-            font-size: 1.500em; // 24px
-        }
-    }
-
-    .woocommerce-loop-product__link {
-        text-decoration: none;
-    }
-
-    .button {
-        display: none;
-        visibility: hidden;
-    }
-    // override the woocommerce plugin styles end
 }
