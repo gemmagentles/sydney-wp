@@ -453,9 +453,9 @@ function custom_filter_widgets_area_init() {
     register_sidebar( array(
       'name' => 'Filter Widgets Area',
       'id' => 'filter_widgets_area',
-      'before_widget' => '<aside>',
-      'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
+      'before_widget' => '<div class="filter-widget__dropdown">',
+      'after_widget' => '</div>',
+      'before_title' => '<h3 class="filter-widget__title">',
       'after_title' => '</h3>',
     ));
   }
