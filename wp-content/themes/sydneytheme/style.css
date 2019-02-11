@@ -11,6 +11,7 @@ COLOURS
 /* grey */
 /* grey */
 /* dark grey */
+/* light grey */
 /* grey */
 /*********************
 SIZES
@@ -193,6 +194,186 @@ TYPOGRAPHY
   @media (min-width: 87em) {
     .centered-text__heading {
       padding: 160px 0 140px 0; } }
+
+.filter-widget__wrapper {
+  padding: 0 30px; }
+
+.filter-widget__inner {
+  background: #EB0029;
+  margin: 0 auto;
+  max-width: 300px;
+  padding: 28px 18px;
+  border-radius: 30px; }
+  @media (min-width: 48em) {
+    .filter-widget__inner {
+      padding: 40px;
+      border-radius: 50px; } }
+  @media (min-width: 64em) {
+    .filter-widget__inner {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+      grid-gap: 22px;
+      padding: 32px;
+      border-radius: 100px;
+      max-width: 1387px; } }
+
+.filter-widget__title {
+  display: none;
+  visibility: hidden; }
+
+.filter-widget__dropdown {
+  margin-bottom: 18px; }
+  .filter-widget__dropdown:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 64em) {
+    .filter-widget__dropdown {
+      margin-bottom: 0; } }
+
+.select2-container--open .select2-dropdown {
+  left: 25px !important;
+  top: 3px; }
+
+.select2-dropdown {
+  border: 1px solid #E9E9E9 !important; }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+  background-color: #E9E9E9 !important;
+  padding: 15px 25px !important; }
+
+.select2-results__option[aria-selected], .select2-results__option[data-selected] {
+  padding: 15px 25px !important; }
+
+.select2-results__option {
+  color: #424445 !important;
+  font-family: "Roboto", sans-serif !important; }
+
+.select2-container--default .select2-selection--single {
+  border-radius: 100px !important; }
+
+.select2-container .select2-selection--single {
+  height: 48px !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  font-family: "Roboto", sans-serif !important;
+  color: #424445 !important;
+  font-size: 14px !important; }
+  @media (min-width: 48em) {
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+      font-size: 16px !important; } }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 10px 25px !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 10px !important;
+  right: 25px !important; }
+
+.price {
+  display: none !important; }
+
+.products {
+  list-style: none;
+  margin: 60px auto 0;
+  padding: 0 30px;
+  justify-content: center;
+  display: grid; }
+  @media (min-width: 48em) {
+    .products {
+      max-width: 100%;
+      margin: 60px 30px 50px 30px;
+      grid-template-columns: auto auto;
+      grid-gap: 20px; } }
+  @media (min-width: 50em) {
+    .products {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 30px; } }
+  @media (min-width: 70em) {
+    .products {
+      margin: 135px 30px 100px 30px; } }
+  @media (min-width: 87em) {
+    .products {
+      display: grid;
+      grid-template-columns: auto auto auto auto; } }
+  .products__subheading {
+    font-size: 0.875em;
+    padding-top: 20px; }
+
+ul.page-numbers {
+  display: flex;
+  margin: 116px auto;
+  max-width: 1152px;
+  justify-content: center;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  color: #767676;
+  font-size: 1em;
+  font-weight: 300; }
+  @media (min-width: 48em) {
+    ul.page-numbers {
+      font-size: 1.500em; } }
+
+.page-numbers li span {
+  background-color: #EB0029;
+  padding: 20px;
+  color: white; }
+
+a.page-numbers {
+  color: #767676;
+  text-decoration: none;
+  padding: 0 20px; }
+  a.page-numbers:hover, a.page-numbers:focus, a.page-numbers:active {
+    background-color: #EB0029;
+    padding: 20px;
+    color: white; }
+
+.next.page-numbers {
+  visibility: hidden; }
+  .next.page-numbers::after {
+    content: "Next";
+    padding-left: 20px;
+    visibility: visible; }
+
+.prev.page-numbers {
+  visibility: hidden; }
+  .prev.page-numbers::before {
+    content: "Prev";
+    padding-right: 20px;
+    visibility: visible; }
+
+a.prev.page-numbers:hover, a.prev.page-numbers:active,
+a.next.page-numbers:hover,
+a.next.page-numbers:active {
+  text-decoration: underline;
+  color: #767676; }
+
+.attachment-woocommerce_thumbnail {
+  border: 1px solid #C7C7C7;
+  width: 100%;
+  height: auto; }
+  @media (min-width: 99.5em) {
+    .attachment-woocommerce_thumbnail {
+      width: 356px; } }
+
+.woocommerce-loop-product__title {
+  font-size: 1.125em;
+  line-height: 1.4;
+  padding: 4px 0 40px;
+  font-weight: normal; }
+  @media (min-width: 48em) {
+    .woocommerce-loop-product__title {
+      font-size: 1.3em;
+      padding: 4px 0 34px; } }
+  @media (min-width: 70em) {
+    .woocommerce-loop-product__title {
+      font-size: 1.500em; } }
+
+.woocommerce-loop-product__link {
+  text-decoration: none; }
+
+.button {
+  display: none;
+  visibility: hidden; }
 
 .slider {
   max-width: 100%;
@@ -510,31 +691,6 @@ TYPOGRAPHY
       .product-grid__products {
         display: grid;
         grid-template-columns: auto auto auto auto; } }
-  .product-grid .attachment-woocommerce_thumbnail {
-    border: 1px solid #C7C7C7;
-    width: 100%;
-    max-width: 270px;
-    height: auto; }
-    @media (min-width: 48em) {
-      .product-grid .attachment-woocommerce_thumbnail {
-        max-width: 354px; } }
-  .product-grid .woocommerce-loop-product__title {
-    font-size: 1.125em;
-    font-weight: 300;
-    line-height: 1.4;
-    padding: 20px 0 40px; }
-    @media (min-width: 48em) {
-      .product-grid .woocommerce-loop-product__title {
-        font-size: 1.3em;
-        padding: 20px 0 34px; } }
-    @media (min-width: 70em) {
-      .product-grid .woocommerce-loop-product__title {
-        font-size: 1.500em; } }
-  .product-grid .woocommerce-loop-product__link {
-    text-decoration: none; }
-  .product-grid .button {
-    display: none;
-    visibility: hidden; }
 
 @media (min-width: 70em) {
   .left-full-width-bg,
