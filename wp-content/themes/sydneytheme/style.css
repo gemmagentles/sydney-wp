@@ -387,6 +387,18 @@ TYPOGRAPHY
 .contact-map-wrapper #wpgmza_map {
   float: none !important; }
 
+.sv-pdf__wrapper {
+  max-width: 1552px;
+  margin: 0 auto;
+  padding: 0 30px 60px 30px; }
+  @media (min-width: 48em) {
+    .sv-pdf__wrapper {
+      padding: 100px 105px 120px 130px; } }
+
+.sv-pdf__heading {
+  font-weight: normal;
+  padding: 15px 0; }
+
 .filter-widget__wrapper {
   padding: 0 30px; }
   @media (min-width: 48em) {
