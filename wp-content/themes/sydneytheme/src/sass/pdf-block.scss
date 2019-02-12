@@ -1,0 +1,16 @@
+.sv-pdf {
+    &__wrapper {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: 0 30px 60px 30px;
+
+        @include breakpoint(tablet) {
+            padding: 100px 105px 120px 130px;
+        }
+    }
+
+    &__heading {
+        font-weight: normal;
+        padding: 15px 0;
+    }
+}
