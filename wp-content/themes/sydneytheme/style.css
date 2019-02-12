@@ -483,31 +483,31 @@ TYPOGRAPHY
 .price {
   display: none !important; }
 
-.products {
+.filter-widget__wrapper + .products {
   list-style: none;
   margin: 60px auto 0;
   padding: 0 30px;
   justify-content: center;
   display: grid; }
   @media (min-width: 48em) {
-    .products {
+    .filter-widget__wrapper + .products {
       max-width: 100%;
       margin: 60px 30px 50px 30px;
       grid-template-columns: auto auto;
       grid-gap: 20px; } }
   @media (min-width: 50em) {
-    .products {
+    .filter-widget__wrapper + .products {
       display: grid;
       grid-template-columns: auto auto auto;
       grid-gap: 30px; } }
   @media (min-width: 70em) {
-    .products {
+    .filter-widget__wrapper + .products {
       margin: 135px 30px 100px 30px; } }
   @media (min-width: 87em) {
-    .products {
+    .filter-widget__wrapper + .products {
       display: grid;
       grid-template-columns: auto auto auto auto; } }
-  .products__subheading {
+  .filter-widget__wrapper + .products__subheading {
     font-size: 0.875em;
     padding-top: 20px; }
 
@@ -586,6 +586,34 @@ a.next.page-numbers:active {
 .button {
   display: none;
   visibility: hidden; }
+
+.sv-wrapper .related.products {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 30px 60px 30px; }
+  @media (min-width: 48em) {
+    .sv-wrapper .related.products {
+      max-width: 1552px;
+      padding: 100px 30px 120px 30px; } }
+  @media (min-width: 99.5em) {
+    .sv-wrapper .related.products {
+      padding: 100px 0 120px 0; } }
+  .sv-wrapper .related.products h2 {
+    font-weight: normal;
+    padding: 35px 0 42px; }
+    @media (min-width: 48em) {
+      .sv-wrapper .related.products h2 {
+        padding: 35px 0 82px; } }
+  .sv-wrapper .related.products .products {
+    list-style: none; }
+    @media (min-width: 48em) {
+      .sv-wrapper .related.products .products {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 30px; } }
+    @media (min-width: 64em) {
+      .sv-wrapper .related.products .products {
+        grid-template-columns: auto auto auto auto; } }
 
 .sv-wrapper .product-hero__wrapper {
   background-color: #F7F7F7; }
