@@ -29,7 +29,7 @@ $cardgridheading = get_field('card_grid_heading');
                 <div class="card-grid__image-container">
                     <a class="card-grid__image-link" href="<?php echo $link; ?>">
                         <img class="card-grid__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
-                        <p class="card-grid__image--title">View Products <img class="card-grid__image--title-arrow"src="<?php echo get_template_directory_uri(); ?>/img/icons/right-arrow.svg" alt=""></p>
+                        <p class="card-grid__image--title">View Products</p>
                     </a>
                 </div>
                 <a class="card-grid__title-link" href="<?php echo $link; ?>"><?php echo $title; ?></a>
