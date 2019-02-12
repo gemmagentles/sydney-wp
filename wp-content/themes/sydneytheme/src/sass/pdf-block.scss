@@ -2,15 +2,68 @@
     &__wrapper {
         max-width: $site-width;
         margin: 0 auto;
-        padding: 0 30px 60px 30px;
+        padding: 60px 30px;
 
         @include breakpoint(tablet) {
-            padding: 100px 105px 120px 130px;
+            padding: 200px 105px 160px 50px;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        @include breakpoint(smalldesktop) {
+            padding: 200px 105px 160px 16px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+
+            @include breakpoint(tablet) {
+                font-size: 18px;
+            }
+
+            &.subtitle::after {
+                margin-left: 10px;
+
+                @include breakpoint(tablet) {
+                    margin-left: 20px;
+                }
+            }
         }
     }
 
     &__heading {
         font-weight: normal;
         padding: 15px 0;
+    }
+
+    &__icon {
+        max-width: 150px;
+        margin: 30px 0;
+    }
+
+    &__link {
+        color: $primary-color;
+        font-family: $primary-font-family;
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: 300;
+        text-decoration: none;
+    
+        @include breakpoint(tablet) {
+            font-size: 16px;
+        }
+    
+        @include breakpoint(desktop) {
+            font-size: 18px;
+        }
+    
+        @include breakpoint(largedesktop) {
+            font-size: 20px;
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
