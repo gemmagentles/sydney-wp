@@ -1,0 +1,39 @@
+.sv-wrapper {
+    .related.products {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 0 30px 60px 30px;
+
+        @include breakpoint(tablet) {
+            max-width: $site-width;
+            padding: 100px 30px 120px 30px;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            padding: 100px 0 120px 0;
+        }
+
+        h2 {
+            font-weight: normal;
+            padding: 35px 0 42px;
+
+            @include breakpoint(tablet) {
+                padding: 35px 0 82px;
+            }
+        }
+
+        .products {
+            list-style: none;
+
+            @include breakpoint(tablet) {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 30px;
+            }
+
+            @include breakpoint(smalldesktop) {
+                grid-template-columns: auto auto auto auto;
+            }
+        }
+    }
+}

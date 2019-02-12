@@ -32,15 +32,15 @@ get_header( 'shop' ); ?>
         do_action( 'woocommerce_before_main_content' );
     ?>
 
-    <!-- div.sv-content ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ABP theme changes -->
-    <div class="sv-content">
+    <!-- div.sv-wrapper ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ABP theme changes, this div class should be used when targeting woocommerce features so we keep Sydney/Vernon changes specific -->
+    <div class="sv-wrapper">
         <?php while ( have_posts() ) : the_post(); ?>
 
             <?php wc_get_template_part( 'content', 'single-product' ); ?>
 
         <?php endwhile; // end of the loop. ?>
     </div>
-    <!-- div.sv-content close ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- div.ssv-wrapper close ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
     <?php
         /**
