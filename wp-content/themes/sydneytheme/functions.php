@@ -499,6 +499,8 @@ add_action( 'woocommerce_single_product_summary', 'product_specs_block_action', 
 add_action( 'woocommerce_after_single_product_summary', 'pdf_block_action', 19 );
 add_action( 'woocommerce_before_single_product_summary', 'add_wrapper_div_open', 19 );
 add_action( 'woocommerce_single_product_summary', 'add_wrapper_div_close', 99 );
+add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_open', 19 );
+add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_close', 21 );
 
 // FUNCTIONS
 // store front page // archive-product.php // all products
@@ -524,23 +526,33 @@ function new_loop_shop_per_page( $cols ) {
 
 // single product page
 function product_collection_block_action() {
-  get_template_part('partials/custom-product-collection-block');
+    get_template_part('partials/custom-product-collection-block');
 }
+
 function product_specs_block_action() {
     get_template_part('partials/custom-product-specs-block');
-  }
+}
+
 function pdf_block_action() {
-  get_template_part('partials/pdf-block');
+    get_template_part('partials/pdf-block');
 }
  
 function add_wrapper_div_open() {
-echo '<div class="product-hero__wrapper">';
-echo '<div class="product-hero__inner">';
+    echo '<div class="product-hero__wrapper">';
+    echo '<div class="product-hero__inner">';
 }
  
 function add_wrapper_div_close() {
-echo '</div>';
-echo '</div>';
+    echo '</div>';
+    echo '</div>';
+}
+
+function add_wrapper_summary_div_open() {
+    echo '<div class="related-products__wrapper">';
+}
+     
+function add_wrapper_summary_div_close() {
+    echo '</div>';
 }
 
 ?>

@@ -1,24 +1,70 @@
 .sv-wrapper {
+    .related-products__wrapper {
+        background-color: $secondary-color;
+    }
+
     .related.products {
         max-width: 400px;
         margin: 0 auto;
-        padding: 0 30px 60px 30px;
+        padding: 60px 30px;
 
         @include breakpoint(tablet) {
             max-width: $site-width;
-            padding: 100px 30px 120px 30px;
+            padding: 140px 30px 120px 50px;
+        }
+
+        @include breakpoint(smalldesktop) {
+            padding: 140px 30px 120px 30px;
         }
 
         @include breakpoint(xlargedesktop) {
-            padding: 100px 0 120px 0;
+            padding: 140px 0 120px 0;
+        }
+
+        &::before {
+            content: "Products";
+            position: absolute;
+            top: 95px;
+            color: #EB0029;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+
+
+            @include breakpoint(tablet) {
+                top: 95px;
+                font-size: 18px;
+            }
+        }
+
+        // line
+        &::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            border-bottom: 1px solid #EB0029;
+            width: 58px;
+            top: 100px;
+            left: 124px;
+            max-width: 100px;
+
+
+            @include breakpoint(tablet) {
+                left: 140px;
+            }
+
+            @include breakpoint(xlargedesktop) {
+                left: 110px;
+            }
         }
 
         h2 {
             font-weight: normal;
-            padding: 35px 0 42px;
+            padding: 68px 0 42px;
+            text-transform: capitalize;
 
             @include breakpoint(tablet) {
-                padding: 35px 0 82px;
+                padding: 0 0 82px;
             }
         }
 
