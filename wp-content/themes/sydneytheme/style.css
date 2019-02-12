@@ -179,8 +179,14 @@ TYPOGRAPHY
   text-align: center; }
 
 .centered-text__container {
-  max-width: 810px;
+  max-width: 430px;
   margin: 0 auto; }
+  @media (min-width: 50em) {
+    .centered-text__container {
+      max-width: 560px; } }
+  @media (min-width: 70em) {
+    .centered-text__container {
+      max-width: 810px; } }
 
 .centered-text__heading {
   font-weight: 300;
