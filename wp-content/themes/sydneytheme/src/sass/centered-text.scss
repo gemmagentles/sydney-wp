@@ -7,12 +7,14 @@
     }
 
     &__container {
-        max-width: 700px;
+        // max-width: 700px;
+        max-width: 810px;
         margin: 0 auto;
     }
 
     &__heading {
         font-weight: 300;
+        line-height: 1.4;
         padding: 60px 20px 45px;
 
         @include breakpoint(tablet) {
