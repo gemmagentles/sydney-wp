@@ -1,27 +1,41 @@
 .filter-widget {
     &__wrapper {
         padding: 0 30px;
+
+        @include breakpoint(tablet) {
+            padding: 0 60px;
+        }
+
+        @include breakpoint(laptop) {
+            padding: 0 30px;
+        }
     }
 
     &__inner {
         background: $primary-color;
         margin: 0 auto;
-        max-width: 300px;
         padding: 28px 18px;
         border-radius: 30px;
+        max-width: 302px;
 
         @include breakpoint(tablet) {
             padding: 40px;
             border-radius: 50px;
+            max-width: 100%;
         }
 
-        @include breakpoint(smalldesktop) {
+        @include breakpoint(laptop) {
             display: grid;
             grid-template-columns: auto auto auto auto auto;
-            grid-gap: 22px;
-            padding: 32px;
+            grid-gap: 12px;
+            padding: 18px 18px 21px 18px;
             border-radius: 100px;
             max-width: $filter-width;
+            
+            @include breakpoint(smalldesktop) {
+                grid-gap: 22px;
+                padding: 32px;
+            }
         }
     }
 
@@ -31,13 +45,13 @@
     }
 
     &__dropdown {
-        margin-bottom: 18px;
+            margin-bottom: 18px;
 
-        &:last-child {
+        @include breakpoint(laptop) {
             margin-bottom: 0;
         }
 
-        @include breakpoint(smalldesktop) {
+        &:last-child {
             margin-bottom: 0;
         }
     }
@@ -94,6 +108,10 @@
     font-size: 14px !important;
 
     @include breakpoint(tablet) {
+        font-size: 12px !important;
+    }
+
+    @include breakpoint(desktop) {
         font-size: 16px !important;
     }
 }
@@ -106,4 +124,12 @@
 .select2-container--default .select2-selection--single .select2-selection__arrow {
     top: 10px !important;
     right: 25px !important;
+
+    @include breakpoint(laptop) {
+        right: 15px !important;
+    }
+
+    @include breakpoint(smalldesktop) {
+        right: 25px !important;
+    }
 }
