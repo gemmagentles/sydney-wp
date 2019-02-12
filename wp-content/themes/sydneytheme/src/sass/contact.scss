@@ -1,0 +1,217 @@
+.flex {
+    display: flex;
+  }
+  // contact enquiry section
+  .contact-enquiry {
+    &__wrapper {
+      box-sizing: border-box;
+      font-family: "Roboto";
+      font-weight: 400;
+      flex-direction: column; // row; desktop
+      padding: 10vh 0vw;
+      background-color: #F7F7F7;
+    }
+    &__inner-wrapper {
+      box-sizing: border-box;
+      width: 100%; // 50%; desktop
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 8vw;
+      &:first-child {
+        border: none; // add border @media 1024px
+        padding-bottom: 10vh; // padding set to zero @media 1024px
+      }
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #424445;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: 1.36px;
+      line-height: 35px;
+      // margin: 16px 0;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #424445;
+      font-family: "Roboto";
+      font-size: 14px;
+      letter-spacing: 0.65px;
+      line-height: 24px;
+      margin: 32px 6vw 64px 6vw;
+      box-sizing: border-box;
+      text-align: center;
+      max-width: 512px;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 187px;
+      height: 59px;
+      background-color: #EA0029;
+      color: #FFFFFF;
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 0.99px;
+      line-height: 24px;
+      text-decoration: none;
+      &:after {
+        content: ">";
+        padding-left: 10px;
+      }
+    }
+  }
+  
+  // contact form section
+  .contact-form {
+    &__wrapper {
+      font-family: "Roboto";
+      font-weight: 400;
+      flex-direction: column; // row; desktop
+      padding: 4vh 0vw;
+      margin: 0 8vw;
+      box-sizing: border-box;
+      span {
+          color: #424445;
+        font-size: 16px;
+        letter-spacing: 0.47px;
+        line-height: 24px;
+        display: block;
+      }
+    }
+    &__inner-wrapper {
+      box-sizing: border-box;
+      width: 100%; // 100%; desktop
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      &.form {
+        order: 2;
+        width: 100%;
+        .wpforms-container {
+          width: 100%;
+          padding-right: 0;
+          box-sizing: border-box;
+          .wpforms-field-container {
+            input {
+              height: 75px;
+              margin-bottom: 24px;
+            }
+            input, textarea {
+              color: #424445;
+              border: 3px solid #DEDEDE;
+              padding: 16px;
+              &::placeholder {
+                color: #7C7C7C;
+                font-size: 16px;
+                letter-spacing: 1.14px;
+                line-height: 19px;
+                // padding: 8px;
+              }
+            }
+          }
+          button[id^='wpforms-submit-'] {
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 187px;
+            height: 59px;
+            background-color: #EA0029;
+            color: #FFFFFF;
+            font-family: "Roboto";
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.99px;
+            line-height: 24px;
+            text-decoration: none;
+            padding: 0 24px;
+            margin-top: 24px;
+            &:after {
+              content: ">";
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+      &.content {
+        order: 1;
+        width: 100%;
+      }
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #424445;
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: 1.36px;
+      line-height: 35px;
+      margin: 16px 0 24px 0;
+    }
+    &__content {
+      &--group {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+  
+    // contact enquiry section
+    .contact-enquiry {
+      &__wrapper {
+        flex-direction: row; // column; mobile
+      }
+      &__inner-wrapper {
+        width: 50%; // 100%; desktop
+        &:first-child {
+          border-right: 1px solid rgba(68,66,69,.52); //no border at mobile
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    // contact form section
+    .contact-form {
+      &__wrapper {
+        flex-direction: row; // row; desktop
+        margin: 0 25vw;
+        padding: 10vh 0vw;
+      }
+      &__inner-wrapper {
+        width: 50%; // 100%; desktop
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        &.form {
+          order: 1;
+          width: 66.66667%;
+          .wpforms-container {
+            padding-right: 4vw;
+          }
+        }
+        &.content {
+          order: 2;
+          width: 33.33333%;
+        }
+      }
+    }
+  }
+
+  .contact-map-wrapper {
+    #wpgmza_map {
+        float: none !important;
+    }
+  }
