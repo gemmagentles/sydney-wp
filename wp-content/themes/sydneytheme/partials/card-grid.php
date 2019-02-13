@@ -27,12 +27,12 @@ $cardgridheading = get_field('card_grid_heading');
             
             <div class="card-grid__image-wrapper">
                 <div class="card-grid__image-container">
-                    <a class="card-grid__image-link" href="<?php echo home_url(); ?>/<?php echo $link; ?>">
+                    <a class="card-grid__image-link" href="<?php echo $link; ?>">
                         <img class="card-grid__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
                         <p class="card-grid__image--title">View Products</p>
                     </a>
                 </div>
-                <a class="card-grid__title-link" href="<?php echo home_url(); ?>/<?php echo $link; ?>"><?php echo $title; ?></a>
+                <a class="card-grid__title-link" href="<?php echo $link; ?>"><?php echo $title; ?></a>
             </div>
 
         <?php endwhile; ?>
