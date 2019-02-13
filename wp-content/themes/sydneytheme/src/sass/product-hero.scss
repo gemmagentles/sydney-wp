@@ -52,17 +52,15 @@
             height: auto;
             padding: 30px;
 
-            @include breakpoint(tablet) {
-                // width: 50vh;
-                // padding: 42px 42px 50px 50px;    
+            @include breakpoint(tablet) {  
                 max-width: 480px;
                 padding: 40px;
             }
 
             @include breakpoint(smalldesktop) {
-                width: 70vh;
+                width: 70vw;
                 padding: 0;
-                max-width: none;
+                max-width: 100%;
             }
         }
     }
@@ -169,6 +167,11 @@
             color: $font-color !important;
             font-family: $primary-font-family !important;
             font-size: 1.000em; // 16px
+            max-width: 360px;
+
+            @include breakpoint(desktop) {
+                max-width: 460px;
+            }
         }
     }
 }
