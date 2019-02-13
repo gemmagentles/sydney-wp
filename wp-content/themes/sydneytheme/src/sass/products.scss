@@ -2,8 +2,6 @@
     display: none !important;
 }
 
-
-
 .filter-widget__wrapper + .products {
     list-style: none;
     margin: 60px auto 0;
@@ -142,7 +140,9 @@ a.next.page-numbers {
     visibility: hidden;
 }
 
-
+.woocommerce-product-gallery__image {
+    pointer-events: none;
+}
 
 .woocommerce-info {
     text-align: center !important;

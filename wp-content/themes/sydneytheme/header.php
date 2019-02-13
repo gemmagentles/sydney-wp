@@ -29,15 +29,15 @@
                 <div class ="social">
                     <div class="line"></div>
 
-                    <a class="nav__link" href="<?php the_field('facebook_url', 'option'); ?>">
+                    <a class="nav__link" href="<?php the_field('facebook_url', 'option'); ?>" target="_blank">
                         <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook" title="Facebook" />
                     </a>
 
-                    <a class="nav__link" href="<?php the_field('twitter_url', 'option'); ?>">
+                    <a class="nav__link" href="<?php the_field('twitter_url', 'option'); ?>" target="_blank">
                         <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Twitter" title="Twitter" />
                     </a>
 
-                    <a class="nav__link" href="<?php the_field('instagram_url', 'option'); ?>">
+                    <a class="nav__link" href="<?php the_field('instagram_url', 'option'); ?>" target="_blank">
                         <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram" title="Instagram" />
                     </a>
                 </div>

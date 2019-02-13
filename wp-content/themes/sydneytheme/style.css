@@ -646,6 +646,9 @@ a.next.page-numbers:active {
   display: none;
   visibility: hidden; }
 
+.woocommerce-product-gallery__image {
+  pointer-events: none; }
+
 .woocommerce-info {
   text-align: center !important;
   padding: 20vh 0 !important; }

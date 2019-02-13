@@ -38,7 +38,7 @@ module.exports = {
             host: 'localhost',
             port: '8080',
             // If using local domain for project change this.
-            proxy: 'http://localhost:8888/',
+            proxy: 'http://sydneydev:8888/',
             open: false,
             files: [{
                 match: ['./*.php'],
@@ -77,4 +77,3 @@ module.exports = {
         jquery: 'jQuery'
     },
 };
-

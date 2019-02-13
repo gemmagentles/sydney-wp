@@ -459,7 +459,7 @@ function custom_filter_widgets_area_init() {
       'after_title' => '</h3>',
     ));
   }
-  
+
   add_action ( 'widgets_init', 'custom_filter_widgets_area_init');
 
 /*------------------------------------*\
@@ -485,14 +485,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_before_shop_loop', 'products_page_heading_action', 1 );
 add_action( 'woocommerce_before_shop_loop', 'filter_widget_area_action', 15 );
 add_action( 'woocommerce_shop_loop_item_title', 'product_collection_block_action', 1 );
-//remove all WooCommerce Styles
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
-/**
- * Change number of products that are displayed per page (shop page)
- */
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-// remove page default heading 
-add_filter( 'woocommerce_show_page_title' , 'woo_hide_page_title' );
+
 // single product page
 add_action( 'woocommerce_single_product_summary', 'product_collection_block_action', 1 );
 add_action( 'woocommerce_single_product_summary', 'product_specs_block_action', 30 );
@@ -512,9 +505,9 @@ function filter_widget_area_action() {
   get_template_part('partials/filter-widget-area');
 }
 
-// remove page default heading 
+// remove page default heading
 function woo_hide_page_title() {
-	return false;	
+	return false;
 }
 
 function new_loop_shop_per_page( $cols ) {
@@ -536,12 +529,12 @@ function product_specs_block_action() {
 function pdf_block_action() {
     get_template_part('partials/pdf-block');
 }
- 
+
 function add_wrapper_div_open() {
     echo '<div class="product-hero__wrapper">';
     echo '<div class="product-hero__inner">';
 }
- 
+
 function add_wrapper_div_close() {
     echo '</div>';
     echo '</div>';
@@ -550,9 +543,23 @@ function add_wrapper_div_close() {
 function add_wrapper_summary_div_open() {
     echo '<div class="related-products__wrapper">';
 }
-     
+
 function add_wrapper_summary_div_close() {
     echo '</div>';
 }
+
+//FILTERS
+
+//ignores tags in the related products section.
+add_filter( 'woocommerce_product_related_posts_relate_by_tag', '__return_false' );
+
+//remove all WooCommerce Styles
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+// remove page default heading
+add_filter( 'woocommerce_show_page_title' , 'woo_hide_page_title' );
 
 ?>
