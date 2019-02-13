@@ -11,6 +11,10 @@
         }
 
         @include breakpoint(smalldesktop) {
+            padding: 200px 105px 160px 80px;
+        }
+
+        @include breakpoint(xlargedesktop) {
             padding: 200px 105px 160px 16px;
         }
 
@@ -65,5 +69,9 @@
         &:focus {
             text-decoration: underline;
         }
+    }
+
+    &__left-box {
+        max-width: 390px;
     }
 }

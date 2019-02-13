@@ -399,6 +399,9 @@ TYPOGRAPHY
       grid-template-columns: auto auto; } }
   @media (min-width: 64em) {
     .sv-pdf__wrapper {
+      padding: 200px 105px 160px 80px; } }
+  @media (min-width: 99.5em) {
+    .sv-pdf__wrapper {
       padding: 200px 105px 160px 16px; } }
   .sv-pdf__wrapper .subtitle {
     font-size: 16px; }
@@ -437,6 +440,9 @@ TYPOGRAPHY
       font-size: 20px; } }
   .sv-pdf__link:hover, .sv-pdf__link:focus {
     text-decoration: underline; }
+
+.sv-pdf__left-box {
+  max-width: 390px; }
 
 .filter-widget__wrapper {
   padding: 0 30px;
@@ -758,9 +764,9 @@ a.next.page-numbers:active {
         padding: 40px; } }
     @media (min-width: 64em) {
       .sv-wrapper .woocommerce-product-gallery .wp-post-image {
-        width: 70vh;
+        width: 70vw;
         padding: 0;
-        max-width: none; } }
+        max-width: 100%; } }
 
 .sv-product-hero-content {
   grid-column: 1;
@@ -833,7 +839,11 @@ a.next.page-numbers:active {
   .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size {
     color: #424445 !important;
     font-family: "Roboto", sans-serif !important;
-    font-size: 1.000em; }
+    font-size: 1.000em;
+    max-width: 360px; }
+    @media (min-width: 70em) {
+      .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size {
+        max-width: 460px; } }
 
 .slider {
   max-width: 100%;
