@@ -85,6 +85,20 @@
         }
     }
 
+    .current-menu-item {
+        @include breakpoint(tablet) {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 5px;
+                border-bottom: 2px solid $primary-color;
+                width: 100%;
+                top: 16px;
+                left: 0;
+            }
+        }
+    }
+
     a {
       color: $font-color;
       text-decoration: none;

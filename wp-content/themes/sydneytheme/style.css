@@ -80,6 +80,15 @@ TYPOGRAPHY
         width: 100%;
         top: 16px;
         left: 0; } }
+  @media (min-width: 48em) {
+    .nav .current-menu-item::after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      border-bottom: 2px solid #EB0029;
+      width: 100%;
+      top: 16px;
+      left: 0; } }
   .nav a {
     color: #424445;
     text-decoration: none;
