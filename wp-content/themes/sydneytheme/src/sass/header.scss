@@ -3,9 +3,10 @@
 
 .header {
     font-size: 0.875em;
-    font-family: $primary-font-family;
+    font-family: $secondary-font-family;
     box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.3);
-
+    letter-spacing: 0.8px;
+    
     @include breakpoint(desktop) {
         font-size: 1em;
     }
