@@ -1,16 +1,20 @@
+@import 'pixel-to-em.scss';
 @import 'header.scss';
-@import 'centered-text.scss';
-@import 'contact.scss';
-@import 'pdf-block.scss';
-@import 'filter-widget-area.scss';
-@import 'products.scss';
-@import 'related-products.scss';
-@import 'product-hero.scss';
 @import 'slider.scss';
-@import 'card-grid.scss';
+@import 'centered-text.scss';
+@import 'filter-widget-area.scss';
 @import 'product-grid.scss';
+@import 'card-grid.scss';
+@import 'product-hero.scss';
+@import 'products.scss';
+@import 'pdf-block.scss';
+@import 'related-products.scss';
 @import 'newsletter-signup.scss';
+@import 'contact-enquiry-columns.scss';
+@import 'contact-form.scss';
+@import 'map.scss';
 @import 'footer.scss';
+
 
 * {
     margin: 0;
