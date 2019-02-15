@@ -154,6 +154,19 @@
         }
     }
 
+    .variable-items-wrapper [data-wvstooltip] {
+        &:before {
+            background: $primary-color;
+            border-radius: 8px;
+            font-family: $primary-font-family;
+            letter-spacing: 0.8px;
+            font-weight: 300;
+        }
+        &:after {
+            border-top: 5px solid $primary-color;
+        }
+    }
+
     .sv-product-specs {
         &__title {
             color: $primary-color;
