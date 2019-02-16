@@ -15,20 +15,20 @@
                 <?php while ( have_rows( 'contact_information_inner' ) ) : the_row(); ?>
               <div class="contact-form__content">
                 <h3 class="contact-form__title"><?php the_sub_field( 'contact_title' ); ?></h3>
-                <div class="contact-form__content--group">
-                    <span><?php the_sub_field( 'contact_address' ); ?></span>
-                    <span>
-                      <?php the_sub_field( 'contact_city' ); ?>,
-                      <?php the_sub_field( 'contact_province' ); ?>
-                      <?php the_sub_field( 'contact_postal_code' ); ?>
-                  </span>
-                  <span><?php the_sub_field( 'contact_country' ); ?></span>
+                <div class="contact-form__content--address">
+                  <p class="contact-form__paragraph"><?php the_sub_field( 'contact_address' ); ?></p>
+                  <p class="contact-form__paragraph">
+                    <?php the_sub_field( 'contact_city' ); ?>,
+                    <?php the_sub_field( 'contact_province' ); ?>
+                    <?php the_sub_field( 'contact_postal_code' ); ?>
+                  </p>
+                  <p class="contact-form__paragraph"><?php the_sub_field( 'contact_country' ); ?></p>
                 </div>
-                <div class="contact-form__content--group">
-                    <span><?php the_sub_field( 'contact_phone_number' ); ?></span>
+                <div class="contact-form__content--phone">
+                  <p class="contact-form__paragraph"><?php the_sub_field( 'contact_phone_number' ); ?></p>
                 </div>
-                <div class="contact-form__content--group">
-                    <span><?php the_sub_field( 'contact_email' ); ?></span>
+                <div class="contact-form__content--email">
+                  <a class="contact-form__email-link" href="mailto:<?php the_sub_field( 'contact_email' ); ?>" target="_top"><?php the_sub_field( 'contact_email' ); ?></a>
                 </div>
               </div>
                 <?php endwhile; ?>
