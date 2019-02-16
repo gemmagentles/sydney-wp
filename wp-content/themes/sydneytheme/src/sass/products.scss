@@ -1,7 +1,3 @@
-.price {
-    display: none !important;
-}
-
 .filter-widget__wrapper + .products {
     list-style: none;
     margin: 60px auto 0;
@@ -38,6 +34,11 @@
 }
 
 // override the woocommerce plugin styles start
+
+.price {
+    display: none !important;
+}
+
 // style pagination
 ul.page-numbers {
     display: flex;

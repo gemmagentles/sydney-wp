@@ -124,6 +124,7 @@
         position: relative;
       }
 
+      // need to add svg images as data if they go in as a background and need to be compiled by sass and webpack, otherwise it throws an error and prevents from compiling css. 
       &--address {
         &::before {
             content: " ";
