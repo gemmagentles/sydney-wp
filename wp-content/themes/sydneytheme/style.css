@@ -140,13 +140,20 @@ TYPOGRAPHY
     .social .nav__link:last-child {
       padding-right: 0; }
   .social .nav__icon {
-    width: 20px; }
+    width: 20px;
+    height: 20px;
+    fill: #EB0029;
+    transition: fill 0.7s ease; }
     @media (min-width: 48em) {
       .social .nav__icon {
-        width: 16px; } }
+        width: 16px;
+        height: 16px; } }
     @media (min-width: 70em) {
       .social .nav__icon {
-        width: 25px; } }
+        width: 25px;
+        height: 25px; } }
+    .social .nav__icon:hover, .social .nav__icon:focus, .social .nav__icon:active {
+      fill: #9f001c; }
 
 /* styles only for mobile and tablet when menu is a hamburger */
 .nav__hamburger-icon {
@@ -1487,13 +1494,20 @@ a.next.page-numbers:active {
       .footer .social__link:last-child {
         padding-right: 0; }
     .footer .social__icon {
-      width: 20px; }
+      width: 20px;
+      height: 20px;
+      fill: #EB0029;
+      transition: fill 0.7s ease; }
       @media (min-width: 48em) {
         .footer .social__icon {
-          width: 16px; } }
+          width: 16px;
+          height: 16px; } }
       @media (min-width: 70em) {
         .footer .social__icon {
-          width: 25px; } }
+          width: 25px;
+          height: 25px; } }
+      .footer .social__icon:hover, .footer .social__icon:focus, .footer .social__icon:active {
+        fill: #9f001c; }
   .footer .parent-company {
     margin: 58px auto;
     max-width: 224px; }

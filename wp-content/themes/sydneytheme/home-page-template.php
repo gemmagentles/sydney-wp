@@ -1,6 +1,7 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
 	<main role="main">
+
 		<!-- Slider -->
 		<section>
 			<?php get_template_part('partials/slider'); ?> 		

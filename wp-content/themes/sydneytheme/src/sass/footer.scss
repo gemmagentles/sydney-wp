@@ -205,13 +205,24 @@
     
         &__icon {
             width: 20px;
+            height: 20px;
+            fill: $primary-color;
+            transition: fill 0.7s ease;
     
             @include breakpoint(tablet) {
                 width: 16px;
+                height: 16px;
             }
     
             @include breakpoint(desktop) {
                 width: 25px;
+                height: 25px;
+            }
+    
+            &:hover,
+            &:focus,
+            &:active {
+                fill: darken( $primary-color, 15% );
             }
         }
     }
