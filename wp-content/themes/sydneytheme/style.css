@@ -1386,17 +1386,32 @@ a.next.page-numbers:active {
   font-size: 0.875em;
   font-family: "Roboto", sans-serif;
   text-align: center;
-  overflow: hidden; }
+  position: relative; }
   @media (min-width: 48em) {
     .footer {
       text-align: left; } }
+  .footer__wrapper {
+    overflow: hidden; }
   .footer__divider {
+    position: relative;
     background: #EB0029;
     height: 16px;
     width: 100%; }
     @media (min-width: 48em) {
       .footer__divider {
         height: 42px; } }
+    .footer__divider--top-arrow {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: -20px;
+      background: #EB0029;
+      padding: 12px;
+      width: 42px; }
+      @media (min-width: 48em) {
+        .footer__divider--top-arrow {
+          padding: 20px;
+          width: auto; } }
   .footer__container {
     max-width: 1552px;
     margin: 0 auto; }

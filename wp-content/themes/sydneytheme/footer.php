@@ -1,5 +1,10 @@
         <footer class="footer" role="contentinfo">
-				<div class="footer__divider"></div>
+				<div class="footer__divider">
+					<a href="#top" title="Top">
+						<img class="footer__divider--top-arrow" src="<?php echo get_template_directory_uri(); ?>/img/icons/top-arrow.svg" alt="">
+					</a>
+				</div>
+			<div class="footer__wrapper">
 				<div class="footer__container">
 					<div class="footer__top">
 						<nav class="footer__nav" role="navigation">
@@ -46,6 +51,7 @@
 						&copy; <?php bloginfo('name'); ?>, <?php echo date('Y'); ?></p>
 						<p class="accredit">Design by <a class="accredit__link" href="https://anotherblankpage.com/">Another Blank Page</a></p>
 					</div>
+				</div>
 				</div>
 			</footer>
 		</div>
