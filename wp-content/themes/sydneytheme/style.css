@@ -501,13 +501,37 @@ TYPOGRAPHY
 
 .product-grid {
   margin-bottom: 50px;
-  background: #F7F7F7; }
+  background: #F7F7F7;
+  overflow: hidden;
+  position: relative; }
   @media (min-width: 48em) {
     .product-grid {
       margin-bottom: 130px; } }
+  @media (min-width: 70em) {
+    .product-grid::after {
+      content: "Products";
+      text-transform: uppercase;
+      transform: rotate(90deg) translateX(50%);
+      transform-origin: right top 0;
+      font-size: 16.5em;
+      font-family: "Roboto", sans-serif;
+      color: #424445;
+      opacity: 0.1;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      line-height: 0.7;
+      z-index: 2;
+      overflow: hidden; } }
+  @media (min-width: 99.5em) {
+    .product-grid::after {
+      font-size: 18.5em; } }
   .product-grid__inner {
     margin: 0 auto;
-    max-width: 1552px; }
+    max-width: 1552px;
+    position: relative;
+    z-index: 3; }
   .product-grid__heading {
     padding: 60px 20px 45px;
     font-weight: 300;
