@@ -87,6 +87,42 @@
         &.previous:last-child {
             z-index: 2;
         }
+
+        &.next:first-child .slider__content-box {
+            @include breakpoint(tablet) {
+
+                @keyframes slideright {
+                    0%   { right: 530px; }
+                    100% { right: 130px; }
+                }
+
+                animation: slideright 3.5s;
+                animation-iteration-count: 1;
+                animation-duration: 2.5s;
+                animation-timing-function: ease;
+            }
+
+            .subtitle {
+                &::after {
+    
+                    @include breakpoint(tablet) {
+                        opacity: 0;
+
+                        @keyframes linegrow {
+                            0%   { max-width: 0; opacity: 0; }
+                            100% { max-width: 86px; opacity: 1; }
+                        }
+    
+                        animation: linegrow 4s;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: 1;
+                        animation-delay: 1s;
+                        animation-duration: 2s;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
+            }
+        }
     }
 
     &__image {
@@ -112,7 +148,7 @@
         padding: 30px;
         position: relative;
         margin-top: -4px;
-
+ 
         @include breakpoint(tablet) {
             position: absolute;
             top: 100px;
@@ -120,6 +156,7 @@
             margin-top: 0;
             padding: 40px;
             max-width: 430px;
+            opacity: 1;
         }
 
         @include breakpoint(largedesktop) {
@@ -181,7 +218,7 @@
             margin: 0 0 10px;
             padding: 20px 48px 20px 36px;
         }
-    }    
+    }  
 }
 
 // style next and previous arrow buttons ****
