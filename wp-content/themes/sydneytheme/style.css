@@ -302,8 +302,6 @@ TYPOGRAPHY
       .slider__image {
         height: 870px; } }
   .slider__content-box {
-    background: white;
-    padding: 30px;
     position: relative;
     margin-top: -4px; }
     @media (min-width: 48em) {
@@ -312,51 +310,74 @@ TYPOGRAPHY
         top: 100px;
         right: 130px;
         margin-top: 0;
-        padding: 40px;
-        max-width: 430px;
-        opacity: 1; } }
+        max-width: 430px; } }
     @media (min-width: 87em) {
       .slider__content-box {
-        max-width: 530px;
+        max-width: 530px; } }
+  .slider__content-box-inner {
+    background: white;
+    padding: 30px; }
+    @media (min-width: 48em) {
+      .slider__content-box-inner {
+        padding: 40px; } }
+    @media (min-width: 87em) {
+      .slider__content-box-inner {
         padding: 82px; } }
-    .slider__content-box .subtitle {
+    .slider__content-box-inner .subtitle {
       font-size: 0.875em;
       padding-bottom: 30px; }
-      .slider__content-box .subtitle::after {
+      .slider__content-box-inner .subtitle::after {
         top: 4px;
         max-width: 86px; }
-    .slider__content-box--heading {
+    .slider__content-box-inner--heading {
       text-transform: uppercase;
       padding: 10px 0 15px 0;
       font-family: "Roboto Condensed", sans-serif;
       font-size: 24px;
       color: #424445; }
       @media (min-width: 48em) {
-        .slider__content-box--heading {
+        .slider__content-box-inner--heading {
           padding: 20px 0 30px 0;
           font-size: 2em; } }
       @media (min-width: 70em) {
-        .slider__content-box--heading {
+        .slider__content-box-inner--heading {
           font-size: 46px; } }
       @media (min-width: 87em) {
-        .slider__content-box--heading {
+        .slider__content-box-inner--heading {
           font-size: 3.250em; } }
-    .slider__content-box--paragraph {
+    .slider__content-box-inner--paragraph {
       padding-bottom: 20px;
       font-size: 0.875em;
       line-height: 1.8; }
       @media (min-width: 48em) {
-        .slider__content-box--paragraph {
+        .slider__content-box-inner--paragraph {
           padding-bottom: 30px;
           max-width: 310px; } }
       @media (min-width: 87em) {
-        .slider__content-box--paragraph {
+        .slider__content-box-inner--paragraph {
           padding-bottom: 65px; } }
-    .slider__content-box .sydney-button__with-icon {
+    .slider__content-box-inner .sydney-button__with-icon {
       left: 0;
       transform: none;
       margin: 0 0 10px;
       padding: 20px 48px 20px 36px; }
+  .slider__progress-bar {
+    margin-top: 30px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: #424445;
+    font-size: 1.25em;
+    letter-spacing: 4px;
+    display: none;
+    visibility: hidden; }
+    @media (min-width: 48em) {
+      .slider__progress-bar {
+        display: flex;
+        visibility: visible; } }
+    .slider__progress-bar--line {
+      background: #EB0029;
+      height: 1px;
+      width: 100%;
+      margin: 11px 20px; }
 
 .slider__arrow--prev {
   position: absolute;

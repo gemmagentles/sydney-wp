@@ -144,23 +144,31 @@
     }
 
     &__content-box {
-        background: white;
-        padding: 30px;
         position: relative;
         margin-top: -4px;
- 
+
         @include breakpoint(tablet) {
             position: absolute;
             top: 100px;
             right: 130px;
             margin-top: 0;
-            padding: 40px;
             max-width: 430px;
-            opacity: 1;
         }
 
         @include breakpoint(largedesktop) {
             max-width: 530px;
+        }
+    }
+
+    &__content-box-inner {
+        background: white;
+        padding: 30px;
+
+        @include breakpoint(tablet) {
+            padding: 40px;
+        }
+
+        @include breakpoint(largedesktop) {
             padding: 82px;
         }
 
@@ -219,6 +227,28 @@
             padding: 20px 48px 20px 36px;
         }
     }  
+
+    &__progress-bar {
+        margin-top: 30px;
+        font-family: $secondary-font-family;
+        color: $font-color;
+        font-size: em(20);
+        letter-spacing: 4px;
+        display: none;
+        visibility: hidden;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            visibility: visible;
+        }
+
+        &--line {
+            background: $primary-color;
+            height: 1px;
+            width: 100%;
+            margin: 11px 20px;
+        }
+    }
 }
 
 // style next and previous arrow buttons ****
