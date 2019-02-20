@@ -25,9 +25,9 @@
             content: "Products";
             position: absolute;
             top: 95px;
-            color: #EB0029;
-            font-family: "Roboto", sans-serif;
-            font-size: 16px;
+            color: $primary-color;
+            font-family: $primary-font-family;
+            font-size: em(16);
             text-transform: uppercase;
 
 
@@ -42,7 +42,7 @@
             content: "";
             position: absolute;
             height: 3px;
-            border-bottom: 1px solid #EB0029;
+            border-bottom: 1px solid $primary-color;
             width: 58px;
             top: 100px;
             left: 124px;
@@ -62,6 +62,14 @@
             font-weight: normal;
             padding: 68px 0 42px;
             text-transform: capitalize;
+
+            @include breakpoint(tablet) {
+                padding: 0 0 82px;
+            }
+        }
+
+        .woocommerce-loop-product__title {
+            padding: 8px 0 42px;
 
             @include breakpoint(tablet) {
                 padding: 0 0 82px;

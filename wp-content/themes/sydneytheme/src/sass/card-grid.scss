@@ -74,6 +74,7 @@
                 opacity: 0;
                 transition: opacity 2s ease;
                 z-index: 1;
+                mix-blend-mode: multiply;
             }
             @include breakpoint(tablet) {
                 &:hover:after { opacity: 0.9; }

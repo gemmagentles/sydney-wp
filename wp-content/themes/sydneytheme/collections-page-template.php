@@ -3,13 +3,13 @@
 	<main role="main">
 		<!-- Centered Text -->
 		<section>
-			<?php include 'partials/centered-text.php'; ?> 		
+			<?php get_template_part('partials/centered-text'); ?> 		
 		</section>
 		<!-- /Centered Text -->
 
 		<!-- Card Grid -->
 		<section>
-			<?php include 'partials/card-grid.php'; ?> 		
+			<?php get_template_part('partials/card-grid'); ?> 		
 		</section>
 		<!-- /Card Grid -->
 	</main>

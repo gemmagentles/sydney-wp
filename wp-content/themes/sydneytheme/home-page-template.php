@@ -1,25 +1,26 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
 	<main role="main">
+
 		<!-- Slider -->
 		<section>
-			<?php include 'partials/slider.php'; ?> 		
+			<?php get_template_part('partials/slider'); ?> 		
 		</section>
 		<!-- /Slider -->
 
 		<!-- Card Grid -->
 		<section>
-			<?php include 'partials/card-grid.php'; ?> 		
+			<?php get_template_part('partials/card-grid'); ?> 		
 		</section>
 		<!-- /Card Grid -->
 
 		<!-- Product Grid -->
 		<section>
-			<?php include 'partials/product-grid.php'; ?> 		
+			<?php get_template_part('partials/product-grid'); ?> 		
 		</section>
 		<!-- /Product Grid -->
 	</main>
 
-<?php include 'partials/newsletter-signup.php'; ?> 
+<?php get_template_part('partials/newsletter-signup'); ?> 
 
 <?php get_footer(); ?>

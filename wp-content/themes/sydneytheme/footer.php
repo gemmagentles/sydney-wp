@@ -1,5 +1,10 @@
         <footer class="footer" role="contentinfo">
-				<div class="footer__divider"></div>
+				<div class="footer__divider">
+					<a href="#top" title="Top">
+						<img class="footer__divider--top-arrow" src="<?php echo get_template_directory_uri(); ?>/img/icons/top-arrow.svg" alt="">
+					</a>
+				</div>
+			<div class="footer__wrapper">
 				<div class="footer__container">
 					<div class="footer__top">
 						<nav class="footer__nav" role="navigation">
@@ -23,16 +28,16 @@
 							<div class ="social">
 								<div class="line"></div>
 
-								<a class="social__link" href="<?php the_field('facebook_url', 'option'); ?>" target="_blank">
-									<img class="social__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook" title="Facebook" />
+								<a class="social__link" title="Facebook" href="<?php the_field('facebook_url', 'option'); ?>" target="_blank">
+									<svg class="social__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-facebook" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-facebook"/></svg>
 								</a>
 
-								<a class="social__link" href="<?php the_field('twitter_url', 'option'); ?>" target="_blank">
-									<img class="social__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Twitter" title="Twitter" />
+								<a class="social__link" title="Twitter" href="<?php the_field('twitter_url', 'option'); ?>" target="_blank">
+									<svg class="social__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-twitter" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-twitter"/></svg>
 								</a>
 
-								<a class="social__link" href="<?php the_field('instagram_url', 'option'); ?>" target="_blank">
-									<img class="social__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram" title="Instagram" />
+								<a class="social__link" title="Instagram" href="<?php the_field('instagram_url', 'option'); ?>" target="_blank">
+									<svg class="social__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-instagram" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-instagram"/></svg>
 								</a>
 							</div>
 							<div class="parent-company">
@@ -46,6 +51,7 @@
 						&copy; <?php bloginfo('name'); ?>, <?php echo date('Y'); ?></p>
 						<p class="accredit">Design by <a class="accredit__link" href="https://anotherblankpage.com/">Another Blank Page</a></p>
 					</div>
+				</div>
 				</div>
 			</footer>
 		</div>
