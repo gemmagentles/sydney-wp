@@ -19,7 +19,7 @@
         left: 0;
         width: 100%;
         min-width: 100vw;
-        transition: all 1.75s ease;
+        transition: all 0.75s ease;
 
         // change from relative as now one slide needs to slide over another, so need to be on top of each other. 
         @include breakpoint(tablet) {
@@ -92,13 +92,13 @@
             @include breakpoint(tablet) {
 
                 @keyframes slideright {
-                    0%   { right: 530px; }
-                    100% { right: 130px; }
+                    0%   { right: 530px; opacity: 0; }
+                    100% { right: 130px; opacity: 1; }
                 }
 
-                animation: slideright 3.5s;
+                animation: slideright 2.5s;
                 animation-iteration-count: 1;
-                animation-duration: 2.5s;
+                animation-duration: 1.5s;
                 animation-timing-function: ease;
             }
 
