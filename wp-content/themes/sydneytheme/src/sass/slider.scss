@@ -19,7 +19,7 @@
         left: 0;
         width: 100%;
         min-width: 100vw;
-        transition: all 1.75s ease;
+        transition: all 0.75s ease;
 
         // change from relative as now one slide needs to slide over another, so need to be on top of each other. 
         @include breakpoint(tablet) {
@@ -87,6 +87,42 @@
         &.previous:last-child {
             z-index: 2;
         }
+
+        &.next:first-child .slider__content-box {
+            @include breakpoint(tablet) {
+
+                @keyframes slideright {
+                    0%   { right: 530px; opacity: 0; }
+                    100% { right: 130px; opacity: 1; }
+                }
+
+                animation: slideright 2.5s;
+                animation-iteration-count: 1;
+                animation-duration: 1.5s;
+                animation-timing-function: ease;
+            }
+
+            .subtitle {
+                &::after {
+    
+                    @include breakpoint(tablet) {
+                        opacity: 0;
+
+                        @keyframes linegrow {
+                            0%   { max-width: 0; opacity: 0; }
+                            100% { max-width: 86px; opacity: 1; }
+                        }
+    
+                        animation: linegrow 4s;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: 1;
+                        animation-delay: 1s;
+                        animation-duration: 2s;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
+            }
+        }
     }
 
     &__image {
@@ -108,8 +144,6 @@
     }
 
     &__content-box {
-        background: white;
-        padding: 30px;
         position: relative;
         margin-top: -4px;
 
@@ -118,12 +152,23 @@
             top: 100px;
             right: 130px;
             margin-top: 0;
-            padding: 40px;
             max-width: 430px;
         }
 
         @include breakpoint(largedesktop) {
             max-width: 530px;
+        }
+    }
+
+    &__content-box-inner {
+        background: white;
+        padding: 30px;
+
+        @include breakpoint(tablet) {
+            padding: 40px;
+        }
+
+        @include breakpoint(largedesktop) {
             padding: 82px;
         }
 
@@ -181,7 +226,29 @@
             margin: 0 0 10px;
             padding: 20px 48px 20px 36px;
         }
-    }    
+    }  
+
+    &__progress-bar {
+        margin-top: 30px;
+        font-family: $secondary-font-family;
+        color: $font-color;
+        font-size: em(20);
+        letter-spacing: 4px;
+        display: none;
+        visibility: hidden;
+
+        @include breakpoint(tablet) {
+            display: flex;
+            visibility: visible;
+        }
+
+        &--line {
+            background: $primary-color;
+            height: 1px;
+            width: 100%;
+            margin: 11px 20px;
+        }
+    }
 }
 
 // style next and previous arrow buttons ****

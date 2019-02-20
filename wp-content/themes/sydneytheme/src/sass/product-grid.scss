@@ -1,14 +1,42 @@
 .product-grid {
     margin-bottom: 50px;
     background: $secondary-color;
-
+    overflow: hidden;
+    position: relative;
+ 
     @include breakpoint(tablet) {
         margin-bottom: 130px;
+    }
+
+    &::after {
+        @include breakpoint(desktop) {
+            content: "Products";
+            text-transform: uppercase;
+            transform: rotate(90deg) translateX(50%);
+            transform-origin: right top 0;
+            font-size: em(264);
+            font-family: $primary-font-family;
+            color: $font-color;
+            opacity: 0.03;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            line-height: 0.7;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            font-size: em(296);
+        }
     }
 
     &__inner {
         margin: 0 auto;
         max-width: $site-width;
+        position: relative;
+        z-index: 3;
     }
 
     &__heading {

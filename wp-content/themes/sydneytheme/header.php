@@ -11,10 +11,11 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 <div class="wrapper">
 
     <header class="header clear" role="banner">
-        <div class="header__wrapper">
+        <div id="top" class="header__wrapper">
             <a class="header__logo" href="<?php echo home_url(); ?>">
                 <img src="<?php the_field('brand_logo', 'option'); ?>" alt="Brand" class="logo">
             </a>
@@ -29,16 +30,16 @@
                 <div class ="social">
                     <div class="line"></div>
 
-                    <a class="nav__link" href="<?php the_field('facebook_url', 'option'); ?>" target="_blank">
-                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/facebook.svg" alt="Facebook" title="Facebook" />
+                    <a class="nav__link" title="Facebook" href="<?php the_field('facebook_url', 'option'); ?>" target="_blank">
+                        <svg class="nav__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-facebook" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-facebook"/></svg>
                     </a>
 
-                    <a class="nav__link" href="<?php the_field('twitter_url', 'option'); ?>" target="_blank">
-                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/twitter.svg" alt="Twitter" title="Twitter" />
+                    <a class="nav__link" title="Twitter" href="<?php the_field('twitter_url', 'option'); ?>" target="_blank">
+                        <svg class="nav__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-twitter" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-twitter"/></svg>
                     </a>
 
-                    <a class="nav__link" href="<?php the_field('instagram_url', 'option'); ?>" target="_blank">
-                        <img class="nav__icon" src="<?php echo get_template_directory_uri(); ?>/img/icons/instagram.svg" alt="Instagram" title="Instagram" />
+                    <a class="nav__link" title="Instagram" href="<?php the_field('instagram_url', 'option'); ?>" target="_blank">
+                        <svg class="nav__icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-instagram" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-instagram"/></svg>
                     </a>
                 </div>
             </nav>

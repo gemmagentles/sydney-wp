@@ -3,6 +3,15 @@
   "version": "1.5.2",
   "description": "domar wordpress theme package",
   "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "ie > 10"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "scripts": {
     "build": "webpack --mode development",
     "dist": "webpack --mode production",
@@ -19,6 +28,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.0.1",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.10.2",
@@ -26,6 +36,9 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "browser-sync": "^2.26.3"
+    "autoprefixer": "^9.4.8",
+    "browser-sync": "^2.26.3",
+    "postcss-cli": "^6.1.1",
+    "style-loader": "^0.23.1"
   }
 }

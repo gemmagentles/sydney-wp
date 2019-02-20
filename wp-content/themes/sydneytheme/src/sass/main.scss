@@ -1,16 +1,20 @@
+@import 'pixel-to-em.scss';
 @import 'header.scss';
-@import 'centered-text.scss';
-@import 'contact.scss';
-@import 'pdf-block.scss';
-@import 'filter-widget-area.scss';
-@import 'products.scss';
-@import 'related-products.scss';
-@import 'product-hero.scss';
 @import 'slider.scss';
-@import 'card-grid.scss';
+@import 'centered-text.scss';
+@import 'filter-widget-area.scss';
 @import 'product-grid.scss';
+@import 'card-grid.scss';
+@import 'product-hero.scss';
+@import 'products.scss';
+@import 'pdf-block.scss';
+@import 'related-products.scss';
 @import 'newsletter-signup.scss';
+@import 'contact-enquiry-columns.scss';
+@import 'contact-form.scss';
+@import 'map.scss';
 @import 'footer.scss';
+
 
 * {
     margin: 0;
@@ -31,7 +35,7 @@ TYPOGRAPHY
 *********************/
 
 :root {
-    font-size: 16px;
+    font-size: em(16);
 }
 
 .subtitle {
@@ -46,11 +50,11 @@ TYPOGRAPHY
     }
 
     @include breakpoint(desktop) {
-        font-size: 16px;
+        font-size: 1em; // 16px
     }
 
     @include breakpoint(largedesktop) {
-        font-size: 18px;
+        font-size: 1.125em; // 18px
     }
 
     &::after {
@@ -92,6 +96,20 @@ h2, h1 {
     }
 }
 
+h3 {
+    font-weight: 400;
+    letter-spacing: 1.36px;
+    line-height: 35px;
+
+    @include breakpoint(tablet) {
+      font-size: 1.5em; // 24px
+    }
+
+    @include breakpoint(desktop) {
+      font-size: 1.875em; // 30px
+    }
+}
+
 h4 {
     padding: 20px 0 10px;
 }
@@ -99,20 +117,20 @@ h4 {
 p {
     color: $font-color;
     font-family: $primary-font-family;
-    font-size: 12px;
+    font-size: 0.75em; // 12px
     line-height: 1.6;
     font-weight: 300;
 
     @include breakpoint(tablet) {
-        font-size: 16px;
+        font-size: 1em; // 16px
     }
 
     @include breakpoint(desktop) {
-        font-size: 18px;
+        font-size: 1.125em; // 18px
     }
 
     @include breakpoint(largedesktop) {
-        font-size: 20px;
+        font-size: 1.25em; // 20px
     }
 }
 
@@ -128,17 +146,17 @@ BUTTONS
     width: 30%;
     transition: background-color 0.7s ease;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 0.75em; // 12px
     line-height: 1.6;
     font-weight: 300;
 
     @include breakpoint(tablet) {
         padding: 16px;
-        font-size: 16px;
+        font-size: 1em; // 16px
     }
 
     @include breakpoint(desktop) {
-        font-size: 18px;
+        font-size: 1.125em; // 18px
     }
 
     @include breakpoint(largedesktop) {
@@ -165,25 +183,25 @@ BUTTONS
     padding: 14px 48px 14px 36px;
     letter-spacing: 1.2px;
     border: none;
-    font-size: 12px;
+    font-size: 0.75em; // 12px
     line-height: 1.6;
     font-weight: 300;
 
     @include breakpoint(tablet) {
         margin-bottom: 100px;
         padding: 20px 52px 20px 46px;
-        font-size: 16px;
+        font-size: 1em; // 16px
         letter-spacing: 2.2px;
     }
 
     @include breakpoint(desktop) {
         padding: 22px 74px 22px 62px;
-        font-size: 18px;
+        font-size: 1.125em; // 18px
     }
 
     @include breakpoint(largedesktop) {
         padding: 22px 74px 22px 62px;
-        font-size: 20px;
+        font-size: 1.25em; // 20px
     }
 
     &:hover,
