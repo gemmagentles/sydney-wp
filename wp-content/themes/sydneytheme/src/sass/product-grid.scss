@@ -3,7 +3,7 @@
     background: $secondary-color;
     overflow: hidden;
     position: relative;
-
+ 
     @include breakpoint(tablet) {
         margin-bottom: 130px;
     }

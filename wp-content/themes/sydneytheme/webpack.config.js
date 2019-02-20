@@ -21,11 +21,11 @@ module.exports = {
                     loader: "babel-loader",
                 }
             },
-            // compile all .scss files to plain old css
+            // compile all .scss files to plain old css, add autoprefixes
             {
-                test: /\.(sass|scss)$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-            }
+                test: /\.(css|sass|scss)$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+            },
         ]
     },
     plugins: [
