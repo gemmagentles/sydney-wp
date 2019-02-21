@@ -100,6 +100,10 @@
             }
         }
 
+        .products__subheading {
+            text-align: left;
+        }
+
         .wrps_related_products_area {
             margin: 0 auto;
             padding: 60px 60px 110px 60px;
@@ -188,7 +192,7 @@
         }
 
         .wpb_wrps_title {
-            padding: 8px 0 42px;
+            padding: 0 0 42px;
             font-family: $primary-font-family;
             text-transform: capitalize;
             font-size: 18px;	
@@ -199,7 +203,7 @@
             text-align: left;
 
             @include breakpoint(tablet) {
-                padding: 20px 0 82px;
+                padding: 0 0 82px;
                 font-size: 24px;	
             }
         }

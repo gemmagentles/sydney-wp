@@ -1141,6 +1141,8 @@ a.next.page-numbers:active {
     @media (min-width: 48em) {
       .sv-wrapper .related-products__wrapper::after {
         width: 60%; } }
+  .sv-wrapper .related-products__wrapper .products__subheading {
+    text-align: left; }
   .sv-wrapper .related-products__wrapper .wrps_related_products_area {
     margin: 0 auto;
     padding: 60px 60px 110px 60px;
@@ -1209,7 +1211,7 @@ a.next.page-numbers:active {
         .sv-wrapper .related-products__wrapper .wrps_related_products_area h2 {
           padding: 0 0 82px; } }
   .sv-wrapper .related-products__wrapper .wpb_wrps_title {
-    padding: 8px 0 42px;
+    padding: 0 0 42px;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-size: 18px;
@@ -1220,7 +1222,7 @@ a.next.page-numbers:active {
     text-align: left; }
     @media (min-width: 48em) {
       .sv-wrapper .related-products__wrapper .wpb_wrps_title {
-        padding: 20px 0 82px;
+        padding: 0 0 82px;
         font-size: 24px; } }
   @media (min-width: 50em) {
     .sv-wrapper .related-products__wrapper .owl-page {
