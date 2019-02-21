@@ -206,42 +206,28 @@
 
         // progress bar 
 
-        // .owl-page span {
-        //     width: 0;
-        //     max-width: 388px;
-        //     transition: width 2s ease-in;
-        // }
-
-        // .owl-page.active span {
-        //     width: 100%;
-        // }
-
-        .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
-            
-            @include breakpoint(tablet) {
-                background-color: $tertiary-color;
-                width: 100vw;
-                max-width: 80px;
-                height: 3px;
-                margin: 0;
-                transition: background-color 2s ease;
-            }
-
-            @include breakpoint(desktop) {
-                max-width: 188px;
+        .owl-page {
+            @include breakpoint(laptop) {
+                width: 33.33%;
             }
 
             @include breakpoint(largedesktop) {
-                max-width: 288px;
+                width: 50%;
             }
+        }
 
-            @include breakpoint(xlargedesktop) {
-                max-width: 388px;
+        .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
+            
+            @include breakpoint(laptop) {
+                background-color: $tertiary-color;
+                width: 0;
+                height: 3px;
+                margin: 0;
             }
         }
 
         .owl-pagination {
-            @include breakpoint(tablet) {
+            @include breakpoint(laptop) {
                 text-align: left;
             }
         }
@@ -253,13 +239,13 @@
         .owl-page,
         .owl-page span,
         .owl-page.active {
-            @include breakpoint(tablet) {
+            @include breakpoint(laptop) {
                 background-color: $primary-color !important;
             }
         }
 
         .owl-page.active ~ .owl-page  {
-            @include breakpoint(tablet) {
+            @include breakpoint(laptop) {
                 background-color: $tertiary-color !important;
                 opacity: 0.4;
             }
