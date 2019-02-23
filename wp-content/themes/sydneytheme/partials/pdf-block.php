@@ -15,16 +15,21 @@
                       <!-- START an accordion to hold a list of pdfs -->
                       <div class="sv-pdf__accordion-wrapper">
 
-                        <?php if ( have_rows( 'pdf_list' ) ) : ?>
-                            <?php while ( have_rows( 'pdf_list' ) ) : the_row(); ?>
-                              <?php $pdf_file = get_sub_field( 'pdf_file' ); ?>
-                              <?php if ( $pdf_file ) { ?>
-                                <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>"><?php echo $pdf_file['filename']; ?></a>
-                              <?php } ?>
-                            <?php endwhile; ?>
-                          <?php else : ?>
-                            <?php // no rows found ?>
-                        <?php endif; ?>
+                      <!-- button to click on to open accordion -->
+                      <button class="sv-pdf__accordion-btn accordion-js">Our Downloads +</button>
+                      <!-- content inside accordion -->
+                      <div class="sv-pdf__accordion-content">
+                          <?php if ( have_rows( 'pdf_list' ) ) : ?>
+                              <?php while ( have_rows( 'pdf_list' ) ) : the_row(); ?>
+                                <?php $pdf_file = get_sub_field( 'pdf_file' ); ?>
+                                <?php if ( $pdf_file ) { ?>
+                                  <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>">Download No.<?php echo get_row_index(); ?></a>
+                                <?php } ?>
+                              <?php endwhile; ?>
+                            <?php else : ?>
+                              <?php // no rows found ?>
+                          <?php endif; ?>
+                      </div>
 
                       </div>
                       <!-- END an accordion to hold a list of pdfs -->

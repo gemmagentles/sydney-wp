@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\n__webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n\n__webpack_require__(/*! ./components/slider.js */ \"./src/components/slider.js\");\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\n__webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n\n__webpack_require__(/*! ./components/slider.js */ \"./src/components/slider.js\");\n\n__webpack_require__(/*! ./components/pdf-block.js */ \"./src/components/pdf-block.js\");\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -107,6 +107,18 @@ eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(
 
 "use strict";
 eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n    });\n\n    $(document).ready(function () {\n        $(\".nav__hamburger-icon\").click(function () {\n            $(\".nav__hamburger-icon\").toggleClass(\"nav__open\");\n            console.log('clicked');\n        });\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/header.js?");
+
+/***/ }),
+
+/***/ "./src/components/pdf-block.js":
+/*!*************************************!*\
+  !*** ./src/components/pdf-block.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n(function ($, root, undefined) {\n\n  $(function () {\n\n    'use strict';\n\n    var acc = document.getElementsByClassName(\"accordion-js\");\n    var i;\n\n    for (i = 0; i < acc.length; i++) {\n      acc[i].addEventListener(\"click\", function () {\n        this.classList.toggle(\"active\");\n        var panel = this.nextElementSibling;\n        if (panel.style.display === \"block\") {\n          panel.style.display = \"none\";\n        } else {\n          panel.style.display = \"block\";\n        }\n      });\n    }\n  });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/pdf-block.js?");
 
 /***/ }),
 
