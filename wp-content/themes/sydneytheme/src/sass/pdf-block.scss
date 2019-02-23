@@ -4,10 +4,11 @@
         margin: 0 auto;
         padding: 60px 30px;
 
-        @include breakpoint(tablet) {
+        @include breakpoint(laptop) {
             padding: 200px 105px 160px 50px;
             display: grid;
             grid-template-columns: auto auto;
+            grid-gap: 70px;
         }
 
         @include breakpoint(smalldesktop) {
@@ -72,6 +73,64 @@
     }
 
     &__left-box {
-        max-width: 390px;
+        // max-width: 390px;
+    }
+
+    // style image gallery 
+
+    &__right-box {
+        max-width: 472px;
+        width: 100%;
+
+        @include breakpoint(laptop) {
+            max-width: 672px;
+        }
+    }
+
+    &__gallery-container {
+        margin-top: 30px;
+        border: 1px solid $tertiary-color;
+
+        @include breakpoint(laptop) {
+            margin-top: 0;
+        }
+        
+        &--image {
+            width: 100%;
+        }
+    }
+
+    &__gallery-row {
+        margin-top: 20px;
+        display: flex;
+
+        @include breakpoint(laptop) {
+            margin-top: 30px;
+        }
+    }
+
+    &__gallery-column {
+        margin-right: 12px;
+
+        @include breakpoint(laptop) {
+            margin-right: 30px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__gallery-column &__gallery-image {
+        width: 100%;
+        // incase there is ever only one thumbnail stop it from being same 100% width of main image
+        max-width: 321px;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &__gallery-image {
+        width: 100%;
+        border: 1px solid $tertiary-color;
     }
 }

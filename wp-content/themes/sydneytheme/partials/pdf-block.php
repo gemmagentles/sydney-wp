@@ -40,16 +40,33 @@
               <div class="sv-pdf__right-box">
 
                 <?php if ( have_rows( 'image_gallery' ) ) : ?>
+                  <?php while ( have_rows( 'image_gallery' ) ) : the_row(); ?>
+                    
+                  <!-- Large main image -->
+                  <div class="sv-pdf__gallery-container">
+                    <?php $main_image = get_sub_field( 'main_image' ); ?>
+                    <?php if ( $main_image ) { ?>
+                      <img id="expandedImg" class="sv-pdf__gallery-container--image" src="<?php echo $main_image['url']; ?>" alt="<?php echo $main_image['alt']; ?>" />
+                    <?php } ?>
+                  </div>
 
-                    <?php while ( have_rows( 'image_gallery' ) ) : the_row(); ?>
-                      <?php $image = get_sub_field( 'image' ); ?>
-                      <?php if ( $image ) { ?>
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                      <?php } ?>
-                    <?php endwhile; ?>
-                  <?php else : ?>
-                    <?php // no rows found ?>
+                  <!-- Row of thumbnails -->
+                  <div class="sv-pdf__gallery-row">
+                    <?php if ( have_rows( 'thumbnail_images' ) ) : ?>
+                      <?php while ( have_rows( 'thumbnail_images' ) ) : the_row(); ?>
+                        <?php $image = get_sub_field( 'image' ); ?>
+                        <?php if ( $image ) { ?>
+                          <div class="sv-pdf__gallery-column">
+                            <img class="sv-pdf__gallery-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                          </div>
+                        <?php } ?>
+                      <?php endwhile; ?>
+                    <?php else : ?>
+                      <?php // no rows found ?>
+                    <?php endif; ?>
+                  </div>
 
+                  <?php endwhile; ?>
                 <?php endif; ?>
 
               </div>
@@ -59,3 +76,23 @@
   </div>
 <?php endif; ?>
 <!-- END OF PDF -->
+
+<!-- Use js to swap out the thumbnail image to the large main image -->
+<script>
+  // image gallery
+  (function ($, root, undefined) {
+
+      $(function () {
+      'use strict';
+
+        $("img").click(function () {
+          var expandImg = document.getElementById("expandedImg");
+          var thumbnailImageSrc = $(this).attr("src");
+          var expandImgSrc = expandImg.src;
+          expandImg.src = thumbnailImageSrc;
+          $(this).attr("src") = expandImg.src;
+        });
+      });
+
+  })(jQuery, this);
+</script>
