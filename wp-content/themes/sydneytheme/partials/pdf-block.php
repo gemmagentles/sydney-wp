@@ -16,19 +16,23 @@
                       <div class="sv-pdf__accordion-wrapper">
 
                       <!-- button to click on to open accordion -->
-                      <button class="sv-pdf__accordion-btn accordion-js">Our Downloads +</button>
+                      <button class="sv-pdf__accordion-btn accordion-js">Our Downloads</button>
                       <!-- content inside accordion -->
                       <div class="sv-pdf__accordion-content">
+                      <div class="sv-pdf__accordion-inner">
                           <?php if ( have_rows( 'pdf_list' ) ) : ?>
                               <?php while ( have_rows( 'pdf_list' ) ) : the_row(); ?>
                                 <?php $pdf_file = get_sub_field( 'pdf_file' ); ?>
                                 <?php if ( $pdf_file ) { ?>
-                                  <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>">Download No.<?php echo get_row_index(); ?></a>
+                                  <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>">Download No.<?php echo get_row_index(); ?>
+                                  <svg class="sv-pdf__link--icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow"/></svg>
+                                </a>
                                 <?php } ?>
                               <?php endwhile; ?>
                             <?php else : ?>
                               <?php // no rows found ?>
                           <?php endif; ?>
+                      </div>
                       </div>
 
                       </div>
