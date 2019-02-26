@@ -1,3 +1,5 @@
+/* Theme Name: Sydney Theme */
+
 @import 'pixel-to-em.scss';
 @import 'header.scss';
 @import 'slider.scss';
@@ -15,7 +17,6 @@
 @import 'map.scss';
 @import 'footer.scss';
 
-
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +31,14 @@ section {
     position: relative;
 }
 
+// Listen to tab events to enable outlines (accessibility improvement) there is js to detect this too to add it in for tab users in the app.js file.
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 /*********************
 TYPOGRAPHY
 *********************/
@@ -41,10 +50,11 @@ TYPOGRAPHY
 .subtitle {
     color: $primary-color;
     text-transform: uppercase;
-    font-family: $primary-font-family;
+    font-family: $secondary-font-family;
     font-size: 10px;
     position: relative;
-
+    letter-spacing: 1px;
+    
     @include breakpoint(tablet) {
         font-size: 14px;
     }
