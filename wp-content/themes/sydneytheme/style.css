@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i);
+/* Theme Name: Sydney Theme */
 /************************
 
 Example Usage:
@@ -1019,27 +1020,34 @@ a.next.page-numbers:active {
   max-width: 1552px;
   margin: 0 auto;
   padding: 60px 30px; }
-  @media (min-width: 48em) {
+  @media (min-width: 50em) {
     .sv-pdf__wrapper {
       padding: 200px 105px 160px 50px;
       display: grid;
-      grid-template-columns: auto auto; } }
+      grid-template-columns: auto auto;
+      grid-gap: 46px; } }
+  @media (min-width: 48em) {
+    .sv-pdf__wrapper {
+      padding: 200px 50px 160px 50px; } }
   @media (min-width: 64em) {
     .sv-pdf__wrapper {
-      padding: 200px 105px 160px 80px; } }
+      padding: 200px 105px 160px 80px;
+      grid-gap: 70px; } }
   @media (min-width: 99.5em) {
     .sv-pdf__wrapper {
       padding: 200px 105px 160px 16px; } }
   .sv-pdf__wrapper .subtitle {
-    font-size: 16px; }
+    font-size: 0.875em; }
     @media (min-width: 48em) {
       .sv-pdf__wrapper .subtitle {
         font-size: 18px; } }
     .sv-pdf__wrapper .subtitle.subtitle::after {
-      margin-left: 10px; }
+      margin-left: 10px;
+      top: 6px; }
       @media (min-width: 48em) {
         .sv-pdf__wrapper .subtitle.subtitle::after {
-          margin-left: 20px; } }
+          margin-left: 20px;
+          top: 8px; } }
 
 .sv-pdf__heading {
   font-weight: normal;
@@ -1050,26 +1058,156 @@ a.next.page-numbers:active {
   margin: 30px 0; }
 
 .sv-pdf__link {
-  color: #EB0029;
+  color: #424445;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6;
   font-weight: 300;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block;
+  border-bottom: 1.5px solid #424445;
+  padding: 25px 0 5px; }
   @media (min-width: 48em) {
     .sv-pdf__link {
-      font-size: 16px; } }
+      font-size: 18px; } }
   @media (min-width: 70em) {
     .sv-pdf__link {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 87em) {
     .sv-pdf__link {
-      font-size: 20px; } }
+      font-size: 24px; } }
   .sv-pdf__link:hover, .sv-pdf__link:focus {
-    text-decoration: underline; }
+    color: #EB0029;
+    border-bottom: 1.5px solid #EB0029; }
+  .sv-pdf__link--icon {
+    height: 16px;
+    width: 10px;
+    top: 8px;
+    position: relative;
+    right: 8px;
+    float: right; }
+    @media (min-width: 70em) {
+      .sv-pdf__link--icon {
+        height: 21px;
+        width: 15px; } }
 
 .sv-pdf__left-box {
-  max-width: 390px; }
+  max-width: 472px; }
+  @media (min-width: 48em) {
+    .sv-pdf__left-box {
+      max-width: 285px; } }
+  @media (min-width: 64em) {
+    .sv-pdf__left-box {
+      max-width: 472px; } }
+
+.sv-pdf__accordion-btn {
+  transition: 0.4s;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  color: #EB0029;
+  background: none;
+  border: none;
+  margin-top: 60px;
+  padding-bottom: 25px;
+  border-bottom: 1.5px solid #EB0029;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  position: relative; }
+  @media (min-width: 48em) {
+    .sv-pdf__accordion-btn {
+      font-size: 22px; } }
+  @media (min-width: 70em) {
+    .sv-pdf__accordion-btn {
+      font-size: 24px; } }
+  @media (min-width: 87em) {
+    .sv-pdf__accordion-btn {
+      font-size: 28px; } }
+  .sv-pdf__accordion-btn:after {
+    /* "plus" sign (+) */
+    content: " ";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='23' viewBox='0 0 22 23'%3E%3Ctitle%3Eplus%3C/title%3E%3Cg%3E%3Cg id='Product' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' font-family='Roboto-Regular, Roboto' font-size='42' font-weight='normal' letter-spacing='2.079'%3E%3Cg id='Sydney_the-Product_V3' transform='translate(-718 -1532)' fill='%23EA0029'%3E%3Cg id='Download_accordion' transform='translate(264 1518)'%3E%3Ctext id='+'%3E%3Ctspan x='453' y='39'%3E+%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    background-repeat: no-repeat;
+    background-size: contain; }
+    @media (min-width: 70em) {
+      .sv-pdf__accordion-btn:after {
+        width: 22px;
+        height: 23px; } }
+  .sv-pdf__accordion-btn.active:after {
+    /* "minus" sign (-) */
+    content: " ";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='3' viewBox='0 0 29 3'%3E%3Ctitle%3Eminus%3C/title%3E%3Cg%3E%3Cg id='Product' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Sydney_the-Product_Downloads' transform='translate(-725 -1545)' fill='%23EA0029'%3E%3Cg id='Download_accordion' transform='translate(264 1526)'%3E%3Cpath id='Rectangle-3' d='M461 19h29v3h-29z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-repeat: no-repeat; }
+    @media (min-width: 70em) {
+      .sv-pdf__accordion-btn.active:after {
+        width: 29px;
+        height: 3px;
+        top: 14px;
+        right: 30px; } }
+
+.sv-pdf__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out; }
+
+.sv-pdf__accordion-inner {
+  margin-top: 35px;
+  border: 1px solid #EB0029;
+  padding: 35px 30px 70px 30px; }
+
+.sv-pdf__right-box {
+  max-width: 472px;
+  width: 100%; }
+  @media (min-width: 50em) {
+    .sv-pdf__right-box {
+      max-width: 672px; } }
+
+.sv-pdf__gallery-container {
+  margin-top: 30px;
+  border: 1px solid #807C7C; }
+  @media (min-width: 50em) {
+    .sv-pdf__gallery-container {
+      margin-top: 0; } }
+  .sv-pdf__gallery-container--image {
+    width: 100%; }
+
+.sv-pdf__gallery-row {
+  margin-top: 20px;
+  display: flex; }
+  @media (min-width: 64em) {
+    .sv-pdf__gallery-row {
+      margin-top: 30px; } }
+
+.sv-pdf__gallery-column {
+  margin-right: 12px; }
+  @media (min-width: 50em) {
+    .sv-pdf__gallery-column {
+      margin-right: 20px; } }
+  @media (min-width: 64em) {
+    .sv-pdf__gallery-column {
+      margin-right: 30px; } }
+  .sv-pdf__gallery-column:last-child {
+    margin-right: 0; }
+
+.sv-pdf__gallery-column .sv-pdf__gallery-image {
+  width: 100%;
+  max-width: 321px;
+  height: 100%;
+  cursor: pointer; }
+
+.sv-pdf__gallery-image {
+  width: 100%;
+  border: 1px solid #807C7C; }
 
 .sv-wrapper .wrps_related_products.wrps_theme_box .wpb-wrps-item {
   background: none; }
@@ -1141,6 +1279,8 @@ a.next.page-numbers:active {
     @media (min-width: 48em) {
       .sv-wrapper .related-products__wrapper::after {
         width: 60%; } }
+  .sv-wrapper .related-products__wrapper .products__subheading {
+    text-align: left; }
   .sv-wrapper .related-products__wrapper .wrps_related_products_area {
     margin: 0 auto;
     padding: 60px 60px 110px 60px;
@@ -1209,7 +1349,7 @@ a.next.page-numbers:active {
         .sv-wrapper .related-products__wrapper .wrps_related_products_area h2 {
           padding: 0 0 82px; } }
   .sv-wrapper .related-products__wrapper .wpb_wrps_title {
-    padding: 8px 0 42px;
+    padding: 0 0 42px;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-size: 18px;
@@ -1220,36 +1360,31 @@ a.next.page-numbers:active {
     text-align: left; }
     @media (min-width: 48em) {
       .sv-wrapper .related-products__wrapper .wpb_wrps_title {
-        padding: 20px 0 82px;
+        padding: 0 0 82px;
         font-size: 24px; } }
-  @media (min-width: 48em) {
+  @media (min-width: 50em) {
+    .sv-wrapper .related-products__wrapper .owl-page {
+      width: 33.33%; } }
+  @media (min-width: 87em) {
+    .sv-wrapper .related-products__wrapper .owl-page {
+      width: 50%; } }
+  @media (min-width: 50em) {
     .sv-wrapper .related-products__wrapper .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
       background-color: #807C7C;
-      width: 100vw;
-      max-width: 80px;
+      width: 0;
       height: 3px;
-      margin: 0;
-      transition: background-color 2s ease; } }
-  @media (min-width: 70em) {
-    .sv-wrapper .related-products__wrapper .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
-      max-width: 188px; } }
-  @media (min-width: 87em) {
-    .sv-wrapper .related-products__wrapper .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
-      max-width: 288px; } }
-  @media (min-width: 99.5em) {
-    .sv-wrapper .related-products__wrapper .wrps_related_products_area .owl-theme .owl-controls .owl-page span {
-      max-width: 388px; } }
-  @media (min-width: 48em) {
+      margin: 0; } }
+  @media (min-width: 50em) {
     .sv-wrapper .related-products__wrapper .owl-pagination {
       text-align: left; } }
   .sv-wrapper .related-products__wrapper .owl-theme .owl-controls .owl-page span {
     border-radius: 0; }
-  @media (min-width: 48em) {
+  @media (min-width: 50em) {
     .sv-wrapper .related-products__wrapper .owl-page,
     .sv-wrapper .related-products__wrapper .owl-page span,
     .sv-wrapper .related-products__wrapper .owl-page.active {
       background-color: #EB0029 !important; } }
-  @media (min-width: 48em) {
+  @media (min-width: 50em) {
     .sv-wrapper .related-products__wrapper .owl-page.active ~ .owl-page {
       background-color: #807C7C !important;
       opacity: 0.4; } }
@@ -1791,6 +1926,12 @@ body {
 section {
   position: relative; }
 
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none; }
+
 /*********************
 TYPOGRAPHY
 *********************/
@@ -1800,9 +1941,10 @@ TYPOGRAPHY
 .subtitle {
   color: #EB0029;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 10px;
-  position: relative; }
+  position: relative;
+  letter-spacing: 1px; }
   @media (min-width: 48em) {
     .subtitle {
       font-size: 14px; } }

@@ -251,7 +251,7 @@ function html5_blank_view_article($more)
 // Remove Admin bar
 function remove_admin_bar()
 {
-    return false;
+    return true;
 }
 
 // Remove 'text/css' from our enqueued stylesheet
@@ -494,6 +494,7 @@ add_action( 'woocommerce_before_single_product_summary', 'add_wrapper_div_open',
 add_action( 'woocommerce_single_product_summary', 'add_wrapper_div_close', 99 );
 add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_open', 19 );
 add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_close', 22 );
+
 
 // FUNCTIONS
 // store front page // archive-product.php // all products
