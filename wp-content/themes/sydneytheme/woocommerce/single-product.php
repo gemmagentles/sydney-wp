@@ -41,7 +41,6 @@ get_header( 'shop' ); ?>
         <?php endwhile; // end of the loop. ?>
     </div>
     <!-- div.ssv-wrapper close ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-
     <?php
         /**
          * woocommerce_after_main_content hook.
@@ -59,6 +58,7 @@ get_header( 'shop' ); ?>
          */
         do_action( 'woocommerce_sidebar' );
     ?>
+
 
 <?php get_footer( 'shop' );
 
