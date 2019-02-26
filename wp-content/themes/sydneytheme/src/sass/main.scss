@@ -53,7 +53,8 @@ TYPOGRAPHY
     font-family: $secondary-font-family;
     font-size: 10px;
     position: relative;
-
+    letter-spacing: 1px;
+    
     @include breakpoint(tablet) {
         font-size: 14px;
     }
