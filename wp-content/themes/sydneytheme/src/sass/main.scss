@@ -31,6 +31,14 @@ section {
     position: relative;
 }
 
+// Listen to tab events to enable outlines (accessibility improvement) there is js to detect this too to add it in for tab users in the app.js file.
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
 /*********************
 TYPOGRAPHY
 *********************/
