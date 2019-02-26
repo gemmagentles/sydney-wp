@@ -3,6 +3,8 @@
 @import 'pixel-to-em.scss';
 @import 'header.scss';
 @import 'slider.scss';
+@import 'generic-hero.scss';
+@import 'download-list.scss';
 @import 'centered-text.scss';
 @import 'filter-widget-area.scss';
 @import 'product-grid.scss';
@@ -12,6 +14,7 @@
 @import 'pdf-block.scss';
 @import 'related-products.scss';
 @import 'newsletter-signup.scss';
+@import 'text-box-image.scss';
 @import 'contact-enquiry-columns.scss';
 @import 'contact-form.scss';
 @import 'map.scss';
@@ -210,7 +213,6 @@ BUTTONS
     }
 
     @include breakpoint(largedesktop) {
-        padding: 22px 74px 22px 62px;
         font-size: 1.25em; // 20px
     }
 

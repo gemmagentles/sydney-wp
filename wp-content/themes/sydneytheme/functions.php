@@ -494,6 +494,8 @@ add_action( 'woocommerce_before_single_product_summary', 'add_wrapper_div_open',
 add_action( 'woocommerce_single_product_summary', 'add_wrapper_div_close', 99 );
 add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_open', 19 );
 add_action( 'woocommerce_after_single_product_summary', 'add_wrapper_summary_div_close', 22 );
+add_action( 'woocommerce_after_single_product_summary', 'text_box_image_action', 23 );
+add_action( 'woocommerce_after_single_product_summary', 'newsletter_signup_action', 24 );
 
 
 // FUNCTIONS
@@ -529,6 +531,14 @@ function product_specs_block_action() {
 
 function pdf_block_action() {
     get_template_part('partials/pdf-block');
+}
+
+function text_box_image_action() {
+    get_template_part('partials/text-box-image');
+}
+
+function newsletter_signup_action() {
+    get_template_part('partials/newsletter-signup');
 }
 
 function add_wrapper_div_open() {

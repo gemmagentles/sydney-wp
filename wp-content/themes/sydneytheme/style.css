@@ -416,6 +416,68 @@ TYPOGRAPHY
       .slider__arrow--next .sydney-button__with-icon {
         padding: 32px; } }
 
+.generic-hero__wrapper {
+  background: #EB0029; }
+
+.generic-hero__container {
+  max-width: 1552px;
+  margin: 0 auto; }
+
+.generic-hero__heading {
+  color: white;
+  text-align: center;
+  padding: 120px 30px;
+  font-weight: 300; }
+
+.download-list__wrapper {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 30px 120px 30px; }
+  @media (min-width: 48em) {
+    .download-list__wrapper {
+      padding: 120px 30px 160px 30px; } }
+
+.download-list__container {
+  padding-top: 80px; }
+  .download-list__container:first-child {
+    padding-top: 0; }
+
+.download-list__heading {
+  color: #EB0029;
+  border-bottom: 1px solid #424445;
+  font-weight: normal;
+  font-size: 1.25em;
+  padding-bottom: 30px; }
+  @media (min-width: 48em) {
+    .download-list__heading {
+      font-size: 1.5em; } }
+  @media (min-width: 70em) {
+    .download-list__heading {
+      font-size: 2.125em; } }
+
+.download-list__link {
+  border-bottom: 1px solid #424445;
+  color: #424445;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  padding: 30px 0;
+  letter-spacing: 0.6px;
+  font-size: 0.875em;
+  line-height: 1.6;
+  font-weight: normal; }
+  @media (min-width: 48em) {
+    .download-list__link {
+      font-size: 1em; } }
+  @media (min-width: 70em) {
+    .download-list__link {
+      font-size: 1.125em; } }
+  .download-list__link--view {
+    color: #EB0029;
+    padding-right: 10px;
+    font-weight: bold; }
+
 .centered-text__wrapper {
   max-width: 1552px;
   margin: 0 auto;
@@ -1485,6 +1547,87 @@ a.next.page-numbers:active {
         padding: 19px;
         font-size: 19px; } }
 
+.text-box-image__wrapper {
+  margin: 20px 0 40px;
+  position: relative; }
+  @media (min-width: 48em) {
+    .text-box-image__wrapper {
+      margin: 110px 0; } }
+
+.text-box-image__container {
+  max-width: 1552px;
+  margin: 0 auto; }
+
+.text-box-image__content {
+  padding: 30px;
+  background: white; }
+  @media (min-width: 48em) {
+    .text-box-image__content {
+      position: absolute;
+      max-width: 320px;
+      height: 100%; } }
+  @media (min-width: 64em) {
+    .text-box-image__content {
+      left: 50px;
+      max-width: 352px;
+      padding: 40px;
+      height: auto;
+      top: 50%;
+      transform: translateY(-50%); } }
+  @media (min-width: 70em) {
+    .text-box-image__content {
+      max-width: 520px; } }
+  @media (min-width: 87em) {
+    .text-box-image__content {
+      padding: 65px;
+      max-width: 620px; } }
+  @media (min-width: 99.5em) {
+    .text-box-image__content {
+      left: 150px; } }
+  .text-box-image__content .sydney-button__with-icon {
+    left: 0;
+    transform: none;
+    margin-bottom: 0;
+    padding: 14px 38px 14px 22px; }
+    @media (min-width: 48em) {
+      .text-box-image__content .sydney-button__with-icon {
+        padding: 16px 48px 16px 26px; } }
+    @media (min-width: 70em) {
+      .text-box-image__content .sydney-button__with-icon {
+        padding: 22px 60px 22px 34px; } }
+
+.text-box-image__logo {
+  max-width: 108px;
+  width: 100%; }
+  @media (min-width: 87em) {
+    .text-box-image__logo {
+      max-width: 158px; } }
+
+.text-box-image__heading {
+  padding: 20px 0;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 1.125em; }
+  @media (min-width: 70em) {
+    .text-box-image__heading {
+      padding: 32px 0;
+      font-size: 1.375em;
+      line-height: 34px; } }
+  @media (min-width: 87em) {
+    .text-box-image__heading {
+      padding: 40px 0;
+      font-size: 2em;
+      line-height: 44px; } }
+
+.text-box-image__paragraph {
+  padding-bottom: 20px; }
+  @media (min-width: 70em) {
+    .text-box-image__paragraph {
+      padding-bottom: 40px; } }
+
+.text-box-image__background-image {
+  width: 100%; }
+
 .contact-enquiry__wrapper {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -2071,7 +2214,6 @@ BUTTONS
       font-size: 1.125em; } }
   @media (min-width: 87em) {
     .sydney-button__with-icon {
-      padding: 22px 74px 22px 62px;
       font-size: 1.25em; } }
   .sydney-button__with-icon:hover, .sydney-button__with-icon:focus, .sydney-button__with-icon:active {
     background-color: #b80020;
