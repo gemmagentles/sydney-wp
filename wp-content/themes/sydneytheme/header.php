@@ -26,7 +26,11 @@
                 <div class="hamburger-bar3"></div>
             </div>
             <nav class="nav" role="navigation">
+            <?php if(SwpmMemberUtils::is_member_logged_in()) { ?>
+                <?php html5blank_nav_logout(); ?>
+            <?php } else { ?> 
                 <?php html5blank_nav(); ?>
+		    <?php } ?>
                 <div class ="social">
                     <div class="line"></div>
 

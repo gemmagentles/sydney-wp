@@ -18,6 +18,231 @@ h1 {
 
 ************************/
 /*********************
+COLOURS
+*********************/
+/* red */
+/* extra light grey */
+/* light grey */
+/* grey */
+/* grey */
+/* dark grey */
+/* light grey */
+/* grey */
+/*********************
+SIZES
+*********************/
+/*********************
+TYPOGRAPHY
+*********************/
+/*********************
+BREAKPOINTS
+*********************/
+.swpm-post-not-logged-in-msg {
+  text-align: center;
+  padding: 150px 30px;
+  font-family: "Roboto", sans-serif;
+  color: #424445;
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 300; }
+  @media (min-width: 70em) {
+    .swpm-post-not-logged-in-msg {
+      font-size: 1.125em; } }
+  @media (min-width: 87em) {
+    .swpm-post-not-logged-in-msg {
+      font-size: 1.25em; } }
+  .swpm-post-not-logged-in-msg .swpm-login-link {
+    color: #EB0029; }
+
+.sv-forms__wrapper {
+  max-width: 1552px;
+  margin: 140px auto 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px; }
+
+.sv-forms__container--heading,
+.sv-forms__container h1 {
+  font-weight: lighter; }
+  .sv-forms__container--heading::after,
+  .sv-forms__container h1::after {
+    content: " ";
+    background: #EB0029;
+    width: 80px;
+    height: 3px;
+    display: block;
+    margin: 40px auto; }
+
+.sv-forms__container a {
+  color: #EB0029; }
+
+.sv-forms__container .swpm-login-widget-form,
+.sv-forms__container .swpm-pw-reset-widget-form {
+  width: 100vw;
+  background: #F7F7F7;
+  margin-top: 80px;
+  padding: 80px 30px 135px 30px; }
+
+.sv-forms__container .swpm-login-form-inner,
+.sv-forms__container .swpm-pw-reset-widget-inside {
+  max-width: 470px;
+  margin: 0 auto; }
+
+.sv-forms__container .swpm-username-label,
+.sv-forms__container .swpm-password-label,
+.sv-forms__container .swpm-pw-reset-email {
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  color: #8e9192;
+  padding-bottom: 15px; }
+
+.sv-forms__container .swpm-text-field {
+  height: 75px;
+  margin-bottom: 24px;
+  width: 100%; }
+
+.sv-forms__container .swpm-text-field {
+  color: #8e9192;
+  border: 3px solid #DEDEDE;
+  padding: 16px;
+  font-size: 1em; }
+  .sv-forms__container .swpm-text-field:-ms-input-placeholder {
+    color: #767676;
+    font-size: 16px;
+    letter-spacing: 1.14px;
+    line-height: 19px; }
+  .sv-forms__container .swpm-text-field::-ms-input-placeholder {
+    color: #767676;
+    font-size: 16px;
+    letter-spacing: 1.14px;
+    line-height: 19px; }
+  .sv-forms__container .swpm-text-field::placeholder {
+    color: #767676;
+    font-size: 16px;
+    letter-spacing: 1.14px;
+    line-height: 19px; }
+
+.sv-forms__container .swpm-username-input,
+.sv-forms__container .swpm-password-input {
+  /* Change Autocomplete styles in Chrome*/ }
+  .sv-forms__container .swpm-username-input input:-webkit-autofill,
+  .sv-forms__container .swpm-username-input input:-webkit-autofill:hover,
+  .sv-forms__container .swpm-username-input input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+  .sv-forms__container .swpm-username-input textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+  .sv-forms__container .swpm-username-input select:-webkit-autofill,
+  .sv-forms__container .swpm-username-input select:-webkit-autofill:hover,
+  .sv-forms__container .swpm-username-input select:-webkit-autofill:focus,
+  .sv-forms__container .swpm-password-input input:-webkit-autofill,
+  .sv-forms__container .swpm-password-input input:-webkit-autofill:hover,
+  .sv-forms__container .swpm-password-input input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+  .sv-forms__container .swpm-password-input textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+  .sv-forms__container .swpm-password-input select:-webkit-autofill,
+  .sv-forms__container .swpm-password-input select:-webkit-autofill:hover,
+  .sv-forms__container .swpm-password-input select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #8e9192;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s; }
+
+.sv-forms__container .swpm-remember-me {
+  text-align: left;
+  position: relative;
+  margin-bottom: 30px;
+  /*Hide the checkmark by default*/
+  /*Unhide the checkmark on the checked state*/
+  /*Adding focus styles on the outer-box of the fake checkbox*/ }
+  .sv-forms__container .swpm-remember-me input[type='checkbox'] {
+    opacity: 0; }
+  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"] + span::after {
+    content: none; }
+  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:checked + span::after {
+    content: ""; }
+  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:focus + span::before {
+    outline: #3b99fc auto 5px; }
+  .sv-forms__container .swpm-remember-me .swpm-rember-label {
+    font-family: "Roboto", sans-serif;
+    color: #8e9192;
+    position: absolute;
+    left: 0;
+    padding-left: 30px; }
+    .sv-forms__container .swpm-remember-me .swpm-rember-label::before, .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
+      position: absolute; }
+    .sv-forms__container .swpm-remember-me .swpm-rember-label::before {
+      content: "";
+      display: inline-block;
+      top: 2px;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid; }
+    .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
+      content: "";
+      display: inline-block;
+      height: 6px;
+      width: 9px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      left: 4px;
+      top: 6px;
+      transform: rotate(-45deg); }
+
+.sv-forms__container .sydney-button,
+.sv-forms__container .swpm-login-form-submit,
+.sv-forms__container .swpm-pw-reset-submit {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #EB0029;
+  color: white;
+  padding: 14px;
+  transition: background-color 0.7s ease;
+  letter-spacing: 1px;
+  font-size: 0.75em;
+  line-height: 1.6;
+  font-weight: 300; }
+  @media (min-width: 48em) {
+    .sv-forms__container .sydney-button,
+    .sv-forms__container .swpm-login-form-submit,
+    .sv-forms__container .swpm-pw-reset-submit {
+      padding: 16px;
+      font-size: 1em; } }
+  @media (min-width: 70em) {
+    .sv-forms__container .sydney-button,
+    .sv-forms__container .swpm-login-form-submit,
+    .sv-forms__container .swpm-pw-reset-submit {
+      font-size: 1.125em; } }
+  @media (min-width: 87em) {
+    .sv-forms__container .sydney-button,
+    .sv-forms__container .swpm-login-form-submit,
+    .sv-forms__container .swpm-pw-reset-submit {
+      padding: 19px;
+      font-size: 19px; } }
+  .sv-forms__container .sydney-button:hover, .sv-forms__container .sydney-button:focus, .sv-forms__container .sydney-button:active,
+  .sv-forms__container .swpm-login-form-submit:hover,
+  .sv-forms__container .swpm-login-form-submit:focus,
+  .sv-forms__container .swpm-login-form-submit:active,
+  .sv-forms__container .swpm-pw-reset-submit:hover,
+  .sv-forms__container .swpm-pw-reset-submit:focus,
+  .sv-forms__container .swpm-pw-reset-submit:active {
+    background-color: #b80020;
+    cursor: pointer; }
+
+.sv-forms__container .swpm-forgot-pass-link {
+  margin-top: 80px; }
+
+.sv-forms__container .swpm-login-form-pw-reset-link {
+  color: #EB0029;
+  font-family: "Roboto", sans-serif; }
+
+.sv-forms__container .swpm-join-us-link {
+  display: none;
+  visibility: hidden; }
+
+/*********************
 BREAKPOINTS
 *********************/
 /*********************
