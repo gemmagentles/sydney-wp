@@ -16,6 +16,7 @@
       var previousFinished = 1;
       
       $( document ).ready(function() {
+        if (document.getElementById("slider")){
         slides = document.getElementById("slider").children;
         slidesArray = Array.prototype.slice.call( slides );
         
@@ -50,7 +51,7 @@
             2000) 
           }
         });
-        
+      }
       });
       
       var nextSlide = function(){
