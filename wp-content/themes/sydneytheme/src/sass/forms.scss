@@ -77,13 +77,17 @@
         }
 
         .swpm-text-field {
-            height: 75px;
+            height: 60px;
             margin-bottom: 24px;
             width: 100%;
             color: lighten($font-color, 30%);
             border: 3px solid $form-fields-border;
             padding: 16px;
             font-size: em(16);
+
+            @include breakpoint(tablet) {
+                height: 75px;
+            }
         }
 
         .swpm-username-input,
@@ -98,7 +102,6 @@
             select:-webkit-autofill,
             select:-webkit-autofill:hover,
             select:-webkit-autofill:focus {
-            //   border: 1px solid green;
               -webkit-text-fill-color: lighten($font-color, 30%);
               -webkit-box-shadow: 0 0 0px 1000px #fff inset;
               transition: background-color 5000s ease-in-out 0s;
@@ -110,39 +113,34 @@
             position: relative;
             margin-bottom: 30px;
 
-            input[type='checkbox'] {
+            // hide default styled checkbox but keep the functionality of it for a11y
+            input[type=checkbox] {
                 opacity: 0;
-
-                &:checked + span::after {
-                    content: "R";
-                    border: 3px solid green;
-
-                }
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
             }
-
-            
-
-            /*Hide the checkmark by default*/
-            .swpm-remember-checkbox input[type="checkbox"] + span::after {
+        
+            // checkbox is NOT selected
+            input[type=checkbox] ~ .swpm-rember-label::after {
                 content: none;
-                border: 3px solid orange;
             }
-            /*Unhide the checkmark on the checked state*/
-            .swpm-remember-checkbox input[type="checkbox"]:checked + span::after {
-                content: " ";
-                border: 3px solid green;
+        
+            // checkbox is selected 
+            input[type=checkbox]:checked ~ .swpm-rember-label::after {
+                content: "";
             }
-
-            /*Adding focus styles on the outer-box of the fake checkbox*/
-            .swpm-remember-checkbox input[type="checkbox"]:focus + span::before {
+        
+            // checkbox on focus using tab key
+            input[type=checkbox]:focus ~ .swpm-rember-label::before {
                 outline: rgb(59, 153, 252) auto 5px;
             }
-
+            
             .swpm-rember-label {
                 font-family: $primary-font-family;
                 color: lighten($font-color, 30%);
-                position: absolute;
-                left: 0;
+                position: relative;
+                left: -17px;
                 padding-left: 30px;
 
                 &::before,
@@ -179,7 +177,6 @@
             width: 100%;
             text-transform: uppercase;
             letter-spacing: 1px;
-
             background: $primary-color;
             color: white;
             padding: 14px;
@@ -225,14 +222,4 @@
             visibility: hidden;
         }
     }
-}
-
-.sv-forms__container .swpm-remember-me input[type='checkbox']:checked + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
-    content: "O";
-    border: 3px solid green;  
-}
-
-.sv-forms__container .swpm-remember-me input[type='checkbox'] + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
-    content: " ";
-    border: 3px solid green;  
 }

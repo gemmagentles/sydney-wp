@@ -96,13 +96,16 @@ BREAKPOINTS
   padding-bottom: 15px; }
 
 .sv-forms__container .swpm-text-field {
-  height: 75px;
+  height: 60px;
   margin-bottom: 24px;
   width: 100%;
   color: #8e9192;
   border: 3px solid #DEDEDE;
   padding: 16px;
   font-size: 1em; }
+  @media (min-width: 48em) {
+    .sv-forms__container .swpm-text-field {
+      height: 75px; } }
 
 .sv-forms__container .swpm-username-input,
 .sv-forms__container .swpm-password-input {
@@ -132,28 +135,23 @@ textarea:-webkit-autofill:focus,
 .sv-forms__container .swpm-remember-me {
   text-align: left;
   position: relative;
-  margin-bottom: 30px;
-  /*Hide the checkmark by default*/
-  /*Unhide the checkmark on the checked state*/
-  /*Adding focus styles on the outer-box of the fake checkbox*/ }
-  .sv-forms__container .swpm-remember-me input[type='checkbox'] {
-    opacity: 0; }
-    .sv-forms__container .swpm-remember-me input[type='checkbox']:checked + span::after {
-      content: "R";
-      border: 3px solid green; }
-  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"] + span::after {
-    content: none;
-    border: 3px solid orange; }
-  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:checked + span::after {
-    content: " ";
-    border: 3px solid green; }
-  .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:focus + span::before {
+  margin-bottom: 30px; }
+  .sv-forms__container .swpm-remember-me input[type=checkbox] {
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer; }
+  .sv-forms__container .swpm-remember-me input[type=checkbox] ~ .swpm-rember-label::after {
+    content: none; }
+  .sv-forms__container .swpm-remember-me input[type=checkbox]:checked ~ .swpm-rember-label::after {
+    content: ""; }
+  .sv-forms__container .swpm-remember-me input[type=checkbox]:focus ~ .swpm-rember-label::before {
     outline: #3b99fc auto 5px; }
   .sv-forms__container .swpm-remember-me .swpm-rember-label {
     font-family: "Roboto", sans-serif;
     color: #8e9192;
-    position: absolute;
-    left: 0;
+    position: relative;
+    left: -17px;
     padding-left: 30px; }
     .sv-forms__container .swpm-remember-me .swpm-rember-label::before, .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
       position: absolute; }
@@ -220,14 +218,6 @@ textarea:-webkit-autofill:focus,
 .sv-forms__container .swpm-join-us-link {
   display: none;
   visibility: hidden; }
-
-.sv-forms__container .swpm-remember-me input[type='checkbox']:checked + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
-  content: "O";
-  border: 3px solid green; }
-
-.sv-forms__container .swpm-remember-me input[type='checkbox'] + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
-  content: " ";
-  border: 3px solid green; }
 
 /*********************
 BREAKPOINTS
