@@ -27,14 +27,6 @@
         </section>
         <!-- /Contact Page Form -->
 
-        <!-- Contact Page Map -->
-        <section>
-            <div class="contact-map-wrapper">
-                <?php the_field( 'contact_map' ); ?> <!-- One field no need for a partial -->
-            </div>
-        </section>
-        <!-- /Contact Page Map -->
-
     </main>
 
 <?php get_footer(); ?>
