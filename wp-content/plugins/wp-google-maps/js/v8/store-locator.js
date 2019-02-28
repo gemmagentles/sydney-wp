@@ -37,7 +37,7 @@ jQuery(function($) {
 	
 	Object.defineProperty(WPGMZA.StoreLocator.prototype, "radius", {
 		"get": function() {
-			return $(this.element).find(".wpgmza_sl_radius_select").val();
+			return $("#radiusSelect_" + this.map.id).val();
 		}
 	});
 	

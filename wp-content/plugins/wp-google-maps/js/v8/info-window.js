@@ -123,7 +123,7 @@ jQuery(function($) {
 	 */
 	WPGMZA.InfoWindow.prototype.close = function()
 	{
-		
+		this.trigger("infowindowclose");
 	}
 	
 	/**

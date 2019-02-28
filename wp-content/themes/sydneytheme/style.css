@@ -62,10 +62,8 @@ BREAKPOINTS
   text-align: center;
   letter-spacing: 1px; }
 
-.sv-forms__container--heading,
 .sv-forms__container h1 {
   font-weight: lighter; }
-  .sv-forms__container--heading::after,
   .sv-forms__container h1::after {
     content: " ";
     background: #EB0029;
@@ -100,28 +98,11 @@ BREAKPOINTS
 .sv-forms__container .swpm-text-field {
   height: 75px;
   margin-bottom: 24px;
-  width: 100%; }
-
-.sv-forms__container .swpm-text-field {
+  width: 100%;
   color: #8e9192;
   border: 3px solid #DEDEDE;
   padding: 16px;
   font-size: 1em; }
-  .sv-forms__container .swpm-text-field:-ms-input-placeholder {
-    color: #767676;
-    font-size: 16px;
-    letter-spacing: 1.14px;
-    line-height: 19px; }
-  .sv-forms__container .swpm-text-field::-ms-input-placeholder {
-    color: #767676;
-    font-size: 16px;
-    letter-spacing: 1.14px;
-    line-height: 19px; }
-  .sv-forms__container .swpm-text-field::placeholder {
-    color: #767676;
-    font-size: 16px;
-    letter-spacing: 1.14px;
-    line-height: 19px; }
 
 .sv-forms__container .swpm-username-input,
 .sv-forms__container .swpm-password-input {
@@ -157,10 +138,15 @@ textarea:-webkit-autofill:focus,
   /*Adding focus styles on the outer-box of the fake checkbox*/ }
   .sv-forms__container .swpm-remember-me input[type='checkbox'] {
     opacity: 0; }
+    .sv-forms__container .swpm-remember-me input[type='checkbox']:checked + span::after {
+      content: "R";
+      border: 3px solid green; }
   .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"] + span::after {
-    content: none; }
+    content: none;
+    border: 3px solid orange; }
   .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:checked + span::after {
-    content: ""; }
+    content: " ";
+    border: 3px solid green; }
   .sv-forms__container .swpm-remember-me .swpm-remember-checkbox input[type="checkbox"]:focus + span::before {
     outline: #3b99fc auto 5px; }
   .sv-forms__container .swpm-remember-me .swpm-rember-label {
@@ -172,7 +158,7 @@ textarea:-webkit-autofill:focus,
     .sv-forms__container .swpm-remember-me .swpm-rember-label::before, .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
       position: absolute; }
     .sv-forms__container .swpm-remember-me .swpm-rember-label::before {
-      content: "";
+      content: " ";
       display: inline-block;
       top: 2px;
       left: 0;
@@ -180,7 +166,7 @@ textarea:-webkit-autofill:focus,
       width: 16px;
       border: 1px solid; }
     .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
-      content: "";
+      content: " ";
       display: inline-block;
       height: 6px;
       width: 9px;
@@ -190,7 +176,6 @@ textarea:-webkit-autofill:focus,
       top: 6px;
       transform: rotate(-45deg); }
 
-.sv-forms__container .sydney-button,
 .sv-forms__container .swpm-login-form-submit,
 .sv-forms__container .swpm-pw-reset-submit {
   width: 100%;
@@ -205,26 +190,20 @@ textarea:-webkit-autofill:focus,
   line-height: 1.6;
   font-weight: 300; }
   @media (min-width: 48em) {
-    .sv-forms__container .sydney-button,
     .sv-forms__container .swpm-login-form-submit,
     .sv-forms__container .swpm-pw-reset-submit {
       padding: 16px;
       font-size: 1em; } }
   @media (min-width: 70em) {
-    .sv-forms__container .sydney-button,
     .sv-forms__container .swpm-login-form-submit,
     .sv-forms__container .swpm-pw-reset-submit {
       font-size: 1.125em; } }
   @media (min-width: 87em) {
-    .sv-forms__container .sydney-button,
     .sv-forms__container .swpm-login-form-submit,
     .sv-forms__container .swpm-pw-reset-submit {
       padding: 19px;
       font-size: 19px; } }
-  .sv-forms__container .sydney-button:hover, .sv-forms__container .sydney-button:focus, .sv-forms__container .sydney-button:active,
-  .sv-forms__container .swpm-login-form-submit:hover,
-  .sv-forms__container .swpm-login-form-submit:focus,
-  .sv-forms__container .swpm-login-form-submit:active,
+  .sv-forms__container .swpm-login-form-submit:hover, .sv-forms__container .swpm-login-form-submit:focus, .sv-forms__container .swpm-login-form-submit:active,
   .sv-forms__container .swpm-pw-reset-submit:hover,
   .sv-forms__container .swpm-pw-reset-submit:focus,
   .sv-forms__container .swpm-pw-reset-submit:active {
@@ -241,6 +220,14 @@ textarea:-webkit-autofill:focus,
 .sv-forms__container .swpm-join-us-link {
   display: none;
   visibility: hidden; }
+
+.sv-forms__container .swpm-remember-me input[type='checkbox']:checked + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
+  content: "O";
+  border: 3px solid green; }
+
+.sv-forms__container .swpm-remember-me input[type='checkbox'] + .sv-forms__container .swpm-remember-me .swpm-rember-label::after {
+  content: " ";
+  border: 3px solid green; }
 
 /*********************
 BREAKPOINTS
@@ -2060,8 +2047,10 @@ a.next.page-numbers:active {
   width: 19px;
   background-repeat: no-repeat; }
 
-.contact-map-wrapper #wpgmza_map {
-  float: none !important; }
+.contact-map-wrapper {
+  height: 400px; }
+  .contact-map-wrapper #wpgmza_map {
+    float: none !important; }
 
 .footer {
   font-size: 0.875em;

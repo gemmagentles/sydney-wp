@@ -8,7 +8,11 @@
 				<div class="footer__container">
 					<div class="footer__top">
 						<nav class="footer__nav" role="navigation">
+						<?php if(SwpmMemberUtils::is_member_logged_in()) { ?>
+							<?php html5blank_nav_logout(); ?>
+						<?php } else { ?> 
 							<?php html5blank_nav(); ?>
+						<?php } ?>
 						</nav>
 						<div class="company-info">
 							<div class="mobile-line"></div>
