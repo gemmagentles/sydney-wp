@@ -878,7 +878,7 @@ function wpgmaps_admin_javascript_basic() {
 			
             wp_enqueue_style( 'wpgmaps_admin_style', plugins_url('css/wpgmza_style.css', __FILE__),array(),$wpgmza_version.'b');
             wp_enqueue_style( 'wpgmaps_admin_datatables_style', plugins_url('css/data_table.css', __FILE__),array(),$wpgmza_version.'b');
-            wp_enqueue_script('wpgmaps_admin_datatables', plugins_url('/js/jquery.dataTables.min.js',__FILE__), $wpgaps_core_dependancy, $wpgmza_version.'b' , false);
+            //wp_enqueue_script('wpgmaps_admin_datatables', plugins_url('/js/jquery.dataTables.min.js',__FILE__), $wpgaps_core_dependancy, $wpgmza_version.'b' , false);
 
 
 
@@ -1739,8 +1739,9 @@ function wpgmaps_return_markers($mapid = false,$marker_id = false) {
         return;
     }
     global $wpdb;
-    
-    $table_name = $wpdb->prefix . "wpgmza";
+    global $wpgmza_tblname;
+	
+    $table_name = $wpgmza_tblname;
 	
 	$columns = implode(', ', wpgmza_get_marker_columns());
 	
@@ -2303,6 +2304,28 @@ function wpgmaps_tag_basic( $atts ) {
 		$attr = str_replace('\\\\%', '%', $escaped);
 		$attr = stripslashes($attr);
 		$map_attributes = "data-settings='" . $attr . "'";
+	}
+	
+	// Using DOMDocument here to properly format the data-shortcode-attributes attribute
+	$document = new WPGMZA\DOMDocument();
+	$document->loadHTML('<div id="debug"></div>');
+	
+	$el = $document->querySelector("#debug");
+	$el->setAttribute('data-shortcode-attributes', json_encode($atts));
+	
+	$html = $document->saveHTML();
+	
+	if(preg_match('/data-shortcode-attributes=".+"/', $html, $m) || preg_match('/data-shortcode-attributes=\'.+\'/', $html, $m))
+	{
+		$map_attributes .= ' ' . $m[0];
+	}
+	else
+	{
+		// Fallback if for some reason we can't match the attribute string
+		$escaped = esc_attr(json_encode($atts));
+		$attr = str_replace('\\\\%', '%', $escaped);
+		$attr = stripslashes($attr);
+		$map_attributes = " data-shortcode-attributes='" . $attr . "'";
 	}
 	
     if (!$map_align || $map_align == "" || $map_align == "1") { $map_align = "float:left;"; }
