@@ -25,7 +25,7 @@
 							<div class="mobile-line"></div>
 							<div class="company-contact">
 								<p>T: <?php the_field('contact_info_phone_number', 'option'); ?></p>
-								<p>E: <a class="email" href="mailto:<?php the_field('contact_info_email', 'option'); ?>" target="_top"><?php the_field('contact_info_email', 'option'); ?></a></p>
+								<p>E: <a class="email" target="_blank" href="mailto:<?php the_field('contact_info_email', 'option'); ?>" target="_top"><?php the_field('contact_info_email', 'option'); ?></a></p>
 							</div>
 						</div>
 						<div class="logos">
