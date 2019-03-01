@@ -32,6 +32,26 @@
         }
     }
 
+    &__mobile {
+        display: block;
+        visibility: visible;
+
+        @include breakpoint(tablet) {
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        visibility: hidden;
+
+        @include breakpoint(tablet) {
+            display: block;
+            visibility: visible;
+        }
+    }
+
     &__inner {
         margin: 0 auto;
         max-width: $site-width;
