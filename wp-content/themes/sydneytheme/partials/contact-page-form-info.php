@@ -28,7 +28,7 @@
                   <p class="contact-form__paragraph"><?php the_sub_field( 'contact_phone_number' ); ?></p>
                 </div>
                 <div class="contact-form__content--email">
-                  <a class="contact-form__email-link" href="mailto:<?php the_sub_field( 'contact_email' ); ?>" target="_top"><?php the_sub_field( 'contact_email' ); ?></a>
+                  <a class="contact-form__email-link" target="_blank" href="mailto:<?php the_sub_field( 'contact_email' ); ?>" target="_top"><?php the_sub_field( 'contact_email' ); ?></a>
                 </div>
               </div>
                 <?php endwhile; ?>
