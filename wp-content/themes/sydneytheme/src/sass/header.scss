@@ -17,6 +17,14 @@
         margin: 0 auto;
         padding: 20px;
         background: white;
+
+        @include breakpoint(smalldesktop) {
+            padding: 20px 40px;
+        }
+
+        @include breakpoint(desktop) {
+            padding: 20px 60px;
+        }
     }
 }
 
@@ -52,8 +60,12 @@
             padding: 10px;
         }
 
+        @include breakpoint(tablet) {
+            padding: 10px;
+        }
+
         @include breakpoint(desktop) {
-            margin: 0 30px;
+            margin: 0 20px;
         }
     }
     
@@ -63,11 +75,8 @@
         position: relative;
         white-space: nowrap;
 
-        @include breakpoint(desktop) {
-            margin: 15px;
-        }
-
         @include breakpoint(tablet) {
+            margin: 10px 12px;
 
             &:hover,
             &:focus,
@@ -83,6 +92,14 @@
                     left: 0;
                 }
             }
+        }
+
+        @include breakpoint(laptop) {
+            margin: 10px 15px;
+        }
+
+        @include breakpoint(desktop) {
+            margin: 15px;
         }
     }
 
@@ -114,6 +131,7 @@
         padding: 0;
         display: flex;
         width: 100%;
+        justify-content: flex-end;
     }
 
     .line {
@@ -123,12 +141,18 @@
         margin: 12px 0 20px;
 
         @include breakpoint(tablet) {
-            margin: 12px 0 0;
+            display: none;
+            visibility: hidden;
+        }
+
+        @include breakpoint(smalldesktop) {
+            margin: 13px 25px 0 0;
+            display: block;
+            visibility: visible;
         }
 
         @include breakpoint(desktop) {
-            margin-top: 30px;
-
+            margin: 18px 40px 0 0;
         }
     }
 
@@ -140,7 +164,7 @@
         }
 
         @include breakpoint(desktop) {
-            padding: 20px;
+            padding: 10px;
         }
 
         &:last-child {
@@ -160,8 +184,8 @@
         }
 
         @include breakpoint(desktop) {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
         }
 
         &:hover,

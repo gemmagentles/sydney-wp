@@ -24,7 +24,7 @@
                               <?php while ( have_rows( 'pdf_list' ) ) : the_row(); ?>
                                 <?php $pdf_file = get_sub_field( 'pdf_file' ); ?>
                                 <?php if ( $pdf_file ) { ?>
-                                  <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>">Download No.<?php echo get_row_index(); ?>
+                                  <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>"><?php the_sub_field( 'pdf_name' ); ?>
                                   <svg class="sv-pdf__link--icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow"/></svg>
                                 </a>
                                 <?php } ?>
