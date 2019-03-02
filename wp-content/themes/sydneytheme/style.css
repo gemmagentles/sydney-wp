@@ -253,6 +253,12 @@ TYPOGRAPHY
     margin: 0 auto;
     padding: 20px;
     background: white; }
+    @media (min-width: 64em) {
+      .header__wrapper {
+        padding: 20px 40px; } }
+    @media (min-width: 70em) {
+      .header__wrapper {
+        padding: 20px 60px; } }
 
 .logo {
   color: #EB0029;
@@ -280,26 +286,34 @@ TYPOGRAPHY
         display: flex;
         margin: 0 5px;
         padding: 10px; } }
+    @media (min-width: 48em) {
+      .nav__list {
+        padding: 10px; } }
     @media (min-width: 70em) {
       .nav__list {
-        margin: 0 30px; } }
+        margin: 0 20px; } }
   .nav__item {
     list-style-type: none;
     margin: 10px;
     position: relative;
     white-space: nowrap; }
+    @media (min-width: 48em) {
+      .nav__item {
+        margin: 10px 12px; }
+        .nav__item:hover::after, .nav__item:focus::after, .nav__item:active::after {
+          content: "";
+          position: absolute;
+          height: 5px;
+          border-bottom: 2px solid #EB0029;
+          width: 100%;
+          top: 16px;
+          left: 0; } }
+    @media (min-width: 50em) {
+      .nav__item {
+        margin: 10px 15px; } }
     @media (min-width: 70em) {
       .nav__item {
         margin: 15px; } }
-    @media (min-width: 48em) {
-      .nav__item:hover::after, .nav__item:focus::after, .nav__item:active::after {
-        content: "";
-        position: absolute;
-        height: 5px;
-        border-bottom: 2px solid #EB0029;
-        width: 100%;
-        top: 16px;
-        left: 0; } }
   @media (min-width: 48em) {
     .nav .current-menu-item::after {
       content: "";
@@ -320,7 +334,8 @@ TYPOGRAPHY
     .social {
       padding: 0;
       display: flex;
-      width: 100%; } }
+      width: 100%;
+      justify-content: flex-end; } }
   .social .line {
     background: #EB0029;
     width: 100%;
@@ -328,10 +343,16 @@ TYPOGRAPHY
     margin: 12px 0 20px; }
     @media (min-width: 48em) {
       .social .line {
-        margin: 12px 0 0; } }
+        display: none;
+        visibility: hidden; } }
+    @media (min-width: 64em) {
+      .social .line {
+        margin: 13px 25px 0 0;
+        display: block;
+        visibility: visible; } }
     @media (min-width: 70em) {
       .social .line {
-        margin-top: 30px; } }
+        margin: 18px 40px 0 0; } }
   .social .nav__link {
     padding: 10px; }
     @media (min-width: 48em) {
@@ -339,7 +360,7 @@ TYPOGRAPHY
         padding: 6px; } }
     @media (min-width: 70em) {
       .social .nav__link {
-        padding: 20px; } }
+        padding: 10px; } }
     .social .nav__link:last-child {
       padding-right: 0; }
   .social .nav__icon {
@@ -353,8 +374,8 @@ TYPOGRAPHY
         height: 16px; } }
     @media (min-width: 70em) {
       .social .nav__icon {
-        width: 25px;
-        height: 25px; } }
+        width: 20px;
+        height: 20px; } }
     .social .nav__icon:hover, .social .nav__icon:focus, .social .nav__icon:active {
       fill: #9f001c; }
 
