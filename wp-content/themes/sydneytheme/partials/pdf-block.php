@@ -66,7 +66,7 @@
                         <?php $image = get_sub_field( 'image' ); ?>
                         <?php if ( $image ) { ?>
                           <div class="sv-pdf__gallery-column">
-                            <img class="sv-pdf__gallery-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <img class="sv-pdf__gallery-image thumbnail-js" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                           </div>
                         <?php } ?>
                       <?php endwhile; ?>
@@ -94,13 +94,14 @@
       $(function () {
       'use strict';
 
-        $("img").click(function () {
-          var expandImg = document.getElementById("expandedImg");
-          var thumbnailImageSrc = $(this).attr("src");
-          var expandImgSrc = expandImg.src;
-          expandImg.src = thumbnailImageSrc;
-          $(this).attr("src") = expandImg.src;
+        $(".thumbnail-js").on('click', function(event){
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+            var expandImg = document.getElementById("expandedImg");
+            var thumbnailImageSrc = $(this).attr("src");
+            expandImg.src = thumbnailImageSrc;
         });
+
       });
 
   })(jQuery, this);
