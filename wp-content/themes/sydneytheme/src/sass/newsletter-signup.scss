@@ -30,6 +30,11 @@
 .newsletter-signup {
     &__wrapper {
         position: relative;
+        margin-top: 40px;
+        
+        @include breakpoint(tablet) {
+            margin-top: 110px;
+        }
     }
 
     &__container {
