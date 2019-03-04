@@ -1772,6 +1772,7 @@ a.next.page-numbers:active {
     border: 3px solid #DEDEDE;
     color: #807C7C;
     padding: 12px;
+    margin-bottom: 20px;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     line-height: 1.6;

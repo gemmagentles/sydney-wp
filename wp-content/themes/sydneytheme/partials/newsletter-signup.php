@@ -11,14 +11,7 @@
         </div>
         <div class="box__right">
 
-            <div class="placeholder-news-letter">
-              <h4 style="line-height: 28px;">Mailing list signup coming soon.<br>Thank you for your patience.</h4>
-            </div>
-
-            <!-- <form action="/action_page.php">
-            <input class="input" type="email" name="email" value="Your email, if you please.">
-            <button class="sydney-button" type="submit">Sign Up</button>
-            </form> -->
+            <?php the_field( 'form', 'option' ); ?>
 
         </div>
     </div>
