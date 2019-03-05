@@ -1205,13 +1205,13 @@ TYPOGRAPHY
     font-size: 1.000em;
     padding: 30px 0 6px;
     font-weight: normal; }
-  .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size {
+  .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size, .sv-product-hero-content .sv-product-specs__specs {
     color: #424445;
     font-family: "Roboto", sans-serif;
     font-size: 1.000em;
     max-width: 360px; }
     @media (min-width: 70em) {
-      .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size {
+      .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size, .sv-product-hero-content .sv-product-specs__specs {
         max-width: 460px; } }
 
 .filter-widget__wrapper + .products {

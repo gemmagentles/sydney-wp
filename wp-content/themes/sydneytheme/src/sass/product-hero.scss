@@ -176,7 +176,8 @@
         }
 
         &__model,
-        &__size {
+        &__size,
+        &__specs {
             color: $font-color;
             font-family: $primary-font-family;
             font-size: 1.000em; // 16px

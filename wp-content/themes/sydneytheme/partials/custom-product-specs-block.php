@@ -14,5 +14,7 @@
 				<?php echo $product_size_term->name; ?>,
 			<?php endforeach; ?>
 		<?php endif; ?></p>
+		<h2 class="sv-product-specs__title">Product Specs:</h2>
+		<p class="sv-product-specs__specs">See section below</p>
 	<?php endwhile; ?>
 <?php endif; ?>
