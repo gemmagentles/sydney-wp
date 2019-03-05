@@ -142,6 +142,12 @@
             height: 870px;
         }
     }
+  
+    &__inner-slide-container {
+        max-width: $site-width;
+        margin: 0 auto;
+        position: relative;
+    }
 
     &__content-box {
         position: relative;
@@ -150,13 +156,18 @@
         @include breakpoint(tablet) {
             position: absolute;
             top: 100px;
-            right: 130px;
+            right: 120px;
             margin-top: 0;
             max-width: 430px;
         }
 
         @include breakpoint(largedesktop) {
             max-width: 530px;
+            right: 60px;
+        }
+
+        @include breakpoint(xlargedesktop) {
+            right: 10px;
         }
     }
 
