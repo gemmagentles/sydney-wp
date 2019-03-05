@@ -1023,11 +1023,18 @@ TYPOGRAPHY
     transform: scale(1.1); } }
 
 .card-grid__image {
-  width: 100%;
+  position: relative;
+  top: -308px;
+  left: -112px;
   transition: transform 2s ease; }
   @media (max-width: 37.5em) {
     .card-grid__image {
       max-width: 644px; } }
+  @media (min-width: 48em) {
+    .card-grid__image {
+      width: 100%;
+      top: 0;
+      left: 0; } }
   @media (min-width: 87em) {
     .card-grid__image {
       max-width: 650px; } }

@@ -101,10 +101,19 @@
     }
 
     &__image {
-        width: 100%;
+        // position the image to be more centered without using height and ruining the aspect ratio.
+        position: relative;
+        top: -308px;
+        left: -112px;
 
         @include breakpoint(mobile) {
             max-width: 644px;
+        }
+
+        @include breakpoint(tablet) {
+            width: 100%;
+            top: 0;
+            left: 0;
         }
 
         @include breakpoint(largedesktop) {
