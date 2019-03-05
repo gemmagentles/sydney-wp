@@ -62,9 +62,12 @@
             }
 
             @include breakpoint(smalldesktop) {
-                width: 100%;
                 padding: 0;
                 max-width: 100%;
+            }
+
+            @include breakpoint(largedesktop) {
+                width: 36vw;
             }
         }
     }
