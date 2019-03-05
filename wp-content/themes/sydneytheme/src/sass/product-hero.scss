@@ -12,8 +12,10 @@
             margin: 0 auto;
 
             @include breakpoint(smalldesktop) {
-                display: grid;
-                grid-template-columns: auto auto;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-around;
+                padding: 0 80px;
             }
         }
     }
@@ -23,9 +25,13 @@
         background-color: white;
 
         @include breakpoint(smalldesktop) {
-            margin: 80px;
+            margin: 80px 0 80px 80px;
             text-align: right;
             background-color: $secondary-color;
+        }
+        
+        @include breakpoint(desktop) {
+            margin: 80px 0 80px 100px;
         }
 
         @include breakpoint(xlargedesktop) {
@@ -34,8 +40,6 @@
     }
 
     .woocommerce-product-gallery {
-        grid-column: 2;
-        grid-row: 1;
         text-align: right;
         padding: 30px;
 
@@ -58,7 +62,7 @@
             }
 
             @include breakpoint(smalldesktop) {
-                width: 70vw;
+                width: 100%;
                 padding: 0;
                 max-width: 100%;
             }
@@ -67,16 +71,11 @@
 }
 
 .sv-product-hero-content {
-    grid-column: 1;
-    grid-row: 1;
 
     &__inner {
         position: relative;
         padding: 0 30px 60px 30px;
-
-        @include breakpoint(mobile) {
-            min-width: 340px;
-        }
+        min-width: 300px;
 
         @include breakpoint(tablet) {
             padding: 42px 42px 50px 50px;
@@ -84,8 +83,7 @@
         }
 
         @include breakpoint(smalldesktop) {
-            padding: 100px 30px 120px 80px;
-            min-width: 490px; 
+            padding: 80px 0;
         }
 
         @include breakpoint(xlargedesktop) {
