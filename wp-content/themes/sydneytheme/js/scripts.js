@@ -106,7 +106,7 @@ eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n    });\n\n    $(document).ready(function () {\n        $(\".nav__hamburger-icon\").click(function () {\n            $(\".nav__hamburger-icon\").toggleClass(\"nav__open\");\n            console.log('clicked');\n        });\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/header.js?");
+eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n    });\n\n    $(document).ready(function () {\n        $(\".nav__hamburger-icon\").click(function () {\n            $(\".nav__hamburger-icon\").toggleClass(\"nav__open\");\n        });\n\n        // When the user scrolls down 80px from the top of the document, make the nav bar smaller\n        window.onscroll = function () {\n            scrollFunction();\n        };\n\n        function scrollFunction() {\n\n            var headingNavBar = document.getElementById(\"navbar-js\");\n\n            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {\n                headingNavBar.classList.add(\"sticky\");\n            } else {\n                headingNavBar.classList.remove(\"sticky\");\n            }\n        }\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/header.js?");
 
 /***/ }),
 

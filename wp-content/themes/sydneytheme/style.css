@@ -243,26 +243,48 @@ TYPOGRAPHY
   font-size: 0.875em;
   font-family: "Roboto Condensed", sans-serif;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.3);
-  letter-spacing: 0.8px; }
+  letter-spacing: 0.8px;
+  background: white;
+  padding: 20px; }
+  @media (min-width: 48em) {
+    .header {
+      overflow: hidden;
+      transition: 0.4s;
+      /* Adds a transition effect when the padding is decreased */
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 99; } }
+  @media (min-width: 64em) {
+    .header {
+      padding: 20px 40px; } }
   @media (min-width: 70em) {
     .header {
+      padding: 20px 60px;
       font-size: 1em; } }
+  @media (min-width: 48em) {
+    .header.sticky {
+      padding: 10px 40px; } }
+  @media (min-width: 70em) {
+    .header.sticky {
+      padding: 10px 60px;
+      font-size: 1em; } }
+  @media (min-width: 48em) {
+    .header.sticky .logo {
+      padding: 5px; } }
+  @media (min-width: 70em) {
+    .header.sticky .logo {
+      padding: 10px; } }
   .header__wrapper {
     display: flex;
     max-width: 1552px;
-    margin: 0 auto;
-    padding: 20px;
-    background: white; }
-    @media (min-width: 64em) {
-      .header__wrapper {
-        padding: 20px 40px; } }
-    @media (min-width: 70em) {
-      .header__wrapper {
-        padding: 20px 60px; } }
+    margin: 0 auto; }
 
 .logo {
   color: #EB0029;
-  max-width: 51px; }
+  max-width: 51px;
+  width: 100%;
+  transition: 0.4s; }
   @media (min-width: 70em) {
     .logo {
       max-width: 75px; } }
@@ -2558,6 +2580,12 @@ a.next.page-numbers:active {
 
 body {
   background: white; }
+  @media (min-width: 48em) {
+    body {
+      margin-top: 98px; } }
+  @media (min-width: 70em) {
+    body {
+      margin-top: 124px; } }
 
 section {
   position: relative; }
