@@ -18,7 +18,6 @@
         max-width: $site-width;
         margin: 0 auto 54px;
 
-
         @include breakpoint(tablet) {
             margin: 0 auto 100px;
         }
@@ -40,6 +39,14 @@
         @include breakpoint(desktop) {
             grid-gap: 40px;
             padding: 0 80px;
+        }
+    }
+
+    &__image-wrapper:last-child {
+        margin-bottom: 80px;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 0;
         }
     }
 
@@ -172,14 +179,11 @@
         text-decoration: none;
         font-family: $primary-font-family;
         font-weight: 300;
-        margin-top: 54px;
-        margin-bottom: 54px;
         display: block;
         text-align: center;
         
         @include breakpoint(tablet) {
             font-size: 1.250em; // 20px
-            margin-bottom: 0;
         }
 
         @include breakpoint(smalldesktop) {
@@ -194,6 +198,25 @@
         &:hover,
         &:focus {
             text-decoration: underline;
+        }
+
+        &--top {
+            margin-top: 40px;
+            margin-bottom: 20px;
+
+            @include breakpoint(tablet) {
+                margin-top: 10px;
+                margin-bottom: 40px;
+            }
+        }
+
+        &--bottom {
+            margin-top: 54px;
+            margin-bottom: 54px;
+            
+            @include breakpoint(tablet) {
+                margin-bottom: 0;
+            }
         }
     }
 }

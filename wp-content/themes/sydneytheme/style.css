@@ -979,6 +979,12 @@ TYPOGRAPHY
     grid-gap: 40px;
     padding: 0 80px; } }
 
+.card-grid__image-wrapper:last-child {
+  margin-bottom: 80px; }
+  @media (min-width: 48em) {
+    .card-grid__image-wrapper:last-child {
+      margin-bottom: 0; } }
+
 .card-grid__image-container {
   position: relative;
   overflow: hidden;
@@ -1072,14 +1078,11 @@ TYPOGRAPHY
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  margin-top: 54px;
-  margin-bottom: 54px;
   display: block;
   text-align: center; }
   @media (min-width: 48em) {
     .card-grid__title-link {
-      font-size: 1.250em;
-      margin-bottom: 0; } }
+      font-size: 1.250em; } }
   @media (min-width: 64em) {
     .card-grid__title-link {
       font-size: 1.500em; } }
@@ -1088,6 +1091,19 @@ TYPOGRAPHY
       font-size: 2em; } }
   .card-grid__title-link:hover, .card-grid__title-link:focus {
     text-decoration: underline; }
+  .card-grid__title-link--top {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+    @media (min-width: 48em) {
+      .card-grid__title-link--top {
+        margin-top: 10px;
+        margin-bottom: 40px; } }
+  .card-grid__title-link--bottom {
+    margin-top: 54px;
+    margin-bottom: 54px; }
+    @media (min-width: 48em) {
+      .card-grid__title-link--bottom {
+        margin-bottom: 0; } }
 
 .sv-wrapper .product-hero__wrapper {
   background-color: #F7F7F7; }

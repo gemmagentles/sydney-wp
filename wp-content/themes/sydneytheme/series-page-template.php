@@ -1,4 +1,4 @@
-<?php /* Template Name: Collections Page Template */ get_header(); ?>
+<?php /* Template Name: Series Page Template */ get_header(); ?>
 
 	<main role="main">
 		<!-- Centered Text -->
