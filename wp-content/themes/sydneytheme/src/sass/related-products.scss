@@ -117,10 +117,6 @@
             @include breakpoint(smalldesktop) {
                 padding: 140px 80px 120px 80px;
             }
-    
-            @include breakpoint(xlargedesktop) {
-                padding: 140px 0 120px 0;
-            }
 
             &::before {
                 content: "Products";
@@ -143,10 +139,6 @@
                     left: 83px;
                     font-size: em(18);
                 }
-
-                @include breakpoint(xlargedesktop) {
-                    left: 3px;
-                }
             }
     
             // line
@@ -168,10 +160,6 @@
                 @include breakpoint(smalldesktop) {
                     top: 100px;
                     left: 193px;
-                }
-    
-                @include breakpoint(xlargedesktop) {
-                    left: 110px;
                 }
             }
     

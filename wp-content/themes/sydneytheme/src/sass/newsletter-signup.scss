@@ -30,6 +30,11 @@
 .newsletter-signup {
     &__wrapper {
         position: relative;
+        margin-top: 40px;
+        
+        @include breakpoint(tablet) {
+            margin-top: 110px;
+        }
     }
 
     &__container {
@@ -108,7 +113,7 @@
             border: 3px solid $form-fields-border;
             color: $tertiary-color;
             padding: 12px;
-
+            margin-bottom: 20px;
             font-family: $primary-font-family;
 
             font-size: 12px;
@@ -129,5 +134,7 @@
                 font-size: 19px;
             }
         }
+
+        
     }
 }

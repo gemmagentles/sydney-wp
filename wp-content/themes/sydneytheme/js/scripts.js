@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\n__webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n\n__webpack_require__(/*! ./components/slider.js */ \"./src/components/slider.js\");\n\n__webpack_require__(/*! ./components/pdf-block.js */ \"./src/components/pdf-block.js\");\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n\n        // Listen to tab events to enable outlines (accessibility improvement)\n\n        function handleFirstTab(e) {\n            if (e.keyCode === 9) {\n                // the \"I am a keyboard user\" key\n                document.body.classList.add('user-is-tabbing');\n                window.removeEventListener('keydown', handleFirstTab);\n            }\n        }\n\n        window.addEventListener('keydown', handleFirstTab);\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(/*! ./sass/main.scss */ \"./src/sass/main.scss\");\n\n__webpack_require__(/*! ./components/header.js */ \"./src/components/header.js\");\n\n__webpack_require__(/*! ./components/slider.js */ \"./src/components/slider.js\");\n\n__webpack_require__(/*! ./components/pdf-block.js */ \"./src/components/pdf-block.js\");\n\n__webpack_require__(/*! ./components/product-hero.js */ \"./src/components/product-hero.js\");\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n\n        // Listen to tab events to enable outlines (accessibility improvement)\n\n        function handleFirstTab(e) {\n            if (e.keyCode === 9) {\n                // the \"I am a keyboard user\" key\n                document.body.classList.add('user-is-tabbing');\n                window.removeEventListener('keydown', handleFirstTab);\n            }\n        }\n\n        window.addEventListener('keydown', handleFirstTab);\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("\n\n__webpack_require__(/*! jquery */ \"jquery\");\n\n__webpack_require__(
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n    });\n\n    $(document).ready(function () {\n        $(\".nav__hamburger-icon\").click(function () {\n            $(\".nav__hamburger-icon\").toggleClass(\"nav__open\");\n            console.log('clicked');\n        });\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/header.js?");
+eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n    });\n\n    $(document).ready(function () {\n        $(\".nav__hamburger-icon\").click(function () {\n            $(\".nav__hamburger-icon\").toggleClass(\"nav__open\");\n        });\n\n        // When the user scrolls down 80px from the top of the document, make the nav bar smaller\n        window.onscroll = function () {\n            scrollFunction();\n        };\n\n        function scrollFunction() {\n\n            var headingNavBar = document.getElementById(\"navbar-js\");\n\n            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {\n                headingNavBar.classList.add(\"sticky\");\n            } else {\n                headingNavBar.classList.remove(\"sticky\");\n            }\n        }\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/header.js?");
 
 /***/ }),
 
@@ -119,6 +119,18 @@ eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'us
 
 "use strict";
 eval("\n\n(function ($, root, undefined) {\n\n  $(function () {\n\n    'use strict';\n\n    var acc = document.getElementsByClassName(\"accordion-js\");\n    var i;\n\n    for (i = 0; i < acc.length; i++) {\n      acc[i].addEventListener(\"click\", function () {\n        this.classList.toggle(\"active\");\n        var panel = this.nextElementSibling;\n        // panel.classList.toggle(\"sv-pdf__accordion-content--open\");\n        if (panel.style.maxHeight) {\n          panel.style.maxHeight = null;\n        } else {\n          panel.style.maxHeight = panel.scrollHeight + \"px\";\n        }\n      });\n    }\n  });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/pdf-block.js?");
+
+/***/ }),
+
+/***/ "./src/components/product-hero.js":
+/*!****************************************!*\
+  !*** ./src/components/product-hero.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n(function ($, root, undefined) {\n\n    $(function () {\n\n        'use strict';\n\n        $(document).ready(function () {\n            if (document.getElementsByClassName(\"product-hero__wrapper\")) {\n\n                // add initials of each attribute finish under each attribute swatch image\n                $(\".image-variable-item-polished-chrome\").append(\"<p>PC</p>\");\n                $(\".image-variable-item-matte-black\").append(\"<p>MB</p>\");\n                $(\".image-variable-item-brushed-nickel\").append(\"<p>BN</p>\");\n                $(\".image-variable-item-oil-rubbed-bronze\").append(\"<p>ORB</p>\");\n            }\n        });\n    });\n})(jQuery, undefined);\n\n//# sourceURL=webpack:///./src/components/product-hero.js?");
 
 /***/ }),
 

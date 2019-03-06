@@ -558,9 +558,10 @@ function pdf_block_action() {
     get_template_part('partials/pdf-block');
 }
 
-function text_box_image_action() {
-    get_template_part('partials/text-box-image');
-}
+// @TODO HIDE THE TEXT BOX IMAGE COMPONENT UNTIL VERNON WEBSITE IS LIVE **********
+// function text_box_image_action() {
+//     get_template_part('partials/text-box-image');
+// }
 
 function newsletter_signup_action() {
     get_template_part('partials/newsletter-signup');
