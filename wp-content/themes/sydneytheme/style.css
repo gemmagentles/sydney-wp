@@ -451,6 +451,15 @@ TYPOGRAPHY
   from {
     left: -100%; } }
 
+@media (min-width: 48em) {
+  #top::before {
+    display: block;
+    content: " ";
+    margin-top: -125px;
+    height: 110px;
+    visibility: hidden;
+    pointer-events: none; } }
+
 .slider {
   max-width: 100%;
   position: relative;
@@ -559,7 +568,7 @@ TYPOGRAPHY
     @media (min-width: 48em) {
       .slider__content-box {
         position: absolute;
-        top: 100px;
+        top: 115px;
         right: 120px;
         margin-top: 0;
         max-width: 430px; } }
@@ -2632,14 +2641,6 @@ body {
   @media (min-width: 70em) {
     body {
       margin-top: 124px; } }
-
-#top::before {
-  display: block;
-  content: " ";
-  margin-top: -285px;
-  height: 285px;
-  visibility: hidden;
-  pointer-events: none; }
 
 section {
   position: relative; }

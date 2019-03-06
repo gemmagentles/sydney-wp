@@ -287,3 +287,15 @@
     from {left: -100%;}
   }
 }
+
+// to make space for where the nav bar should be once you click on the top button at the bottom
+#top::before { 
+    @include breakpoint(tablet) {
+        display: block; 
+        content: " "; 
+        margin-top: -125px;
+        height: 110px;
+        visibility: hidden; 
+        pointer-events: none;
+    }
+}
