@@ -3,6 +3,7 @@ import './sass/main.scss';
 import './components/header.js';
 import './components/slider.js';
 import './components/pdf-block.js';
+import './components/product-hero.js';
 
 
 (function ($, root, undefined) {

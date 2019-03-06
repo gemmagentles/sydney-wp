@@ -29,6 +29,24 @@
 
 body {
     background: white;
+    // to account for the fixed nav bar 
+    @include breakpoint(tablet) {
+        margin-top: 98px;
+    }
+
+    @include breakpoint(desktop) {
+        margin-top: 124px;
+    }
+}
+
+// to make space for where the nav bar should be once you click on the top button at the bottom
+#top::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -285px; 
+    height: 285px; 
+    visibility: hidden; 
+    pointer-events: none;
 }
 
 section {

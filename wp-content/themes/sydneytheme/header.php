@@ -10,12 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body id="top" <?php body_class(); ?>>
 
 <div class="wrapper">
 
-    <header class="header clear" role="banner">
-        <div id="top" class="header__wrapper">
+    <header id="navbar-js" class="header clear" role="banner">
+        <div class="header__wrapper">
             <a class="header__logo" href="<?php echo home_url(); ?>">
                 <img src="<?php the_field('brand_logo', 'option'); ?>" alt="Brand" class="logo">
             </a>
