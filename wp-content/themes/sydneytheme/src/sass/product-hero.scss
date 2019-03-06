@@ -168,12 +168,37 @@
         }
     }
 
+    // js is injecting html to add initials of each finish attribute, style them here. 
+    .image-variable-item {
+
+        &-polished-chrome,
+        &-brushed-nickel,     
+        &-oil-rubbed-bronze,     
+        &-matte-black {     
+
+            p {
+                color: $font-color;
+                font-size: em(16);
+                font-family: $secondary-font-family;
+                position: absolute;
+                top: 60px;
+                font-weight: 400;
+            }
+            
+        }
+    }
+
     .sv-product-specs {
         &__title {
             color: $primary-color;
             font-size: 1.000em; // 16px
             padding: 30px 0 6px;
             font-weight: normal;
+
+            // make space for the injected initials under each finish attribute
+            &:first-child {
+                padding-top: 65px;
+            }
         }
 
         &__model,
@@ -190,4 +215,3 @@
         }
     }
 }
-

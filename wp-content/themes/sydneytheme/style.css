@@ -1238,11 +1238,21 @@ TYPOGRAPHY
 .sv-product-hero-content .variable-items-wrapper [data-wvstooltip]:after {
   border-top: 5px solid #EB0029; }
 
+.sv-product-hero-content .image-variable-item-polished-chrome p, .sv-product-hero-content .image-variable-item-brushed-nickel p, .sv-product-hero-content .image-variable-item-oil-rubbed-bronze p, .sv-product-hero-content .image-variable-item-matte-black p {
+  color: #424445;
+  font-size: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+  position: absolute;
+  top: 60px;
+  font-weight: 400; }
+
 .sv-product-hero-content .sv-product-specs__title {
   color: #EB0029;
   font-size: 1.000em;
   padding: 30px 0 6px;
   font-weight: normal; }
+  .sv-product-hero-content .sv-product-specs__title:first-child {
+    padding-top: 65px; }
 
 .sv-product-hero-content .sv-product-specs__model, .sv-product-hero-content .sv-product-specs__size, .sv-product-hero-content .sv-product-specs__specs {
   color: #424445;
