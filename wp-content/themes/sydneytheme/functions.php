@@ -510,6 +510,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_before_shop_loop', 'products_page_heading_action', 1 );
 add_action( 'woocommerce_before_shop_loop', 'filter_widget_area_action', 15 );
 add_action( 'woocommerce_shop_loop_item_title', 'product_collection_block_action', 1 );
+add_action( 'woocommerce_shop_loop_item_title', 'thumbnail_product_swatches_action', 10 );
 
 // single product page
 add_action( 'woocommerce_single_product_summary', 'product_collection_block_action', 1 );
@@ -548,6 +549,10 @@ function new_loop_shop_per_page( $cols ) {
 // single product page
 function product_collection_block_action() {
     get_template_part('partials/custom-product-collection-block');
+}
+
+function thumbnail_product_swatches_action() {
+    get_template_part('partials/thumbnail-product-swatches');
 }
 
 function product_specs_block_action() {
