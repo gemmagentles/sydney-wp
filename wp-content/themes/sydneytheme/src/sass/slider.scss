@@ -90,17 +90,30 @@
 
         &.next:first-child .slider__content-box {
             @include breakpoint(tablet) {
-
                 @keyframes slideright {
                     0%   { right: 530px; opacity: 0; }
-                    100% { right: 130px; opacity: 1; }
+                    100% { right: 120px; opacity: 1; }  
                 }
-
-                animation: slideright 2.5s;
-                animation-iteration-count: 1;
-                animation-duration: 1.5s;
-                animation-timing-function: ease;
             }
+
+            @include breakpoint(largedesktop) {
+                @keyframes slideright {
+                    0%   { right: 530px; opacity: 0; }
+                    100% { right: 60px; opacity: 1; }  
+                }
+            }
+    
+            @include breakpoint(xlargedesktop) {
+                @keyframes slideright {
+                    0%   { right: 530px; opacity: 0; }
+                    100% { right: 10px; opacity: 1; }  
+                }
+            }
+
+            animation: slideright 2.5s;
+            animation-iteration-count: 1;
+            animation-duration: 1.5s;
+            animation-timing-function: ease;
 
             .subtitle {
                 &::after {
