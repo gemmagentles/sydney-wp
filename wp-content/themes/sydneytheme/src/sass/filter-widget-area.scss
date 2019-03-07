@@ -151,11 +151,12 @@
 // woocommerce plugin overrides
 
 .filter-widget__inner {
+
     // placeholder text
     .select2-container--default .select2-selection--single .select2-selection__rendered .select2-selection__placeholder {
-        font-family: $primary-font-family;
+        font-family: $secondary-font-family;
+        letter-spacing: 1px;
         color: $font-color;
-        // needs to be pixels so it doesnt use em of parent font and reduce font size twice
         font-size: 14px;
 
         @include breakpoint(desktop) {
@@ -164,8 +165,14 @@
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
-        padding: 10px 25px;
+        padding: 10px 14px;
         font-size: 14px;
+        font-family: $secondary-font-family;
+        letter-spacing: 1px;
+
+        @include breakpoint(smalldesktop) {
+            padding: 10px 25px;
+        }
 
         @include breakpoint(desktop) {
             font-size: 16px;
@@ -183,6 +190,28 @@
 
         @include breakpoint(smalldesktop) {
             right: 25px;
+        }
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow b {
+        border: none;
+        margin: 0;
+        
+        &::after {
+            content: " ";
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='10px' height='9px' viewBox='0 0 25 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EStroke 1 Copy 7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cg id='Footer' transform='translate(-887.000000, -22.000000)' stroke='%23424445' stroke-width='2'%3E%3Cg id='Stroke-1-Copy-7'%3E%3Cpolyline transform='translate(899.500000, 28.000000) rotate(-90.000000) translate(-899.500000, -28.000000) ' points='895 17 904 28 895 39'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            position: absolute;
+            top: 50%;
+            height: 9px;
+            width: 10px;
+            background-repeat: no-repeat;
+            transform: translateY(-50%) rotate(180deg);
+
+            @include breakpoint(smalldesktop) {
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='12px' viewBox='0 0 25 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EStroke 1 Copy 7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cg id='Footer' transform='translate(-887.000000, -22.000000)' stroke='%23424445' stroke-width='2'%3E%3Cg id='Stroke-1-Copy-7'%3E%3Cpolyline transform='translate(899.500000, 28.000000) rotate(-90.000000) translate(-899.500000, -28.000000) ' points='895 17 904 28 895 39'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                height: 12px;
+                width: 15px;
+            }
         }
     }
 }
@@ -208,7 +237,8 @@
 
 .select2-results__option {
     color: $font-color !important;
-    font-family: $primary-font-family !important;
+    font-family: $secondary-font-family !important;
+    letter-spacing: 1px;
     font-size: em(14);
 
     @include breakpoint(desktop) {
@@ -222,4 +252,17 @@
 
 .select2-container .select2-selection--single {
     height: 48px !important;
+}
+
+// search box inside drop down
+input[type=text].select2-search__field {
+    font-family: $secondary-font-family;
+    letter-spacing: 1px;
+    color: $font-color;
+    // needs to be pixels so it doesnt use em of parent font and reduce font size twice
+    font-size: 14px;
+
+    @include breakpoint(desktop) {
+        font-size: 16px;
+    }
 }

@@ -901,7 +901,8 @@ TYPOGRAPHY
     margin-bottom: 0; }
 
 .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__rendered .select2-selection__placeholder {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
   color: #424445;
   font-size: 14px; }
   @media (min-width: 70em) {
@@ -909,8 +910,13 @@ TYPOGRAPHY
       font-size: 16px; } }
 
 .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__rendered {
-  padding: 10px 25px;
-  font-size: 14px; }
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px; }
+  @media (min-width: 64em) {
+    .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__rendered {
+      padding: 10px 25px; } }
   @media (min-width: 70em) {
     .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__rendered {
       font-size: 16px; } }
@@ -924,6 +930,24 @@ TYPOGRAPHY
   @media (min-width: 64em) {
     .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__arrow {
       right: 25px; } }
+
+.filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none;
+  margin: 0; }
+  .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__arrow b::after {
+    content: " ";
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='10px' height='9px' viewBox='0 0 25 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EStroke 1 Copy 7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cg id='Footer' transform='translate(-887.000000, -22.000000)' stroke='%23424445' stroke-width='2'%3E%3Cg id='Stroke-1-Copy-7'%3E%3Cpolyline transform='translate(899.500000, 28.000000) rotate(-90.000000) translate(-899.500000, -28.000000) ' points='895 17 904 28 895 39'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    position: absolute;
+    top: 50%;
+    height: 9px;
+    width: 10px;
+    background-repeat: no-repeat;
+    transform: translateY(-50%) rotate(180deg); }
+    @media (min-width: 64em) {
+      .filter-widget__inner .select2-container--default .select2-selection--single .select2-selection__arrow b::after {
+        background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='15px' height='12px' viewBox='0 0 25 12' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3EStroke 1 Copy 7%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3E%3Cg id='Footer' transform='translate(-887.000000, -22.000000)' stroke='%23424445' stroke-width='2'%3E%3Cg id='Stroke-1-Copy-7'%3E%3Cpolyline transform='translate(899.500000, 28.000000) rotate(-90.000000) translate(-899.500000, -28.000000) ' points='895 17 904 28 895 39'%3E%3C/polyline%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        height: 12px;
+        width: 15px; } }
 
 .select2-container--open .select2-dropdown {
   left: 25px !important;
@@ -941,7 +965,8 @@ TYPOGRAPHY
 
 .select2-results__option {
   color: #424445 !important;
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Roboto Condensed", sans-serif !important;
+  letter-spacing: 1px;
   font-size: 0.875em; }
   @media (min-width: 70em) {
     .select2-results__option {
@@ -952,6 +977,15 @@ TYPOGRAPHY
 
 .select2-container .select2-selection--single {
   height: 48px !important; }
+
+input[type=text].select2-search__field {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 1px;
+  color: #424445;
+  font-size: 14px; }
+  @media (min-width: 70em) {
+    input[type=text].select2-search__field {
+      font-size: 16px; } }
 
 .product-grid {
   margin-bottom: 50px;

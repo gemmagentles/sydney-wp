@@ -12,7 +12,6 @@
 
             // for filter widget accordion only START 
             // make the button corners only go round once the dropdown is fully inside the button
-            // $( document ).ready(function() {
               if (document.getElementById("filter-button-js")){
                 var filterBtn = document.getElementById("filter-button-js");
                 var openAccordion = filterBtn.classList.contains("active");
@@ -25,7 +24,6 @@
                   filterBtn.style.transitionDelay = 0.2 + "s"; 
                 }
               }
-            // });
             // for filter widget accordion only END
 
 
