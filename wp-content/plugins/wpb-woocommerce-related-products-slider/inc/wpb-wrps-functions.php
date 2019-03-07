@@ -68,11 +68,14 @@ if( !function_exists('wpb_wrps_related_products') ){
 								<figure>
 									<a href="<?php the_permalink(); ?>" class="wpb_wrps_img_url"><?php echo woocommerce_get_product_thumbnail(); ?></a>
 									<figcaption>
+										<!-- Related Products -->
 										<!-- Custom code added by ABP - Add collection subheading -->
 										<?php get_template_part('partials/custom-product-collection-block'); ?> 
 										<h3 class="wpb_wrps_title">
 											<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 										</h3>
+										<!-- Custom code added by ABP - Add product swatches -->
+										<?php get_template_part('partials/thumbnail-product-swatches'); ?>
 
 										<?php echo ( $price_html ? '<div class="wpb_wrps_price">'.$price_html.'</div>' : '' ); ?>
 
