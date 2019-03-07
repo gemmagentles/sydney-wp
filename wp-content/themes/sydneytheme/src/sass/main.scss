@@ -43,6 +43,34 @@ section {
     position: relative;
 }
 
+// style page not found
+#post-404 {
+    max-width: $site-width;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px;
+
+    h1 {
+        padding-bottom: 32px;
+    }
+
+    h1,
+    a {
+        font-weight: 300;
+        color: $font-color;
+        line-height: 37px;
+    }
+    
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
 // Listen to tab events to enable outlines (accessibility improvement) there is js to detect this too to add it in for tab users in the app.js file.
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
