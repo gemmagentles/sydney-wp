@@ -31,6 +31,10 @@
     &.sticky {
 
         @include breakpoint(tablet) {
+            padding: 10px 26px;
+        }
+
+        @include breakpoint(smalldesktop) {
             padding: 10px 40px;
         }
     
