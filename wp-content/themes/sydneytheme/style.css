@@ -1083,6 +1083,42 @@ input[type=text].select2-search__field {
         display: grid;
         grid-template-columns: auto auto auto auto; } }
 
+.thumbnail-product-swatches__wrapper {
+  margin-top: -20px;
+  margin-bottom: 50px;
+  float: left;
+  clear: both; }
+
+.thumbnail-product-swatches__image {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+  float: left; }
+  @media (min-width: 64em) {
+    .thumbnail-product-swatches__image {
+      width: 30px;
+      height: 30px; } }
+  .thumbnail-product-swatches__image:last-child {
+    margin-right: 0; }
+  .thumbnail-product-swatches__image span {
+    display: none; }
+  .thumbnail-product-swatches__image--polished-chrome {
+    background-image: url("/wp-content/uploads/2019/01/polishedchrome.png"); }
+  .thumbnail-product-swatches__image--brushed-nickel {
+    background-image: url("/wp-content/uploads/2019/01/Brushed-Nickel.png"); }
+  .thumbnail-product-swatches__image--oil-rubbed-bronze {
+    background-image: url("/wp-content/uploads/2019/03/oilrubbedbronze.png"); }
+  .thumbnail-product-swatches__image--matte-black {
+    background-image: url("/wp-content/uploads/2019/01/Mat-Black.png"); }
+
+.related-products__wrapper .thumbnail-product-swatches__wrapper {
+  margin-top: -37px; }
+  @media (min-width: 48em) {
+    .related-products__wrapper .thumbnail-product-swatches__wrapper {
+      margin-top: -72px; } }
+
 .card-grid__heading {
   text-align: center;
   font-weight: 300;
@@ -1741,20 +1777,16 @@ a.next.page-numbers:active {
 
 .sv-wrapper .wrps_related_products_area .owl-buttons {
   position: absolute;
-  top: calc(50% - 62px);
+  top: calc(50% - 92px);
   transform: translateY(-50%);
-  width: 100%;
   height: 42px; }
   @media (min-width: 48em) {
     .sv-wrapper .wrps_related_products_area .owl-buttons {
-      top: calc(50% - 90px);
+      top: calc(50% - 100px);
       height: 66px; } }
   .sv-wrapper .wrps_related_products_area .owl-buttons .owl-prev {
-    position: absolute;
-    left: -10px; }
-    @media (min-width: 48em) {
-      .sv-wrapper .wrps_related_products_area .owl-buttons .owl-prev {
-        left: -26px; } }
+    display: none;
+    visibility: hidden; }
   .sv-wrapper .wrps_related_products_area .owl-buttons .owl-next {
     position: absolute;
     right: -10px; }

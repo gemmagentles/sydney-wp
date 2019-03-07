@@ -1,0 +1,58 @@
+.thumbnail-product-swatches {
+    &__wrapper {
+        margin-top: -20px;
+        margin-bottom: 50px;
+        float: left;
+        clear: both;
+    }
+
+    &__image {
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+        float: left;
+
+        @include breakpoint(smalldesktop) {
+            width: 30px;
+            height: 30px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        span {
+            display: none;
+        }
+
+        &--polished-chrome {
+            background-image: url('/wp-content/uploads/2019/01/polishedchrome.png');
+        }
+
+        &--brushed-nickel {
+            background-image: url('/wp-content/uploads/2019/01/Brushed-Nickel.png');
+        }
+
+        &--oil-rubbed-bronze {
+            background-image: url('/wp-content/uploads/2019/03/oilrubbedbronze.png');
+        }
+
+        &--matte-black {
+            background-image: url('/wp-content/uploads/2019/01/Mat-Black.png');
+        }
+    }
+}
+
+.related-products__wrapper {
+    .thumbnail-product-swatches {
+        &__wrapper {
+            margin-top: -37px;
+
+            @include breakpoint(tablet) {
+                margin-top: -72px;
+            }
+        }
+    }
+}
