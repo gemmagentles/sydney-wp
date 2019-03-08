@@ -1104,14 +1104,6 @@ input[type=text].select2-search__field {
     margin-right: 0; }
   .thumbnail-product-swatches__image span {
     display: none; }
-  .thumbnail-product-swatches__image--polished-chrome {
-    background-image: url("/wp-content/uploads/2019/01/polishedchrome.png"); }
-  .thumbnail-product-swatches__image--brushed-nickel {
-    background-image: url("/wp-content/uploads/2019/01/Brushed-Nickel.png"); }
-  .thumbnail-product-swatches__image--oil-rubbed-bronze {
-    background-image: url("/wp-content/uploads/2019/03/oilrubbedbronze.png"); }
-  .thumbnail-product-swatches__image--matte-black {
-    background-image: url("/wp-content/uploads/2019/01/Mat-Black.png"); }
 
 .related-products__wrapper .thumbnail-product-swatches__wrapper {
   margin-top: -37px; }
