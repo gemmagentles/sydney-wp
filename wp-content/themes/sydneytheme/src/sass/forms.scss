@@ -61,6 +61,15 @@
             padding: 80px 30px 135px 30px;
         }
 
+        .swpm-login-action-msg {
+            padding-top: 30px;
+        }
+        
+        .swpm-login-widget-action-msg {
+            font-family: $primary-font-family;
+            color: $font-color;
+        }
+
         .swpm-login-form-inner,
         .swpm-pw-reset-widget-inside {
             max-width: 470px;
