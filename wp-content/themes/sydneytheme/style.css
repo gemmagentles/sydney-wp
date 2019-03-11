@@ -1599,10 +1599,7 @@ a.next.page-numbers:active {
       font-size: 1.125em; } }
   @media (min-width: 70em) {
     .sv-pdf__link {
-      font-size: 20px; } }
-  @media (min-width: 87em) {
-    .sv-pdf__link {
-      font-size: 24px; } }
+      font-size: 1.25em; } }
   .sv-pdf__link:hover, .sv-pdf__link:focus {
     color: #EB0029;
     border-bottom: 1.5px solid #EB0029; }
@@ -1616,8 +1613,8 @@ a.next.page-numbers:active {
     margin-left: 30px; }
     @media (min-width: 70em) {
       .sv-pdf__link--icon {
-        height: 21px;
-        width: 15px; } }
+        height: 18px;
+        width: 13px; } }
 
 .sv-pdf__left-box {
   max-width: 472px;
