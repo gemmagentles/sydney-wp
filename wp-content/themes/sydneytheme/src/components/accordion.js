@@ -33,11 +33,18 @@
             if (panel.style.maxHeight){
               // close
               panel.style.maxHeight = null;
+              panel.style["overflow"] = "hidden";
             } else {
               // open
               panel.style.maxHeight = panel.scrollHeight + "px"; 
+            
+              // prevent overflow from being hidden once open
+              setTimeout(
+                function() {
+                  panel.style["overflow"] = "visible";
+                },
+              250);
             } 
-
           });
         }
 

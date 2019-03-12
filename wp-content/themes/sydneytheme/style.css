@@ -82,6 +82,13 @@ BREAKPOINTS
   margin-top: 80px;
   padding: 80px 30px 135px 30px; }
 
+.sv-forms__container .swpm-login-action-msg {
+  padding-top: 30px; }
+
+.sv-forms__container .swpm-login-widget-action-msg {
+  font-family: "Roboto", sans-serif;
+  color: #424445; }
+
 .sv-forms__container .swpm-login-form-inner,
 .sv-forms__container .swpm-pw-reset-widget-inside {
   max-width: 470px;
@@ -1599,10 +1606,7 @@ a.next.page-numbers:active {
       font-size: 1.125em; } }
   @media (min-width: 70em) {
     .sv-pdf__link {
-      font-size: 20px; } }
-  @media (min-width: 87em) {
-    .sv-pdf__link {
-      font-size: 24px; } }
+      font-size: 1.25em; } }
   .sv-pdf__link:hover, .sv-pdf__link:focus {
     color: #EB0029;
     border-bottom: 1.5px solid #EB0029; }
@@ -1616,8 +1620,8 @@ a.next.page-numbers:active {
     margin-left: 30px; }
     @media (min-width: 70em) {
       .sv-pdf__link--icon {
-        height: 21px;
-        width: 15px; } }
+        height: 18px;
+        width: 13px; } }
 
 .sv-pdf__left-box {
   max-width: 472px;
@@ -2307,6 +2311,9 @@ a.next.page-numbers:active {
   width: 19px;
   background-repeat: no-repeat; }
 
+.contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container input, .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container textarea {
+  font-family: "Roboto", sans-serif; }
+
 .page-template-dealer-locator-page-template .centered-text__container {
   padding: 0 0 40px; }
 
@@ -2387,7 +2394,7 @@ a.next.page-numbers:active {
     margin-bottom: 24px;
     color: #424445;
     border: 3px solid #DEDEDE;
-    padding: 16px;
+    padding: 22px;
     width: 100% !important;
     max-width: 620px; }
     .contact-map-wrapper .addressInput:-ms-input-placeholder {
@@ -2787,7 +2794,8 @@ a.next.page-numbers:active {
   box-sizing: border-box; }
 
 body {
-  background: white; }
+  background: white;
+  overflow-x: hidden; }
   @media (min-width: 48em) {
     body {
       margin-top: 98px; } }
