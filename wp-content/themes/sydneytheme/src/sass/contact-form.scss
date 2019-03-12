@@ -165,3 +165,7 @@
       }
     }
   }
+
+  .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container input, .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container textarea {
+    font-family: $primary-font-family;
+  }
