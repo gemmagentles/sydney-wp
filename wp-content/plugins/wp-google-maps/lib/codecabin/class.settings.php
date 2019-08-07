@@ -2,6 +2,9 @@
 
 namespace codecabin;
 
+if(!defined('ABSPATH'))
+	return;
+
 class Settings implements \ArrayAccess, \JsonSerializable, \IteratorAggregate
 {
 	private $data;
@@ -21,7 +24,10 @@ class Settings implements \ArrayAccess, \JsonSerializable, \IteratorAggregate
 		if(empty($option_value))
 			$this->data = (object)array();
 		else if(!($this->data = json_decode($option_value)))
-			throw new \Exception("Option value is not valid JSON");
+		{
+			global $wpdb;
+			throw new \Exception("Option value is not valid JSON in {$wpdb->prefix}options - " . json_last_error_msg());
+		}
 		
 		$this->overrides = (object)array();
 	}
