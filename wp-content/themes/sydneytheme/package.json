@@ -1,6 +1,6 @@
 {
   "name": "sydney",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "sydney wordpress theme package",
   "main": "index.js",
   "browserslist": [
