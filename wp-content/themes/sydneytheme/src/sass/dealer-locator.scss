@@ -130,11 +130,6 @@
       padding: 20px 28px;
       letter-spacing: 1.2px;
       border: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      border-radius: 0px !important;
-      background-image: none !important; 
       
       @include breakpoint(tablet) {
         padding: 23px 44px;
