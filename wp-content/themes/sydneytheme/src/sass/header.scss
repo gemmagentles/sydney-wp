@@ -188,6 +188,7 @@
             margin: 13px 25px 0 0;
             display: block;
             visibility: visible;
+            max-width: 772px;
         }
 
         @include breakpoint(desktop) {
