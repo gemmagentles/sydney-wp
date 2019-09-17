@@ -580,8 +580,10 @@ TYPOGRAPHY
   .slider__image {
     width: 100%;
     height: 280px;
-    object-fit: cover;
-    object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: left;
+       object-position: left;
     position: relative; }
     @media (min-width: 48em) {
       .slider__image {
@@ -2245,6 +2247,16 @@ a.next.page-numbers:active {
       color: #424445;
       border: 3px solid #DEDEDE;
       padding: 16px; }
+      .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container input:-ms-input-placeholder, .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container textarea:-ms-input-placeholder {
+        color: #767676;
+        font-size: 16px;
+        letter-spacing: 1.14px;
+        line-height: 19px; }
+      .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container input::-ms-input-placeholder, .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container textarea::-ms-input-placeholder {
+        color: #767676;
+        font-size: 16px;
+        letter-spacing: 1.14px;
+        line-height: 19px; }
       .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container input::placeholder, .contact-form__inner-wrapper.form .wpforms-container .wpforms-field-container textarea::placeholder {
         color: #767676;
         font-size: 16px;
@@ -2409,6 +2421,16 @@ a.next.page-numbers:active {
     padding: 22px;
     width: 100% !important;
     max-width: 620px; }
+    .contact-map-wrapper .addressInput:-ms-input-placeholder {
+      color: #767676;
+      font-size: 1em;
+      letter-spacing: 1.14px;
+      line-height: 19px; }
+    .contact-map-wrapper .addressInput::-ms-input-placeholder {
+      color: #767676;
+      font-size: 1em;
+      letter-spacing: 1.14px;
+      line-height: 19px; }
     .contact-map-wrapper .addressInput::placeholder {
       color: #767676;
       font-size: 1em;
@@ -2995,6 +3017,8 @@ BUTTONS
 input[type=button],
 input[type=submit],
 input[type=reset] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border-radius: 0px !important;
   background-image: none !important;
@@ -3072,3 +3096,4 @@ a[href^="tel"] {
       .sydney-button__with-icon--icon {
         max-width: 12px;
         right: 26px; } }
+
