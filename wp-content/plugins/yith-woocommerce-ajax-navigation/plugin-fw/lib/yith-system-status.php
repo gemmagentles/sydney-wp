@@ -297,13 +297,20 @@ if ( ! class_exists( 'YITH_System_Status' ) ) {
 		 */
 		public function get_system_info() {
 
-			//Get TLS version
-			$ch = curl_init( 'https://www.howsmyssl.com/a/check' );
-			curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-			$data = curl_exec( $ch );
-			curl_close( $ch );
-			$json = json_decode( $data );
-			$tls  = $json != null ? str_replace( 'TLS ', '', $json->tls_version ) : '';
+			$tls = '';
+
+			if ( function_exists( 'curl_init' ) ) {
+				//Get TLS version
+				$ch = curl_init();
+				curl_setopt( $ch, CURLOPT_URL, 'https://www.howsmyssl.com/a/check' );
+				curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 0 );
+				curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 0 );
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
+				$data = curl_exec( $ch );
+				curl_close( $ch );
+				$json = json_decode( $data );
+				$tls  = $json != null ? str_replace( 'TLS ', '', $json->tls_version ) : '';
+			}
 
 			//Get PHP version
 			preg_match( "#^\d+(\.\d+)*#", PHP_VERSION, $match );
