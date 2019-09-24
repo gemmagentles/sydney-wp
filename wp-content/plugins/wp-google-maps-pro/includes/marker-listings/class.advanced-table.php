@@ -20,6 +20,54 @@ class AdvancedTable extends \WPGMZA\MarkerDataTable
 		$this->map_id = $map_id;
 		$this->map = \WPGMZA\Map::createInstance($map_id);
 		
+		// Initial sort
+		$name = null;
+		
+		switch($this->map->order_markers_by)
+		{
+			case \WPGMZA\MarkerListing::ORDER_BY_TITLE:
+				$name = "title";
+				break;
+			
+			case \WPGMZA\MarkerListing::ORDER_BY_ADDRESS:
+				$name = "address";
+				break;
+			
+			case \WPGMZA\MarkerListing::ORDER_BY_DESCRIPTION:
+				$name = "description";
+				break;
+				
+			case \WPGMZA\MarkerListing::ORDER_BY_CATEGORY:
+				$name = "category";
+				break;
+		}
+		
+		switch($this->map->order_markers_choice)
+		{
+			case \WPGMZA\MarkerListing::ORDER_DESC:
+				$direction = "desc";
+				break;
+			
+			default:
+				$direction = "asc";
+				break;
+		}
+		
+		$columns	= $this->getColumns();
+		$keys		= array_keys($columns);
+		$position	= array_search($name, $keys);
+			
+		if($position !== false)
+		{
+			$json = json_encode(array(array(
+				$position,
+				$direction
+			)));
+			
+			$this->element->setAttribute('data-order-json', $json);
+		}
+		
+		// Table classes
 		$table = $this->element->querySelector("table");
 		$table->addClass('responsive');
 		$table->addClass('wpgmza_table');
@@ -288,7 +336,7 @@ class AdvancedTable extends \WPGMZA\MarkerDataTable
 	{
 		$useDefaultOrderBy = true;
 		
-		if(isset($input_params['overrideListingOrderSettings']))
+		if(isset($input_params['overrideListingOrderSettings']) && $input_params['overrideListingOrderSettings'] !== 'false')
 		{
 			switch($input_params['overrideListingOrderSettings'])
 			{

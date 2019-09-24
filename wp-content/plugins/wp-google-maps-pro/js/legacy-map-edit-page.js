@@ -1160,7 +1160,14 @@
 				heatmapInstance.set("opacity", options.opacity);
 				heatmapInstance.set("radius", options.radius);
 				
-				if(options.gradient)
+				var json;
+				try{
+					json = JSON.parse(options.gradient);
+				}catch(e) {
+					console.warn("Invalid heatmap gradient");
+				}
+				
+				if(json && typeof json == "object")
 					heatmapInstance.set("gradient", JSON.parse(options.gradient));
 			}
 			

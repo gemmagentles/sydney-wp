@@ -3,12 +3,22 @@
 Plugin Name: WP Google Maps - Pro Add-on
 Plugin URI: http://www.wpgmaps.com
 Description: This is the Pro add-on for WP Google Maps. The Pro add-on enables you to add descriptions, pictures, links and custom icons to your markers as well as allows you to download your markers to a CSV file for quick editing and re-upload them when complete.
-Version:  7.11.54
+Version:  7.11.56
 Author: WP Google Maps
 Author URI: http://www.wpgmaps.com
 */
 
 /*
+ * 7.11.56 :- 2019-09-24 :- Medium priority
+ * Added Astra theme compatibilty module, fixes InfoWindows not opening with Astra theme
+ * Fixed invalid heatmap gradient JSON breaking map edit page
+ * Fixed sort order wrong after initial advanced tables pagination on servers that interpret string "false" as true
+ *
+ * 7.11.55 :- 2019-09-19 :- Medium priority
+ * Fixed create shapes buttons not working in map edit page before Global Settings (engine) have been saved
+ * Fixed Modern Store Locator Radius causing Safari (mobile) to reload page
+ * Fixed Advanced Table sort order not respected after pagination first changed
+ *
  * 7.11.54 :- 2019-09-13 :- Medium priority
  * Added markerlistingupdated.wpgmza event to AdvancedTableMarkerListing
  * Fixed markers not visible in Internet Explorer when using OpenLayers (append is not a method)
