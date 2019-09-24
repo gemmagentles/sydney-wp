@@ -38,6 +38,10 @@ jQuery(function($) {
 	{
 		var self = this;
 		var options = WPGMZA.DataTable.prototype.getDataTableSettings.apply(this, arguments);
+		var json;
+		
+		if(json = $(this.element).attr("data-order-json"))
+			options.order = JSON.parse(json);
 		
 		options.drawCallback = function(settings) {
 			

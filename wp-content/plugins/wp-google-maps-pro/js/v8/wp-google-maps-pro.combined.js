@@ -566,7 +566,7 @@ jQuery(function($) {
 		isSafari: function() {
 			
 			var ua = navigator.userAgent.toLowerCase();
-			return (ua.indexOf("safari") != -1 && ua.indexOf("chrome") == -1);
+			return (ua.match(/safari/i) && !ua.match(/chrome/i));
 			
 		},
 		
@@ -3000,7 +3000,10 @@ jQuery(function($) {
         
         options.draggable				= !(this.wpgmza_settings_map_draggable == 'yes');
         options.disableDoubleClickZoom	= (this.wpgmza_settings_map_clickzoom == 'yes');
-        options.scrollwheel				= !(this.wpgmza_settings_map_scroll == 'yes');
+		
+		// NB: This setting is handled differently as setting scrollwheel to true breaks gestureHandling
+		if(this.wpgmza_settings_map_scroll)
+			options.scrollwheel			= false;
 		
 		if(this.wpgmza_force_greedy_gestures == "greedy" || this.wpgmza_force_greedy_gestures == "yes")
 			options.gestureHandling = "greedy";
@@ -5652,6 +5655,34 @@ jQuery(function ($) {
 
 	// Allow the Pro module to extend and create the module, only create here when Pro isn't loaded
 	if(!WPGMZA.isProVersion() && !(/^6/.test(WPGMZA.pro_version))) WPGMZA.integrationModules.gutenberg = WPGMZA.Integration.Gutenberg.createInstance();
+});
+
+// js/v8/compatibility/astra-theme-compatibility.js
+/**
+ * @namespace WPGMZA
+ * @module AstraThemeCompatiblity
+ * @requires WPGMZA
+ * @description Prevents the document.body.onclick handler firing for markers, which causes the Astra theme to throw an error, preventing the infowindow from opening
+ */
+jQuery(function($) {
+	
+	$(window).on("load", function(event) {
+		
+		var parent = document.body.onclick;
+		
+		if(!parent)
+			return;
+		
+		document.body.onclick = function(event)
+		{
+			if(event.target instanceof WPGMZA.Marker)
+				return;
+			
+			parent(event);
+		}
+		
+	});
+	
 });
 
 // js/v8/compatibility/google-ui-compatibility.js
@@ -9889,6 +9920,8 @@ jQuery(function($) {
 		var self = this;
 		var options = this.settings.toGoogleMapsOptions();
 		
+		options = {};
+		
 		this.googleMap = new google.maps.Map(this.engineElement, options);
 		
 		google.maps.event.addListener(this.googleMap, "bounds_changed", function() { 
@@ -9911,6 +9944,9 @@ jQuery(function($) {
 	{
 		Parent.prototype.setOptions.call(this, options);
 		
+		if(options.scrollwheel)
+			delete options.scrollwheel;	// NB: Delete this when true, scrollwheel: true breaks gesture handling
+		
 		if(!initializing)
 		{
 			this.googleMap.setOptions(options);
@@ -9918,8 +9954,6 @@ jQuery(function($) {
 		}
 		
 		var converted = $.extend(options, this.settings.toGoogleMapsOptions());
-		
-		//this.googleMap.setOptions(converted);
 		
 		var clone = $.extend({}, converted);
 		if(!clone.center instanceof google.maps.LatLng && (clone.center instanceof WPGMZA.LatLng || typeof clone.center == "object"))
@@ -13118,6 +13152,10 @@ jQuery(function($) {
 	{
 		var self = this;
 		var options = WPGMZA.DataTable.prototype.getDataTableSettings.apply(this, arguments);
+		var json;
+		
+		if(json = $(this.element).attr("data-order-json"))
+			options.order = JSON.parse(json);
 		
 		options.drawCallback = function(settings) {
 			

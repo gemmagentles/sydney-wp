@@ -220,6 +220,13 @@ Please upgrade your version of WP Google Maps to version 6.0.27 as it includes m
 
 == Changelog ==
 
+= 7.11.52 :- 2019-09-24 :- Medium priority =
+* Added Astra theme compatibilty module, fixes InfoWindows not opening with Astra theme
+* Added fallback for older versions of WordPress where wp_doing_ajax is not present, fixes fatal error on WordPress < 4.7
+
+= 7.11.51 :- 2019-09-19 :- Medium Priority =
+* Fixed Modern Store Locator Radius causing Safari (mobile) to reload page
+
 = 7.11.50 :- 2019-09-13 :- Medium priority =
 * Fixed markers not visible in Internet Explorer when using OpenLayers (append is not a method)
 
@@ -1275,6 +1282,8 @@ Please upgrade your version of WP Google Maps to version 6.0.27 as it includes m
 
 
 For more, please view the WP Google Maps site
+
+
 
 
 
