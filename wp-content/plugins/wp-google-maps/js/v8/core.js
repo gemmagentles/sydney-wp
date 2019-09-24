@@ -564,7 +564,7 @@ jQuery(function($) {
 		isSafari: function() {
 			
 			var ua = navigator.userAgent.toLowerCase();
-			return (ua.indexOf("safari") != -1 && ua.indexOf("chrome") == -1);
+			return (ua.match(/safari/i) && !ua.match(/chrome/i));
 			
 		},
 		

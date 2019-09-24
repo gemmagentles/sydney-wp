@@ -12,9 +12,9 @@
 							<?php html5blank_nav_logout(); ?>
 						<?php } else { ?> 
 							<?php html5blank_nav(); ?>
-							<a href="/site-map">Site Map</a>
 						<?php } ?>
-						</nav>
+							<a href="/site-map">Site Map</a>
+						</nav>			
 						<div class="company-info">
 							<div class="mobile-line"></div>
 							<div class="company-address">
