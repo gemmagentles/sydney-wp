@@ -23,13 +23,11 @@
                           <?php if ( have_rows( 'pdf_list' ) ) : ?>
                               <?php while ( have_rows( 'pdf_list' ) ) : the_row(); ?>
                                 <?php $pdf_file = get_sub_field( 'pdf_file' ); ?>
-                                <?php $bluetooth_icon = get_sub_field( 'add_bluetooth_icon' ); ?>
                                 <?php if ( $pdf_file ) { ?>
                                   <a class="sv-pdf__link" href="<?php echo $pdf_file['url']; ?>">
-                                    <?php if ( $bluetooth_icon == 'yes') { ?>
-                                      <svg class="sv-pdf__link--bluetooth-icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-Bluetooth" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-Bluetooth"/></svg>
-                                    <?php } ?>
+                                    <div>
                                     <?php the_sub_field( 'pdf_name' ); ?>
+                                    </div>
                                     <svg class="sv-pdf__link--icon"><use href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow" xlink:href="<?php echo get_template_directory_uri(); ?>/img/icons/icons.svg#icon-sv-down-arrow"/></svg>
                                   </a>
                                 <?php } ?>
